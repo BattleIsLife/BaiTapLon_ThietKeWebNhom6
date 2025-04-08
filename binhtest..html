@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello</title>
+</head>
+<body>
+    <script>
+        studentslist=["bob","sally","jill"]
+        //today_value="Wednesday";
+        today_value=new Date().toDateString();
+        for(let i=0;i<studentslist.length;i++){
+            alert("hey"+studentslist[i]+",today is "+today_value)
+        }
+        while(studentslist.length>0){
+            alert("hey "+studentslist[0]+" ,today is"+today_value);
+            studentslist.shift();
+        }
+        let x=9,y=8;
+        function tinhtong(x,y){
+            return x+y;
+        }
+        alert("x+y="+tinhtong(x,y));
+    </script>
+</body>
+</html>
