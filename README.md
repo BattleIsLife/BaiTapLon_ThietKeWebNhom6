@@ -1,4 +1,4 @@
-# Please go away if ur not a contributor
+# Pls go away if ur not a contributor
 Bài tập lớn thiết kế web bán quần áo
 
 Website tham khảo:
