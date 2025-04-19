@@ -33,3 +33,18 @@ function openModal(imageSrc) {
 function closeModal() {
     document.getElementById("imageModal").style.display = "none";
 }
+  // Hiển thị loader khi click vào các link (ngoại trừ link dạng # hoặc javascript)
+  document.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      const href = link.getAttribute('href');
+      if (href && !href.startsWith('#') && !href.startsWith('javascript')) {
+        document.getElementById('page-loader').style.display = 'flex';
+      }
+    });
+  });
+
+  // Ẩn loader sau khi trang đã tải xong
+  window.addEventListener('load', () => {
+    document.getElementById('page-loader').style.display = 'none';
+  });
+
