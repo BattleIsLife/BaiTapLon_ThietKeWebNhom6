@@ -1,0 +1,42 @@
+.size_guide {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.size_guide h1 {
+    text-align: center;
+    color: #333;
+}
+
+.size_info {
+    margin-top: 20px;
+}
+
+.size_info h3 {
+    color: #007BFF;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
