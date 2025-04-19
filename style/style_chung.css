@@ -1,0 +1,338 @@
+body
+{
+    font-family: 'Roboto Condensed', 'Arial', 'Verdana', 'Geneva', 'Tahoma', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADER */
+
+/* Top hedaer */
+.top_header
+{
+    background-color: #292929;
+    color: lightgray;
+    display: flex;
+    align-items: center;
+    font-size: small;
+    text-transform: uppercase;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.top_header a
+{
+    color: lightgray;
+    text-decoration: none;
+    margin-right: 15px;
+    padding-right: 15px;
+    border-right: 2px gray solid;
+}
+
+/* Main header */
+.main_header
+{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: whitesmoke;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: uppercase;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-bottom: 2px lightgray solid;
+}
+
+.main_header a
+{
+    color: black;
+    text-decoration: none;
+    margin-right: 22px;
+}
+
+.main_header button
+{
+    margin-left: 10px;
+    margin-right: 10px;
+    border: black 1px solid;
+}
+
+#search_button
+{
+    margin-left: 10px;
+    margin-right: 10px;
+    border: black 1px solid;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#search_button:hover
+{
+    border: red 1px solid;
+}
+
+button:hover
+{
+    border: red 1px solid;
+}
+
+.button_class
+{
+    display: flex;
+}
+
+#menu_button
+{
+    display: none;
+}
+
+
+
+/* Logo */
+.logo
+{
+    width: 100px;
+}
+
+
+/* Footer */
+
+/* Top footer */
+.top_footer
+{
+    background-color: whitesmoke;
+    font-size: small;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 25px;
+    padding-right: 25px
+}
+
+.top_footer h3
+{
+    text-transform: uppercase;
+    border-bottom: 2px darkgray solid;
+}
+.top_footer p
+{
+    line-height: 18px;
+}
+
+/* Lower footer */
+.lower_footer
+{
+    background-color: #262525;
+    font-size:medium;
+    color: lightgray;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 5px 10px;
+    border-bottom: 2px lightgray solid;
+    font-size: 15px;
+}
+
+.lower_footer h3
+{
+    text-transform: uppercase;
+    color: whitesmoke;
+    text-decoration: underline solid 1px whitesmoke;
+}
+
+.lower_footer .row
+{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.list_footer
+{
+    list-style-type: ">>";
+}
+
+.list_info
+{
+    justify-self: center;
+    list-style-type: none;
+}
+
+.lower_footer p
+{
+    line-height: 25px;
+}
+
+.lower_footer .row a
+{
+    color: lightgray;
+    text-decoration: none;
+    padding: 10px;
+    line-height: 25px;
+}
+
+.lower_footer .row a:hover
+{
+    color: red;
+}
+
+.lower_footer input
+{
+    width: 200px;
+    height: 30px;
+    color: whitesmoke;
+    background-color: #292929;
+    border: 1px solid gray;
+}
+
+.lower_footer button
+{
+    height: 35px;
+    color: whitesmoke;
+    text-transform: uppercase;
+    background-color: #b21313;
+    border: 1px solid #b21313;
+}
+
+.lower_footer button:hover
+{
+    border: 1px solid #b21313;
+}
+
+
+/* Main footer */
+
+.main_footer
+{
+    background-color: #1f1f1f;
+    color: lightgray;
+    padding: 40px;
+    line-height: 25px;
+    font-size: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+}
+
+.main_footer p
+{
+    padding: 2px;
+}
+
+#copyright, #owner_info
+{
+    border-bottom: 1px solid gray;
+}
+
+#ownership
+{
+    color: red;
+}
+
+
+/* Back to top */
+.back_to_top
+{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.back_to_top a
+{
+    background-color: rgb(72, 72, 72);
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: large;
+    font-weight: bold;
+    padding: 15px;
+    border: 2px solid rgb(98, 98, 98);
+    border-radius: 10px;
+}
+
+
+a:hover
+{
+    color:red;
+}
+
+
+/* Dropdown menu */
+.dropdown_content
+{
+    display: none;
+    position: sticky;
+    background-color: whitesmoke;
+    top: 100px;
+    height: 100%;
+    z-index: 100;
+    padding: 10px;
+}
+
+.dropdown_content a
+{
+    color: black;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.dropdown_content a:hover
+{
+    color: red;
+}
+
+/* Gio hang */
+
+.myCart
+{
+    position: relative;
+}
+
+#cart_dropdown
+{
+    display: none;
+}
+
+.myCart:hover #cart_dropdown
+{
+    background-color: whitesmoke;
+    padding: 10px;
+    position: absolute;
+    display: block;
+    float: right;
+    right: 0;
+    min-width: 250px;
+    min-height: 250px;
+    text-transform: none;
+    border: 1px solid gray;
+    border-radius: 1px;
+}
+
+.show
+{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px)
+{
+    .top_footer
+    {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 756px)
+{
+    .top_header, #cart_button, .main_header nav
+    {
+        display: none;
+    }
+    #menu_button
+    {
+        display: block;
+    }
+}
