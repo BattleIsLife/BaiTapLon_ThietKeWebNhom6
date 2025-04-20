@@ -22,6 +22,7 @@ window.onclick = function(event) {
         }
     }
 }
+//hiển thị ảnh khi click vào
 function openModal(imageSrc) {
     const modal = document.getElementById("imageModal");
     const modalImg = document.getElementById("modalImage");
@@ -47,4 +48,28 @@ function closeModal() {
   window.addEventListener('load', () => {
     document.getElementById('page-loader').style.display = 'none';
   });
+  /*back to top*/
+  const backToTop = document.getElementById("backToTop");
+
+  // Ẩn ban đầu
+  backToTop.style.display = "none";
+
+  window.addEventListener("scroll", () => {
+    backToTop.style.display = window.scrollY > 300 ? "flex" : "none";
+  });
+
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  // hiển thị form khi click vào apply now
+  function openForm(jobTitle) {
+    document.getElementById('applyModal').style.display = 'flex';
+    document.getElementById('jobTitle').textContent = jobTitle;
+  }
+
+  function closeForm() {
+    document.getElementById('applyModal').style.display = 'none';
+  }
+  
 
