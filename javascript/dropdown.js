@@ -71,5 +71,18 @@ function closeModal() {
   function closeForm() {
     document.getElementById('applyModal').style.display = 'none';
   }
-  
+  //hiện thị nút hỗ trợ ở góc màn
+  const toggleBtn = document.getElementById('toggleMenu');
+  const closeBtn = document.getElementById('closeMenu');
+  const menu = document.getElementById('menuItems');
+
+  toggleBtn.addEventListener('click', () => {
+    menu.style.display = 'flex';
+    toggleBtn.style.display = 'none';
+  });
+
+  closeBtn.addEventListener('click', () => {
+    menu.style.display = 'none';
+    toggleBtn.style.display = 'block';
+  });
 
