@@ -1,0 +1,85 @@
+.catalog
+{
+    padding: 10px;
+    border-bottom: 1px lightgray solid;
+}
+
+.catalog h2
+{
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.list_product /*Danh sách sản phẩm*/
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.product_info /*Thông tin sản phẩm*/
+{
+    position: relative;
+    text-align: center;
+    font-size: medium;
+    padding: 20px;
+    margin: 10px;
+    background-color: rgb(224, 221, 221);
+    border: 1px solid lightgray;
+}
+
+.product_info .product_img
+{
+    width: 250px;
+    height: auto;
+}
+
+.product_info a
+{
+    text-decoration: none;
+    color: inherit;
+}
+
+.product_info a:hover
+{
+    color: red;
+}
+
+
+/* Giá thành */
+.price
+{
+    color: red;
+}
+
+
+/* Hình mẫu */
+.model_picture
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* border-bottom: 1px solid lightgray; */
+}
+
+.model_picture img
+{
+    width: 300px;
+    height: auto;
+    margin: 10px 30px;
+}
+
+
+/* Logo giảm giá */
+.discount
+{
+    width: 90px;
+    top: 5px;
+    right: 5px;
+    z-index: 10;
+    position: absolute;
+    float: right;
+    height: auto;
+}
