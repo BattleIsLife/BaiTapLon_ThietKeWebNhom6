@@ -135,7 +135,35 @@ button:hover
     border-bottom: 2px lightgray solid;
     font-size: 15px;
 }
-
+.lower_footer .logo {
+    min-width: 170px;
+    align-self: flex-start; /* Căn logo sang trái */
+  }
+.lower_footer button {
+    padding: 8px 16px;
+    background-color: #1abc9c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-left: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .lower_footer button:hover {
+    background-color: #70c7c742;
+  }
+  .list_info {
+    list-style: none;
+    padding: 10px;
+    margin: 13px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .row p{
+    padding: 10px;
+    margin: 13px;
+  }
 .lower_footer h3
 {
     text-transform: uppercase;
@@ -153,12 +181,6 @@ button:hover
 .list_footer
 {
     list-style-type: ">>";
-}
-
-.list_info
-{
-    justify-self: center;
-    list-style-type: none;
 }
 
 .lower_footer p
