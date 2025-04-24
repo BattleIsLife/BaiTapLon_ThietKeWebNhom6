@@ -1,0 +1,7 @@
+.full-width-video {
+    width: 100%;       /* Chiếm toàn bộ chiều ngang trình duyệt */
+    height: auto;       /* Giữ tỉ lệ gốc */
+    display: block;
+    object-fit: cover;  /* Có thể dùng để cắt cho đẹp */
+  }
+

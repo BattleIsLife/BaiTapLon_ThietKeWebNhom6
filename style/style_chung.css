@@ -536,7 +536,24 @@ a:hover
     width: 30px;
     height: 30px;
   }
+  .icon-float {
+    position: absolute;
+    font-size: 40px;
+    pointer-events: none;
+    animation: floatUp 1s ease-out forwards;
+    z-index: 9999;
+  }
   
+  @keyframes floatUp {
+    0% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-80px) scale(1.5);
+    }
+  }
   
 
 

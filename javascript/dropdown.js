@@ -85,4 +85,40 @@ function closeModal() {
     menu.style.display = 'none';
     toggleBtn.style.display = 'block';
   });
+// hiệu ứng chuyển ảnh
+let currentSlide = 0;
+  const slides = document.querySelectorAll('.slide');
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.remove('active');
+    });
+    slides[index].classList.add('active');
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  setInterval(nextSlide, 3000);
+  
+  window.onload = () => {
+    showSlide(currentSlide);
+  };
+
+// hiệu ứng click
+  document.addEventListener('click', function(e) {
+    const icons = ["❤️", "⭐", "🌟", "✨", "💫"];
+    const icon = document.createElement("div");
+    icon.className = "icon-float";
+    icon.textContent = icons[Math.floor(Math.random() * icons.length)];
+    icon.style.left = e.pageX + "px";
+    icon.style.top = e.pageY + "px";
+    document.body.appendChild(icon);
+
+    setTimeout(() => {
+      icon.remove();
+    }, 1000); // xóa sau 1s
+  });
 
