@@ -43,9 +43,10 @@ body {
 .main_header {
     position: sticky;
     top: 0;
-    z-index: 999;
+    z-index: 100;
     background-color: #ffffff00;
-    backdrop-filter: blur(10px);
+    /* background-color: whitesmoke; */
+    backdrop-filter: blur(100px);
     font-size: 14px;
     display: flex;
     align-items: center;
@@ -106,7 +107,7 @@ body {
 
 /* Logo */
 .logo {
-    width: 120px; /* Kích thước vừa phải */
+    width: 80px; /* Kích thước vừa phải */
     height: auto; /* Giữ tỷ lệ cho logo */
     transition: all 0.3s ease; /* Hiệu ứng chuyển đổi mượt mà khi hover */
     border-radius: 8px; /* Bo góc logo */
@@ -472,10 +473,12 @@ a:hover
 /* Dropdown menu */
 .dropdown_content
 {
+    
     display: none;
     position: sticky;
     background-color: whitesmoke;
-    top: 100px;
+    border-top: 1px solid lightgray;
+    top: 122px;
     height: 100%;
     z-index: 100;
     padding: 10px;
@@ -564,14 +567,15 @@ a:hover
 /* Responsive */
 @media screen and (max-width: 768px)
 {
+    .main_header
+    {
+        background-color: whitesmoke;
+    }
     .top_footer
     {
         flex-direction: column;
     }
-}
 
-@media screen and (max-width: 756px)
-{
     .top_header, #cart_button, .main_header nav
     {
         display: none;
@@ -581,6 +585,11 @@ a:hover
         display: block;
     }
 }
+
+/* @media screen and (max-width: 756px)
+{
+    
+} */
 /* Loader Wrapper */
 .loader-wrapper {
     position: fixed;
