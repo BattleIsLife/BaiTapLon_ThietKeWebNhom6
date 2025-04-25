@@ -121,4 +121,3 @@ let currentSlide = 0;
       icon.remove();
     }, 1000); // xóa sau 1s
   });
-
