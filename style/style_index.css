@@ -102,7 +102,7 @@
         transform: translateX(-5%); /* Đảm bảo chuyển động vòng tròn mà không bị ngắt quãng */
     }
     100%{
-        transform: translateX(0);
+        transform: translateX(0%);
     }
 }
 

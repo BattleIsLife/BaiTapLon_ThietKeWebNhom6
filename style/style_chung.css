@@ -2,127 +2,7 @@ body {
     font-family: 'Roboto Condensed', 'Arial', 'Verdana', 'Geneva', 'Tahoma', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ffffff00; /* Nền trắng sáng bóng */
-    color: #212121; /* Chữ đen đậm để dễ đọc trên nền trắng */
-    line-height: 1.6; /* Tăng khoảng cách giữa các dòng */
-    font-size: 16px; /* Kích thước font phù hợp */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Hiệu ứng chuyển màu mượt mà khi thay đổi chế độ */
 }
-
-/* Tạo hiệu ứng sáng bóng cho nền khi hover */
-body:hover {
-    background-color: #f4f4f400; /* Nền sáng hơn một chút khi hover */
-    color: #000000; /* Chữ đen sáng lên khi hover */
-}
-
-/* Cải tiến cho các đoạn văn bản */
-p, h1, h2, h3, h4, h5, h6 {
-    margin: 0 0 15px 0;
-    padding: 0;
-}
-
-/* Các link */
-a {
-    color: #212121; /* Màu chữ của liên kết là đen */
-    text-decoration: none; /* Loại bỏ gạch chân */
-    transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-
-a:hover {
-    color: #ff4d4d; /* Đổi màu đỏ cho link khi hover */
-    text-decoration: underline; /* Gạch chân khi hover */
-    text-shadow: 0 0 10px rgba(255, 77, 77, 0.7); /* Hiệu ứng sáng đỏ khi hover */
-}
-
-/* Cải tiến tiêu đề với hiệu ứng bóng đổ mạnh mẽ */
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
-    color: #212121; /* Tiêu đề đen đậm */
-    letter-spacing: 1.5px; /* Khoảng cách giữa các chữ rộng hơn để tăng sự sang trọng */
-    text-transform: uppercase; /* Chữ in hoa để tạo sự nổi bật */
-    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Bóng đổ nhẹ tạo chiều sâu */
-}
-
-/* Các hiệu ứng cho thẻ input, textarea */
-input, textarea {
-    background-color: #fafafa; /* Nền sáng, dễ chịu cho các trường nhập liệu */
-    color: #212121; /* Màu chữ đen */
-    border: 1px solid #ccc; /* Viền sáng nhẹ */
-    padding: 12px;
-    border-radius: 8px;
-    font-size: 16px;
-    width: 100%;
-    transition: all 0.3s ease;
-}
-
-input:focus, textarea:focus {
-    background-color: #ffffff; /* Nền trắng khi focus */
-    border-color: #ff4d4d; /* Viền đỏ khi focus */
-    outline: none;
-    box-shadow: 0 0 12px rgba(255, 77, 77, 0.5); /* Hiệu ứng bóng đỏ khi focus */
-}
-
-/* Thêm hiệu ứng nâng cao cho các button */
-button {
-    background-color: #ff4d4d; /* Nền đỏ nổi bật cho button */
-    color: #ffffff; /* Chữ trắng */
-    border: none;
-    border-radius: 8px;
-    padding: 12px 24px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 6px 15px rgba(255, 77, 77, 0.3); /* Bóng đổ đỏ nhạt khi bình thường */
-}
-
-button:hover {
-    background-color: #ff3333; /* Đổi màu đỏ đậm khi hover */
-    transform: scale(1.05); /* Tăng kích thước nút khi hover */
-    box-shadow: 0 8px 20px rgba(255, 77, 77, 0.5); /* Tăng bóng đổ khi hover */
-}
-
-/* Các phần tử danh sách */
-ul, ol {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-/* Định dạng cho mỗi item của danh sách */
-li::before {
-    content: '►';
-    color: #ff4d4d; /* Dấu chấm đỏ cho mỗi item */
-    margin-right: 10px;
-}
-
-/* Các thẻ tiêu đề trên các phần tử */
-section h2, section h3 {
-    font-size: 22px; /* Kích thước chữ lớn hơn */
-    font-weight: 600; /* Chữ đậm hơn */
-    text-transform: uppercase;
-    margin-top: 40px; /* Khoảng cách trên lớn hơn */
-    color: #212121;
-    border-bottom: 2px solid #ff4d4d; /* Đường viền đỏ dưới tiêu đề */
-    padding-bottom: 10px;
-}
-
-/* Các thẻ paragraph */
-p {
-    font-size: 16px;
-    color: #333333; /* Chữ đen tối cho đoạn văn */
-    line-height: 1.8; /* Khoảng cách dòng rộng hơn để dễ đọc */
-}
-
-.hero-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Overlay tối để làm nổi bật chữ */
-}
-
 
 /* HEADER */
 
@@ -171,14 +51,14 @@ p {
     align-items: center;
     justify-content: space-between;
     text-transform: uppercase;
-    padding: 20px 40px;
-    border-bottom: 1px solid #e0e0e0;
+    padding: 10px 40px;
+    border-bottom: 1px solid #fbfbfb00;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .main_header a {
-    color: #222;
+    color: #8b2d2d;
     text-decoration: none;
     margin-right: 28px;
     font-weight: 500;
@@ -186,14 +66,14 @@ p {
 }
 
 .main_header a:hover {
-    color: #ff5252;
-    text-shadow: 0 0 3px #ff5252aa;
+    color: #fc0404;
+    text-shadow: 0 0 3px #fc0505aa;
 }
 
 .main_header button,
 #search_button {
     margin: 0 10px;
-    background-color: #ffffff;
+    background-color: #ffffff00;
     border: 1px solid #aaa;
     padding: 8px 16px;
     border-radius: 6px;
@@ -234,7 +114,7 @@ p {
     backdrop-filter: blur(8px); /* Hiệu ứng làm mờ nền phía sau logo (kiểu kính) */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Bóng đổ tạo chiều sâu */
     padding: 8px; /* Khoảng cách xung quanh logo */
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Viền mờ cho logo */
+    border: 1px solid rgba(255, 255, 255, 0); /* Viền mờ cho logo */
 }
 
 /* Hiệu ứng hover */
@@ -246,7 +126,7 @@ p {
 
 /* Nếu có hình ảnh bên trong logo */
 .logo img {
-    border-radius: 8px; /* Bo góc hình ảnh */
+    border-radius: 10%; /* Bo góc hình ảnh */
     transition: all 0.3s ease; /* Hiệu ứng mượt mà khi hover */
 }
 
@@ -329,9 +209,9 @@ p {
 
 /* ==== Lower Footer: Dark, Glassy, Premium ==== */
 .lower_footer {
-    background: rgba(20, 20, 20, 0.95);
+    background: rgba(21, 21, 21, 0.95);
     backdrop-filter: blur(8px);
-    color: #ccc;
+    color: #cccccc;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -339,7 +219,7 @@ p {
     font-family: 'Inter', sans-serif;
     gap: 40px;
     position: relative;
-    border-top: 3px solid #ff4d4d; /* Thêm border đỏ cho phần trên cùng */
+    border-top: 1px solid #fafafa; /* Thêm border đỏ cho phần trên cùng */
 }
 
 .lower_footer p {
@@ -423,7 +303,7 @@ p {
 }
 
 .lower_footer input:focus {
-    border-color: #ff4d4d; /* Chỉnh màu viền khi focus thành đỏ */
+    border-color: #f9f9f9; /* Chỉnh màu viền khi focus thành đỏ */
     outline: none;
     background-color: rgba(255, 255, 255, 0.08);
 }
@@ -460,7 +340,7 @@ p {
 
 .list_footer li::before {
     content: '⤷';
-    color: #ff4d4d; /* Màu biểu tượng "⤷" đỏ */
+    color: #f00a0a; /* Màu biểu tượng "⤷" đỏ */
     margin-right: 10px;
 }
 
@@ -468,10 +348,10 @@ p {
 
 /* ==== MAIN FOOTER: PRO MAX STYLE ==== */
 .main_footer {
-    background: rgba(20, 20, 20, 0.92);
+    background: rgba(10, 10, 10, 0.92);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-top: 1px solid rgba(35, 34, 34, 0.026);
     color: #e0e0e0;
     padding: 60px 100px;
     font-family: 'Segoe UI', 'Inter', sans-serif;
@@ -482,7 +362,7 @@ p {
     justify-content: space-between;
     position: relative;
     overflow: hidden;
-    border-bottom: 3px solid #ff4d4d; /* Thêm viền đỏ phía dưới footer */
+    border-bottom: 1px solid #ffffff; /* Thêm viền đỏ phía dưới footer */
 }
 
 /* Decorative light border line */
