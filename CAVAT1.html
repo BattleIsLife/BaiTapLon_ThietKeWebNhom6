@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>123CLOTHES - Quần áo cho mọi nhà</title>
+    <link rel="stylesheet" href="style/style_chung.css">
+    <link rel="stylesheet" href="style/style_index.css">
+    <link rel="stylesheet" href="style/huong-dan.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+body{
+    background-color:#EEEEEE;
+}
+.manh { /* Стил chỉ áp dụng cho thẻ <p> ngay sau div.Danhmuc */
+    color: #555; /* Màu chữ xám nhạt hơn */
+    font-size: 14px; /* Kích thước chữ nhỏ hơn một chút (tùy chỉnh) */
+    line-height: 1.6; /* Khoảng cách dòng tăng lên một chút để dễ đọc hơn */
+    margin-bottom: 20px; /* Thêm khoảng cách dưới đoạn văn */
+    /* Bạn có thể thêm các стил khác nếu cần */
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="top_header">
+            <div><img src="picture/icon/phone.png" style="width: 19px; 
+                    margin-right: 10px; 
+                    margin-bottom: -5px;">SĐT: <span class="tel">0123.456.789</span></div>
+            <div>
+                <a href="huong-dan-chon-size.html">Cách chọn size</a>
+                <a href="huong-dan-dat-hang.html">Hướng dẫn đặt hàng</a>
+                <a href="#">Giới thiệu</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="main_header">
+        <div><a href="index.html"><img class="logo" src="picture/ShopLogo.png"></a></div>
+        <nav>
+            <a href="thoi-trang-moi-nhat.html">Hàng mới về</a>
+
+            <a href="#">Bộ sưu tập</a>
+
+            <div class="dropdown_link">
+                <a href="javascript:void(0);">Áo</a>
+                <div class="dropdown_section_clothes_list">
+                    <a href="#">Áo nam</a>
+                    <a href="#">Áo nữ</a>
+                </div>
+            </div>
+
+            <div class="dropdown_link">
+                <a href="javascript:void(0);">Quần</a>
+                <div class="dropdown_section_clothes_list">
+                    <a href="#">Quần nam</a>
+                    <a href="#">Quần nữ</a>
+                </div>
+            </div>
+
+            <a href="#">Váy</a>
+            <a href="#">Đầm</a>
+            <div class="dropdown_link">
+                <a href="javascript:void(0);">Phụ kiện</a>
+                <div class="dropdown_section_clothes_list">
+                    <a href="#">Giày dép</a>
+                    <a href="#">Thắt lưng</a>
+                    <a href="#">Ví da</a>
+                    <a href="#">Cà vạt</a>
+                    <a href="#">Nơ</a>
+                    <a href="#">Mũ nón</a>
+                    <a href="#">Túi xách</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="button_class">
+            <a href="thoi-trang-moi-nhat.html" id="search_button"><img src="picture/icon/search-icon.png"
+                    style="width: 25px;"></a>
+
+            <div class="myCart">
+                <button id="cart_button"><img src="picture/icon/cart-icon.png" style="width: 25px;"></button>
+                <div id="cart_dropdown">
+                    <p>Giỏ hàng của bạn đang trống, nhanh chóng mua hàng nào!!</p>
+                </div>
+            </div>
+
+            <button id="menu_button" class="dropBtn"><img src="picture/icon/menu_icon.png"
+                    style="width: 25px;"></button>
+        </div>
+
+    </div>
+    <!-- Menu dropdown -->
+    <div id="menu_dropdown" class="dropdown_content">
+        <a href="thoi-trang-moi-nhat.html">Hàng mới về</a>
+        <a href="#">Bộ sưu tập</a>
+        <a href="#">Áo nam</a>
+        <a href="#">Áo nữ</a>
+        <a href="#">Quần nam</a>
+        <a href="#">Quần nữ</a>
+        <a href="#">Váy</a>
+        <a href="#">Đầm</a>
+        <a href="#">Giày dép</a>
+        <a href="#">Thắt lưng</a>
+        <a href="#">Ví da</a>
+        <a href="#">Cà vạt</a>
+        <a href="#">Nơ</a>
+        <a href="#">Mũ nón</a>
+        <a href="#">Túi xách</a>
+    </div>
+
+    <main>
+        <div class="container">
+            <div class="Danhmuc">
+                <h1>Cà Vạt</h1>
+                <div class="session1">
+                    <ul>
+                        <li>lọc danh sách
+                            <ul>
+                                <li>ví da</li>
+                                <li>Ba lô</li>
+                                <li>thắt lưng</li>
+                                <li>nón</li>
+                                <li>mắt kính</li>
+                            </ul>
+                        </li>
+                        <li> sắp xếp:
+                            <ul>
+                                <li>giá tăng dần</li>
+                                <li>giá giảm dần</li>
+                                <li>mới nhất</li>
+                                <li>cũ nhất</li>
+                            </ul>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <section>
+                <p class="manh">Cà vạt là vật dụng không thể thiếu, thể hiện sở thích, cá tính, tạo nên vẻ hoàn hảo. 123 clothes cung cấp cà vạt đẹp cho nam, từ ví, túi xách, mắt kính, thắt lưng đến nón, cà vạt lịch lãm...</p>
+            </section>
+        </div>
+       
+        <div class="container mt-5">
+            <div class="row">
+
+                <div class="col-9">
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                    <a href="huong-dan-dat-hang.html" class="text-dark text-decoration-none">
+                        <div class="card h-100 card-hover">
+                            <img src="picture/clothes/6ee4c25cf245b7dc1a5dcd8276360d01.webp" alt="anh1"
+                                class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="title">Cà vạt nam thắt sẵn trẻ trung cao cấp</h5>
+                                <p class="card-text text-danger font-weight-bold">₫17.500 <span
+                                        class="badge badge-danger">-50%</span></p>
+                                <p class="badge badge-success">Rẻ Vô Địch</p>
+                                <div class="text-warning">⭐ 4.9</div>
+                                <small class="text-muted">📍 Hà Nội</small>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Sản phẩm 2 -->
+                <div class="col-md-4 mb-3">
+                    <a href="BaiTapLon_ThietKeWebNhom6-main/huong-dan-dat-hang.html"
+                        class="text-dark text-decoration-none">
+                        <div class="card h-100 card-hover">
+                            <img src="picture/clothes/vn-11134207-7ras8-m28ylchvkj3mfb.webp" alt="anh 2"
+                                class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="title">Cà vạt học sinh bản nhỏ và lớn kỷ yếu nam nữ...</h5>
+                                <p class="card-text text-danger font-weight-bold">₫33.900 <span
+                                        class="badge badge-danger">-51%</span></p>
+                                <p class="badge badge-success">Rẻ Vô Địch • Mua để nhận quà</p>
+                                <div class="text-warning">⭐ 4.6</div>
+                                <small class="text-muted">📍TP. Hồ Chí Minh</small>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            
+                <!-- Sản phẩm 3 -->
+                <div class="col-md-4 mb-3">
+                    <a href="BaiTapLon_ThietKeWebNhom6-main/huong-dan-dat-hang.html"
+                        class="text-dark text-decoration-none">
+                        <div class="card h-100 card-hover">
+                            <img src="picture/clothes/sg-11134201-23020-p3ub6o0bc3mv66.webp" alt="anh 3"
+                                class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="title">Cà vạt EFAN vải lụa dệt jacquard nhiều màu...</h5>
+                                <p class="card-text text-danger font-weight-bold">₫26.400 <span
+                                        class="badge badge-danger">-36%</span></p>
+                                <p class="badge badge-success">Rẻ Vô Địch • Mua để nhận quà</p>
+                                <div class="text-warning">⭐ 4.8</div>
+                                <small class="text-muted">📍 TP. Hải Dương</small>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            
+                <!-- Sản phẩm 4 -->
+                <div class="col-md-4 mb-3">
+                    <a href="BaiTapLon_ThietKeWebNhom6-main/huong-dan-dat-hang.html"
+                        class="text-dark text-decoration-none">
+                        <div class="card h-100 card-hover">
+                            <img src="picture/clothes/vn-11134207-7qukw-lfi20m7b8qro92@resize_w900_nl.webp" alt="anh 4"
+                                class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="title">Cà Vạt Đồng Phục Họa Tiết Sọc Caro...</h5>
+                                <p class="card-text text-danger font-weight-bold">₫29.400</p>
+                                <p class="badge badge-success">Rẻ Vô Địch</p>
+                                <div class="text-warning">⭐ 4.9</div>
+                                <small class="text-muted">📍 Quảng Bình</small>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+           
+                <!-- Sản phẩm 5 -->
+                <div class="col-md-4 mb-3">
+                    <a href="BaiTapLon_ThietKeWebNhom6-main/huong-dan-dat-hang.html"
+                        class="text-dark text-decoration-none">
+                        <div class="card h-100 card-hover">
+                            <img src="picture/clothes/sg-11134201-7qvf3-lg3pthjqeagx18.webp" alt="anh 5"
+                                class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="title">Tb Cà Vạt Kẻ Sọc Ba Màu Phong Cách Preppy Hàn Quốc</h5>
+                                <p class="card-text text-danger font-weight-bold">₫21.572</p>
+                                <p class="badge badge-success">Rẻ Vô Địch</p>
+                                <div class="text-warning">⭐ 4.8</div>
+                                <small class="text-muted">📍 TP. Hồ Chí Minh</small>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            
+                <!-- Sản phẩm 6 -->
+                <div class="col-md-4 mb-3">
+                    <a href="BaiTapLon_ThietKeWebNhom6-main/huong-dan-dat-hang.html"
+                        class="text-dark text-decoration-none">
+                        <div class="card h-100 card-hover">
+                            <img src="picture/clothes/vn-11134207-7r98o-llxdrb26g6hr4f.webp" alt="Tất 6"
+                                class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="title">Cà vạt nơ cổ đen học sinh đi làm đám cưới</h5>
+                                <p class="card-text text-danger font-weight-bold">₫19.000</p>
+                                <p class="badge badge-success">Rẻ Vô Địch</p>
+                                <div class="text-warning">⭐ 4.9</div>
+                                <small class="text-muted">📍 TP. Hải Dương</small>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            
+                <!-- Sản phẩm 7 -->
+                <div class="col-md-4 mb-3">
+                    <a href="BaiTapLon_ThietKeWebNhom6-main/huong-dan-dat-hang.html"
+                        class="text-dark text-decoration-none">
+                        <div class="card h-100 card-hover">
+                            <img src="picture/clothes/cn-11134207-7r98o-lkuqappwqen21f.webp" alt="Tất 7"
+                                class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="title">Cà Vạt Lụa Sọc Ca Rô Thời Trang Cho Nam Nữ</h5>
+                                <p class="card-text text-danger font-weight-bold">₫69.000</p>
+                                <p class="badge badge-success">Rẻ Vô Địch</p>
+                                <div class="text-warning">⭐ 4.9</div>
+                                <small class="text-muted">📍 TP. Hà Nội</small>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+          
+                <!-- Sản phẩm 8 -->
+                <div class="col-md-4 mb-3">
+                    <a href="BaiTapLon_ThietKeWebNhom6-main/huong-dan-dat-hang.html"
+                        class="text-dark text-decoration-none">
+                        <div class="card h-100 card-hover">
+                            <img src="picture/clothes/a178d10682cb8092ac916fa7718eb8c6.webp" alt="anh 8"
+                                class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="title">Cà vạt học sinh KING thắt sẵn và tự thắt công sở</h5>
+                                <p class="card-text text-danger font-weight-bold">₫40.000</p>
+                                <p class="badge badge-success">Rẻ Vô Địch</p>
+                                <div class="text-warning">⭐ 4.9</div>
+                                <small class="text-muted">📍 TP. HCM</small>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+           
+                <!-- Sản phẩm 9 -->
+                <div class="col-md-4 mb-3">
+                    <a href="BaiTapLon_ThietKeWebNhom6-main/huong-dan-dat-hang.html"
+                        class="text-dark text-decoration-none">
+                        <div class="card h-100 card-hover">
+                            <img src="picture\clothes\sg-11134201-7rbme-lnvrb2ozjbatfa.webp" alt="anh 9"
+                                class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="title">Cà Vạt Kẻ Sọc Caro Nâu Phong Cách Nhật Bản Cho Nam Nữ</h5>
+                                <p class="card-text text-danger font-weight-bold">₫15.200</p>
+                                <p class="badge badge-success">Rẻ Vô Địch</p>
+                                <div class="text-warning">⭐ 5.0</div>
+                                <small class="text-muted">📍 TP. Hà nội</small>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <a href="#" class="text-dark text-decoration-none">
+                        <div class="card h-100 card-hover">
+                            <img src="picture/clothes/vn-11134207-7ra0g-m7222kxgqr88a5.webp" alt="Tất 12"
+                                class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="title">Cà Vạt Đồng Phục Học Sinh Và Nơ Đồng Phục Kẻ Sọc</h5>
+                                <p class="card-text text-danger font-weight-bold">₫69.000</p>
+                                <p class="badge badge-success">Rẻ Vô Địch</p>
+                                <div class="text-warning">⭐ 4.9</div>
+                                <small class="text-muted">📍 TP. Hà Nội</small>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Sản phẩm 10 -->
+                <div class="col-md-4 mb-3">
+                    <a href="#" class="text-dark text-decoration-none">
+                        <div class="card h-100 card-hover">
+                            <img src="picture/clothes/vn-11134207-7qukw-lfhvve29u3xx24@resize_w900_nl.webp" alt="anh 10"
+                                class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="title">Cà Vạt Nhiều Màu Sắc Phong Cách Học Sinh Nữ Hàn Quốc</h5>
+                                <p class="card-text text-danger font-weight-bold">₫30.000</p>
+                                <p class="badge badge-success">Rẻ Vô Địch</p>
+                                <div class="text-warning">⭐ 4.8</div>
+                                <small class="text-muted">📍 TP. Hà Nội</small>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Sản phẩm 12 -->
+                <div class="col-md-4 mb-3">
+                    <a href="#" class="text-dark text-decoration-none">
+                        <div class="card h-100 card-hover">
+                            <img src="picture/clothes/1e3cb906ae9dd777b6d49aab55c5b498.webp" alt="Tất 11"
+                                class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="title">Cà vạt học sinh nam nữ thắt sẵn 6x26cm [chuyên sỉ]</h5>
+                                <p class="card-text text-danger font-weight-bold">₫12.000</p>
+                                <p class="badge badge-success">Rẻ Vô Địch</p>
+                                <div class="text-warning">⭐ 5.0</div>
+                                <small class="text-muted">📍 TP. Hà Nội</small>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            
+             
+                </div>
+                </div>
+                <div class="col-3">
+                    <h3> SẢN PHẨM HÓT</h3>
+                    <div class="Muc">
+                        <img src="picture/clothes/1e3cb906ae9dd777b6d49aab55c5b498.webp" alt="ảnh1">
+                        <p> Cà vạt học sinh nam nữ thắt sẵn 6x26cm [chuyên sỉ]<br>₫12.000</br></p>
+                    </div>
+                    <div class="Muc">
+                        <img src="picture/clothes/vn-11134207-7ra0g-m7222kxgqr88a5.webp" alt="ảnh2">
+                        <p> Cà Vạt Đồng Phục Học Sinh Và Nơ Đồng Phục Kẻ Sọc<br>₫69.000</br></p>
+
+                    </div>
+                    <div class="Muc">
+                        <img src="picture\clothes\sg-11134201-7rbme-lnvrb2ozjbatfa.webp" alt="Tất 1">
+                        <p> Cà Vạt Kẻ Sọc Caro Nâu Phong Cách Nhật Bản Cho Nam Nữ<br>₫15.200</br></p>
+
+                    </div>
+                    <div class="Muc">
+                        <img src="picture/clothes/vn-11134207-7qukw-lfi20m7b8qro92@resize_w900_nl.webp" alt="ảnh3">
+                        <p> Cà Vạt Đồng Phục Họa Tiết Sọc Caro...<br>₫29.400</br></p>
+
+                    </div>
+                    <div>
+                        <h3>Nơi Bán</h3>
+                        <div>
+                            <input type="checkbox" checked> Hà Nội<br>
+                            <input type="checkbox"> TP. Hồ Chí Minh<br>
+                            <input type="checkbox"> Thái Nguyên<br>
+                            <input type="checkbox"> Vĩnh Phúc<br>
+                            <input type="checkbox"> Hải Phòng<br>
+                            <input type="checkbox"> Đồng Nai<br>
+                            <input type="checkbox"> Hưng Yên<br>
+                            <input type="checkbox"> Bình Dương<br>
+                            <input type="checkbox"> Bắc Ninh<br>
+                            <input type="checkbox"> Đà Nẵng<br>
+                            <input type="checkbox"> Quảng Ninh<br>
+                            <input type="checkbox"> Hải Dương<br>
+                            <input type="checkbox"> Nam Định<br>
+                            <input type="checkbox"> Cần Thơ<br>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </main>
+
+    <div class="top_footer">
+        <div class="more_info">
+            <h3><img src="picture/icon/plane_icon_darker.png" style="width: 25px;"> Thanh toán & giao hàng</h3>
+            <p>Miễn phí vận chuyển cho đơn hàng trên 200.000 VNĐ
+                <br>- Giao hàng và thu tiền tận nơi
+                <br>- Chuyển khoản và giao hàng
+                <br>- Mua trực tiếp tại shop
+            </p>
+        </div>
+
+        <div class="more_info">
+            <h3><img src="picture/icon/clock_icon_darker.png" style="width: 25px;"> Giờ mở cửa</h3>
+            <p><b>7:00 - 23:00</b>
+                <br>- Từ thứ Hai đến thứ Sáu
+                <br><b>7:00 - 18:00</b> vào thứ Bảy
+                <br>- Áp dụng cho mọi chi nhánh của 123CLOTHES
+            </p>
+        </div>
+
+        <div class="more_info">
+            <h3><img src="picture/icon/headphone_darker.png" style="width: 25px;"> Đội ngũ hỗ trợ nhiệt tình</h3>
+            <p>Liên hệ ngay nếu bạn có thắc mắc
+                <br>- 0123.456.789
+            </p>
+        </div>
+
+    </div>
+    </div>
+
+    <div class="lower_footer">
+        <div class="row">
+            <p><img class="logo" src="picture/ShopLogoDark.png" style="min-width: 170px;"></p>
+            <ul class="list_footer">
+                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="#">Liên hệ</a></li>
+                <li><a href="tuyen-dung.html">Tuyển dụng</a></li>
+                <li><a href="#">Tin tức</a></li>
+            </ul>
+            <ul class="list_info">
+                <li><img src="picture/icon/email_icon.png" style="width: 15px; margin-right: 10px;">Email:<a
+                        href="mailto:placeholder@mail.com">placeholder@mail.com</a></li>
+                <li><img src="picture/icon/phone.png" style="width: 15px; margin-right: 10px;">Hotline:<a
+                        href="tel:0123456789">0123.456.789</a></li>
+            </ul>
+            <p>Đăng kí để có cơ hội nhận ưu đãi khủng lên tới 80%
+                <br><input inputmode="email" placeholder="Email của bạn"><button>Đăng kí</button>
+            </p>
+        </div>
+
+        <div class="row">
+            <h3>Hỗ trợ khách hàng</h3>
+            <ul class="list_footer">
+                <li><a href="huong-dan-dat-hang.html">Hướng dẫn đặt hàng</a></li>
+                <li><a href="huong-dan-chon-size.html">Hướng dẫn chọn size</a></li>
+                <li><a href="#">Câu hỏi thường gặp</a></li>
+                <li><a href="#">Chính sách thanh toán - giao hàng</a></li>
+                <li><a href="chinh-sach-doi-hang.html">Chính sách đổi hàng</a></li>
+            </ul>
+        </div>
+
+        <div class="row">
+            <h3>Hệ thống cửa hàng</h3>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18309978.621253494!2d19.159568758408525!3d-73.7337626470779!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb165fce02a3d7ef5%3A0x142d0eddfdb57ff4!2zU291dGggUG9sZSwgQ2jDonUgTmFtIEPhu7Fj!5e0!3m2!1svi!2s!4v1744974810190!5m2!1svi!2s"
+                width="250" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <div class="row">
+            <h3>Kết nối với chúng tôi</h3>
+            <iframe
+                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FLienquanMobile&tabs=timeline&width=250&height=250&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                width="250" height="250" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                allowfullscreen="true"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+            <div style="display: flex; justify-content: center;">
+                <a href="https://youtu.be/dQw4w9WgXcQ?si=rMVVerkm2dpWlwAl"><img
+                        src="picture/icon/facebook_icon.png"></a>
+                <a href="https://youtu.be/dQw4w9WgXcQ?si=rMVVerkm2dpWlwAl"><img src="picture/icon/youtube_icon.png"></a>
+                <a href="https://youtu.be/dQw4w9WgXcQ?si=rMVVerkm2dpWlwAl"><img
+                        src="picture/icon/instagram_icon.png"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="floating-menu">
+        <button class="main-btn" id="toggleMenu">
+            <img src="picture/icon/help-desk.png" alt="Main Icon">
+            <span class="ripple-effect"></span>
+        </button>
+
+        <div class="menu-items" id="menuItems">
+            <a href="tel:0123456789" class="menu-icon">
+                <img src="picture/icon/phone.png" alt="Call">
+            </a>
+            <a href="https://zalo.me" class="menu-icon">
+                <img src="picture/icon/icons8-zalo-96.png" alt="Zalo">
+            </a>
+            <a href="https://m.me/TranTuanDat" class="menu-icon">
+                <img src="picture/icon/messenger.png" alt="Messenger">
+            </a>
+            <button class="menu-icon close-btn" id="closeMenu">
+                <img src="picture/icon/close.png" alt="Close">
+            </button>
+        </div>
+    </div>
+
+    <div class="back_to_top" id="backToTop">
+        <span class="arrow-up"></span>
+    </div>
+
+    <footer>
+        <div class="main_footer">
+            <div>
+                <p id="copyright">Copyright 2025 - By <b>123CLOTHES</b> Design Team</p>
+                <p id="owner_info">
+                    Chủ quán: Ông Nguyễn Văn A
+                    <br>SĐT cá nhân: 0123456789
+                    <br>Số ĐKKD: 12A3456789 do UBND Phường Phương Liệt - Tp.Hà Nội cấp ngày 18/04/2025
+                </p>
+                <p id="ownership">Nhãn hiệu "123CLOTHES" đã được đăng kí độc quyền tại Cục sở hữu trí tuệ Việt Nam</p>
+            </div>
+            <p><img class="logo" src="picture/ShopLogoDark.png" style="min-width: 170px;"></p>
+
+        </div>
+    </footer>
+    <script src="javascript/dropdown.js"></script>
+    <!-- Loader hiệu ứng 4 chấm quay -->
+    <div id="page-loader" class="loader-wrapper">
+        <div class="loader">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+    </div>
+</body>
+
+</html>

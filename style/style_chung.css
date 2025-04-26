@@ -1,5 +1,4 @@
-body
-{
+body {
     font-family: 'Roboto Condensed', 'Arial', 'Verdana', 'Geneva', 'Tahoma', sans-serif;
     margin: 0;
     padding: 0;
@@ -7,252 +6,427 @@ body
 
 /* HEADER */
 
-/* Top hedaer */
-.top_header
-{
-    background-color: #292929;
-    color: lightgray;
+/* Top Header */
+.top_header {
+    background: linear-gradient(90deg, #090909, #0e0d0d);
+    color: #dcdcdc;
     display: flex;
     align-items: center;
-    font-size: small;
-    text-transform: uppercase;
     justify-content: space-between;
-    padding: 10px;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 14px 32px;
+    letter-spacing: 1.2px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.top_header a
-{
-    color: lightgray;
+.top_header a {
+    color: #bbbbbb;
     text-decoration: none;
-    margin-right: 15px;
-    padding-right: 15px;
-    border-right: 2px gray solid;
+    margin-right: 24px;
+    padding-right: 24px;
+    border-right: 1px solid #444;
+    transition: all 0.3s ease;
 }
 
-/* Main header */
-.main_header
-{
+.top_header a:last-child {
+    border-right: none;
+}
+
+.top_header a:hover {
+    color: #ff0d00;
+    text-shadow: 0 0 5px #00ffff88;
+}
+
+/* Main Header */
+.main_header {
     position: sticky;
     top: 0;
-    z-index: 1000;
-    background-color: whitesmoke;
-    font-size: 15px;
+    z-index: 100;
+    background-color: #ffffff00;
+    /* background-color: whitesmoke; */
+    backdrop-filter: blur(100px);
+    font-size: 14px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     text-transform: uppercase;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-bottom: 2px lightgray solid;
+    padding: 10px 15px;
+    border-bottom: 1px solid #fbfbfb00;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.main_header a
-{
-    color: black;
+.main_header a {
+    color: #8b2d2d;
     text-decoration: none;
-    margin-right: 22px;
+    margin-right: 18px;
+    font-weight: 500;
+    transition: all 0.3s ease;
 }
 
-.main_header button
-{
-    margin-left: 10px;
-    margin-right: 10px;
-    border: black 1px solid;
+.main_header a:hover {
+    color: #fc0404;
+    text-shadow: 0 0 3px #fc0505aa;
 }
 
-#search_button
-{
-    margin-left: 10px;
-    margin-right: 10px;
-    border: black 1px solid;
-    padding-top: 1px;
-    padding-left: 5px;
-    padding-right: 5px;
+.main_header button,
+#search_button {
+    margin: 0 5px;
+    background-color: #ffffff00;
+    border: 1px solid #aaa;
+    padding: 4px 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: all 0.3s ease;
+    font-weight: 500;
 }
 
-#search_button:hover
-{
-    border: red 1px solid;
+.main_header button:hover,
+#search_button:hover {
+    border-color: #ff5252;
+    color: #ff5252;
+    box-shadow: 0 0 8px #ff525255;
+    transform: translateY(-2px);
 }
 
-button:hover
-{
-    border: red 1px solid;
-}
-
-.button_class
-{
+.button_class {
     display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-#menu_button
-{
+#menu_button {
     display: none;
 }
 
 
 
+
 /* Logo */
-.logo
-{
-    width: 100px;
+.logo {
+    width: 80px; /* Kích thước vừa phải */
+    height: auto; /* Giữ tỷ lệ cho logo */
+    transition: all 0.3s ease; /* Hiệu ứng chuyển đổi mượt mà khi hover */
+    border-radius: 8px; /* Bo góc logo */
+    background: rgba(255, 255, 255, 0.1); /* Nền trong suốt, với màu trắng nhẹ */
+    backdrop-filter: blur(8px); /* Hiệu ứng làm mờ nền phía sau logo (kiểu kính) */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Bóng đổ tạo chiều sâu */
+    padding: 8px; /* Khoảng cách xung quanh logo */
+    border: 1px solid rgba(255, 255, 255, 0); /* Viền mờ cho logo */
+}
+
+/* Hiệu ứng hover */
+.logo:hover {
+    transform: scale(1.05); /* Phóng to logo khi hover */
+    box-shadow: 0 8px 25px rgba(255, 77, 77, 0.5); /* Bóng đổ đậm và sáng hơn khi hover */
+    filter: brightness(1.2); /* Làm sáng logo khi hover */
+}
+
+/* Nếu có hình ảnh bên trong logo */
+.logo img {
+    border-radius: 10%; /* Bo góc hình ảnh */
+    transition: all 0.3s ease; /* Hiệu ứng mượt mà khi hover */
+}
+
+/* Hiệu ứng hover trên hình ảnh logo */
+.logo img:hover {
+    transform: scale(1.05); /* Phóng to hình ảnh logo khi hover */
+    filter: brightness(1.1); /* Làm sáng hình ảnh khi hover */
 }
 
 
-/* Footer */
 
-/* Top footer */
-.top_footer
-{
-    background-color: whitesmoke;
-    font-size: small;
-    display: flex;
-    justify-content: space-between;
-    padding-left: 25px;
-    padding-right: 25px
-}
-
-.top_footer h3
-{
-    text-transform: uppercase;
-    border-bottom: 2px darkgray solid;
-}
-.top_footer p
-{
-    line-height: 18px;
-}
-
-/* Lower footer */
-.lower_footer
-{
-    background-color: #262525;
-    font-size:medium;
-    color: lightgray;
+/* ==== TOP FOOTER: PROMAX ELEGANCE ==== */
+.top_footer {
+    background: linear-gradient(135deg, #ffffff, #f7f7f7);
+    font-size: 14px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 5px 10px;
-    border-bottom: 2px lightgray solid;
-    font-size: 15px;
+    padding: 60px 80px;
+    color: #222;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #eee;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.02) inset;
+    position: relative;
+    z-index: 1;
 }
+
+/* Elegant headline */
+.top_footer h3 {
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    margin-bottom: 16px;
+    position: relative;
+    color: #101010;
+    background: linear-gradient(to right, #111, #666);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Neon underline effect */
+.top_footer h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #ff4d4d, #00ffe7);
+    border-radius: 50px;
+    box-shadow: 0 0 12px #00ffe799;
+}
+
+/* Paragraph styling */
+.top_footer p {
+    line-height: 1.8;
+    max-width: 340px;
+    font-size: 14.2px;
+    color: #4b4b4b;
+    transition: all 0.3s ease;
+}
+
+.top_footer p:hover {
+    color: #000;
+    transform: translateX(4px);
+    transition: 0.3s ease;
+}
+
+/* Optional fade-in on load */
+.top_footer {
+    animation: fadeInTopFooter 1s ease-in-out;
+}
+
+@keyframes fadeInTopFooter {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ==== Lower Footer: Dark, Glassy, Premium ==== */
+.lower_footer {
+    background: rgba(21, 21, 21, 0.95);
+    backdrop-filter: blur(8px);
+    color: #cccccc;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 60px 80px;
+    font-family: 'Inter', sans-serif;
+    gap: 40px;
+    position: relative;
+    border-top: 1px solid #fafafa; /* Thêm border đỏ cho phần trên cùng */
+}
+
+.lower_footer p {
+    color: #eee;
+}
+.lower_footer::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #ff4d4d, #e60000);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 77, 77, 0.7); /* Bóng đỏ nhẹ cho hiệu ứng */
+}
+
 .lower_footer .logo {
-    min-width: 170px;
-    align-self: flex-start; /* Căn logo sang trái */
-  }
-.lower_footer button {
-    padding: 8px 16px;
-    background-color: #1abc9c;
-    color: white;
-    border: none;
+    font-size: 26px; /* Tăng kích thước logo */
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: 2px;
+    text-shadow: 0 0 15px #ff4d4d, 0 0 25px #1abc9c;
+    margin-bottom: 20px;
+}
+
+.lower_footer .row {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.lower_footer h3 {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.lower_footer h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 30px;
+    height: 2px;
+    background: #ff4d4d; /* Đổi màu đường viền dưới thành đỏ */
     border-radius: 4px;
-    margin-left: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  .lower_footer button:hover {
-    background-color: #70c7c742;
-  }
-  .list_info {
-    list-style: none;
-    padding: 10px;
-    margin: 13px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .row p{
-    padding: 10px;
-    margin: 13px;
-  }
-.lower_footer h3
-{
-    text-transform: uppercase;
-    color: whitesmoke;
-    text-decoration: underline solid 1px whitesmoke;
 }
 
-.lower_footer .row
-{
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-}
-
-.list_footer
-{
-    list-style-type: ">>";
-}
-
-.lower_footer p
-{
-    line-height: 25px;
-}
-
-.lower_footer .row a
-{
-    color: lightgray;
+.lower_footer a {
+    color: #bbb;
     text-decoration: none;
-    padding: 10px;
-    line-height: 25px;
+    font-size: 14px;
+    transition: all 0.3s ease;
 }
 
-.lower_footer .row a:hover
-{
-    color: red;
+.lower_footer a:hover {
+    color: #ff0000;
+    text-shadow: 0 0 8px #ff0000, 0 0 20px #ff0000; /* Thêm hiệu ứng sáng đỏ khi hover */
 }
 
-.lower_footer input
-{
-    width: 200px;
-    height: 30px;
-    color: whitesmoke;
-    background-color: #292929;
-    border: 1px solid gray;
+.lower_footer input {
+    width: 240px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid #444;
+    color: #fff;
+    padding: 0 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    backdrop-filter: blur(4px);
+    transition: all 0.3s ease;
 }
 
-.lower_footer button
-{
-    height: 35px;
-    color: whitesmoke;
+.lower_footer input::placeholder {
+    color: #aaa;
+}
+
+.lower_footer input:focus {
+    border-color: #f9f9f9; /* Chỉnh màu viền khi focus thành đỏ */
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.lower_footer button {
+    height: 42px;
+    padding: 0 24px;
+    color: #fff;
     text-transform: uppercase;
-    background-color: #b21313;
-    border: 1px solid #b21313;
+    background: linear-gradient(135deg, #ff4d4d, #ff7777);
+    border: none;
+    border-radius: 6px;
+    margin-left: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 10px rgba(255, 77, 77, 0.3);
+    transition: all 0.3s ease;
 }
 
-.lower_footer button:hover
-{
-    border: 1px solid #b21313;
+.lower_footer button:hover {
+    background: linear-gradient(135deg, #ff0000, #e00000); /* Màu đỏ đậm khi hover */
+    color: #111;
+    transform: translateY(-2px);
+    box-shadow: 0 0 12px rgba(255, 0, 0, 0.5); /* Bóng đổ mạnh hơn khi hover */
+}
+
+.list_footer,
+.list_info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list_footer li::before {
+    content: '⤷';
+    color: #f00a0a; /* Màu biểu tượng "⤷" đỏ */
+    margin-right: 10px;
 }
 
 
-/* Main footer */
 
-.main_footer
-{
-    background-color: #1f1f1f;
-    color: lightgray;
-    padding: 40px;
-    line-height: 25px;
+/* ==== MAIN FOOTER: PRO MAX STYLE ==== */
+.main_footer {
+    background: rgba(10, 10, 10, 0.92);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-top: 1px solid rgba(35, 34, 34, 0.026);
+    color: #e0e0e0;
+    padding: 60px 100px;
+    font-family: 'Segoe UI', 'Inter', sans-serif;
     font-size: 15px;
+    line-height: 1.8;
     display: flex;
     flex-wrap: wrap;
-    justify-content:space-between;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid #ffffff; /* Thêm viền đỏ phía dưới footer */
 }
 
-.main_footer p
-{
-    padding: 2px;
+/* Decorative light border line */
+.main_footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 80%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ff4d4d, transparent); /* Sử dụng gradient màu đỏ */
+    animation: glowLine 4s ease-in-out infinite;
 }
 
-#copyright, #owner_info
-{
-    border-bottom: 1px solid gray;
+@keyframes glowLine {
+    0% { transform: scaleX(0); opacity: 0; }
+    50% { transform: scaleX(1); opacity: 1; }
+    100% { transform: scaleX(0); opacity: 0; }
 }
 
-#ownership
-{
-    color: red;
+/* Footer content */
+.main_footer p {
+    margin: 0;
+    padding: 6px 0;
+    font-size: 14px;
+    color: #c7c7c7;
+    max-width: 600px;
+    transition: all 0.3s ease;
 }
+
+/* Border sections */
+#copyright,
+#owner_info {
+    width: 100%;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+/* Highlighted ownership info */
+#ownership {
+    color: #ff4d4d; /* Thay đổi màu đỏ cho thông tin sở hữu */
+    font-weight: 600;
+    text-shadow: 0 0 6px #ff4d4d99; /* Bóng đỏ nhẹ cho chữ sở hữu */
+}
+
+/* Animated floating effect */
+.main_footer {
+    animation: fadeInSlide 1.2s ease-out;
+}
+
+@keyframes fadeInSlide {
+    0% { opacity: 0; transform: translateY(40px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Optional hover animation on text */
+.main_footer p:hover {
+    color: #ff4d4d; /* Màu chữ khi hover là đỏ */
+    text-shadow: 0 0 8px #ff4d4d; /* Tạo hiệu ứng bóng đỏ khi hover */
+    transition: all 0.3s ease;
+}
+
 
 
 /* Back to top */
@@ -299,10 +473,12 @@ a:hover
 /* Dropdown menu */
 .dropdown_content
 {
+    
     display: none;
     position: sticky;
     background-color: whitesmoke;
-    top: 100px;
+    border-top: 1px solid lightgray;
+    top: 122px;
     height: 100%;
     z-index: 100;
     padding: 10px;
@@ -391,14 +567,15 @@ a:hover
 /* Responsive */
 @media screen and (max-width: 768px)
 {
+    .main_header
+    {
+        background-color: whitesmoke;
+    }
     .top_footer
     {
         flex-direction: column;
     }
-}
 
-@media screen and (max-width: 756px)
-{
     .top_header, #cart_button, .main_header nav
     {
         display: none;
@@ -408,6 +585,11 @@ a:hover
         display: block;
     }
 }
+
+/* @media screen and (max-width: 756px)
+{
+    
+} */
 /* Loader Wrapper */
 .loader-wrapper {
     position: fixed;
@@ -536,7 +718,24 @@ a:hover
     width: 30px;
     height: 30px;
   }
+  .icon-float {
+    position: absolute;
+    font-size: 40px;
+    pointer-events: none;
+    animation: floatUp 1s ease-out forwards;
+    z-index: 9999;
+  }
   
+  @keyframes floatUp {
+    0% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-80px) scale(1.5);
+    }
+  }
   
 
 

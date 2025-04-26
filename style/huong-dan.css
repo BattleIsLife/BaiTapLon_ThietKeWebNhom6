@@ -1,0 +1,108 @@
+.DanhsachSanPham{       
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 10px;
+     margin-bottom: 10px;
+      }
+      .Danhsach{
+        max-width: 300px;
+      }
+      .Danhsach img{
+        width: 100px;
+  height: 100px;
+      }
+.tong{
+  display:flex;
+  gap:25px;
+ 
+}
+.Muc{
+  display: flex;
+  margin-top: 10px;
+}
+.container{
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 15px;
+}
+
+.product-card img {
+max-width: 100%;
+height: auto;
+display: block; 
+}
+
+.product-card{
+height: 580px;
+border: 1px solid #ddd;
+border-radius: 10px;
+max-width: 300px; /* hoặc giá trị tùy ý */
+width: 100%;
+}
+.gia{
+font-size: 20px;
+color: #f00;
+}
+.product-card:hover {
+transform: translateY(-5px);
+}
+.tag {
+background-color: #ffeb3b;
+color: #000; /* chữ đen rõ ràng */
+font-size: 13px;
+padding: 2px 8px;
+border-radius: 4px;
+display: inline-block;
+}
+.sao {
+color: #FFD700;
+font-size: 16px;
+margin-top: 5px;
+}
+.product-link {
+  text-decoration: none;
+ color:inherit;
+}
+.Danhsach h3{
+  font-weight: 50px;
+}
+.Danhmuc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+ .session1 ul {
+  display:flex;
+  gap: 10px;
+  list-style: none;
+  list-style: none;
+}
+.session1 ul li{
+  position:relative;
+ 
+}
+.session1 ul li ul{
+  position:absolute;
+  top:100%;
+  display: none;
+  width: 95px;
+  color:black;
+}
+.session1 ul li ul{
+   display: none;
+}
+.session1 ul li ul li:hover{
+  color:red;
+  padding-left: 3px;
+}
+.session1 ul li:hover ul{
+  display: block;
+  background-color: #fff;
+  border: 1px solid #fff;
+  padding: 10px;
+  border-radius: 5px;
+  color:black;
+
+}
+
+

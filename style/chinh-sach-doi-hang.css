@@ -1,66 +1,85 @@
 main {
-    max-width: 1100px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    border-radius: 10px;
-  }
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 40px;
+  background: linear-gradient(145deg, #ffffff, #f9f9f9);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
 
-  h1 {
-    text-align: center;
-    color: #2c3e50;
-    margin-bottom: 30px;
-  }
+h1 {
+  text-align: center;
+  color: #1e293b;
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
 
-  section {
-    margin-top: 40px;
-  }
+section {
+  margin-top: 50px;
+}
 
-  .main h3 {
-    color: #1abc9c;
-    margin-bottom: 15px;
-    border-left: 6px solid #1abc9c;
-    padding-left: 10px;
-  }
+.main h3 {
+  color: #16a085;
+  font-size: 1.6em;
+  margin-bottom: 20px;
+  padding-left: 16px;
+  border-left: 5px solid #16a085;
+  font-weight: 600;
+}
 
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-  }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
 
-  thead {
-    background-color: #f1f1f1;
-    color: #333;
-  }
+thead {
+  background: #ecf0f1;
+  color: #2c3e50;
+  text-transform: uppercase;
+  font-size: 0.95em;
+}
 
+th, td {
+  padding: 16px 20px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+tr:hover {
+  background-color: #f0f8ff;
+  transition: background-color 0.3s ease;
+}
+
+td[colspan="6"],
+td[colspan="3"] {
+  background-color: #fff8f8;
+  font-style: italic;
+  text-align: center;
+  color: #c0392b;
+  font-weight: 500;
+  font-size: 1.05em;
+}
+
+@media (max-width: 768px) {
   th, td {
-    padding: 14px 16px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-  }
-
-  tr:hover {
-    background-color: #f9f9f9;
-  }
-
-  td[colspan="6"], td[colspan="3"] {
-    background-color: #fcfcfc;
-    font-style: italic;
-    text-align: center;
-    color: #f00909;
-  }
-
-  @media (max-width: 768px) {
-    th, td {
       font-size: 14px;
-      padding: 10px;
-    }
-
-    h2, h3 {
-      font-size: 18px;
-    }
+      padding: 12px;
   }
+
+  h2, h3 {
+      font-size: 18px;
+  }
+
+  main {
+      padding: 24px;
+      margin: 30px 16px;
+  }
+}

@@ -1,0 +1,112 @@
+/* Dùng cho bộ sưu tập, danh mục sản phẩm,... */
+.collection-title
+{
+    font-size: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 1px dashed gray;
+    padding-bottom: 5px;
+}
+
+.product_info
+{
+    background-color: rgb(230, 230, 230);
+}
+
+.list_product .product_info
+{
+    background-color: rgb(230, 230, 230);
+    width: 175px;
+}
+
+
+
+.checkpoint
+{
+    background-color: rgb(230, 230, 230);
+    padding: 3px;
+    text-align: center;
+    font-size: large;
+}
+
+.checkpoint a
+{
+    color: rgb(66, 66, 66);
+    text-decoration: none;
+}
+
+main
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: relative;
+}
+
+.hot-product
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: sticky;
+    z-index: 10;
+    top: auto;
+    margin-left: 10px;
+    margin-right: 30px;
+}
+
+.hot_title
+{
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: larger;
+    border-bottom: 1px solid lightgray;
+    line-height: 2em;
+}
+
+.hot-product .product_info
+{
+    background-color: #fff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 0;
+    height: max-content;
+    width: max-content;
+    display: flex;
+    font-size: small;
+}
+
+.hot-product .product_info .product_img
+{
+    width: 100px;
+    height: auto;
+    background-color: rgb(230, 230, 230);;
+    padding: 10px;
+    border: 2px solid lightgray;
+    border-radius: 0;
+}
+
+.hot-product .name_and_price
+{
+    padding-left: 15px;
+}
+
+.hot-product .name_and_price p
+{
+    text-align: left;
+    font-size: larger;
+}
+
+@media (max-width: 768px) {
+    main
+    {
+        flex-direction: column;
+    }
+    
+    .hot-product .product_info
+    {
+        width: auto;
+    }
+}
