@@ -96,3 +96,12 @@
     border: 2px solid red;
     cursor: pointer;
   }
+/* Bo tròn hình ảnh sản phẩm gợi ý */
+.col-md-4 img {
+    border-radius: 10px;
+  }
+  
+  /* Bo tròn phần khung sản phẩm gợi ý */
+  .col-md-4 .border {
+    border-radius: 10px;
+  }
