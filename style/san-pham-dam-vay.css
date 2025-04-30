@@ -92,4 +92,7 @@
 .thumbnail:hover {
     border: 2px solid #e91e63;
 }
-
+.small-img:hover {
+    border: 2px solid red;
+    cursor: pointer;
+  }
