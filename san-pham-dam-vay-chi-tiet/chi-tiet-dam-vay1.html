@@ -11,7 +11,6 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="../style/style_chung.css">
   <link rel="stylesheet" href="../style/san-pham-dam-vay.css">
-  <link rel="stylesheet" href="../style/chi-tiet-sp.css">
 </head>
 <body>
 
@@ -115,9 +114,9 @@
         <img class="main-image" src="../picture/dam-vay-picture/dam1(1).png" alt="Đầm hoa vintage">
     </div>
     <div class="thumbnail-container">
-        <img class="thumbnail" src="../picture/dam-vay-picture/dam1(1).png" alt="1">
-        <img class="thumbnail" src="../picture/dam-vay-picture/dam1(2).png" alt="2">
-        <img class="thumbnail" src="../picture/dam-vay-picture/dam1(3).png" alt="3">
+        <img class="thumbnail" src="../picture/dam-vay-picture/dam1(2).png" width="80">
+        <img class="thumbnail" src="../picture/dam-vay-picture/dam1(3).png" width="80">
+        <img class="thumbnail" src="../picture/dam-vay-picture/dam1(4).png" width="80">
     </div>
 
       <!-- Thông tin sản phẩm -->
@@ -319,16 +318,17 @@
   <!-- Script dropdown hoặc thêm giỏ hàng -->
   <script src="javascript/dropdown.js"></script>
   <script>
-document.querySelectorAll('.product-card').forEach(card => {
-    const mainImage = card.querySelector('.main-image');
-    const thumbnails = card.querySelectorAll('.thumbnail');
-
-    thumbnails.forEach(thumb => {
-        thumb.addEventListener('click', () => {
-            mainImage.src = thumb.src;
+    document.querySelectorAll('.row').forEach(card => {
+        const mainImage = card.querySelector('.main-image');
+        const thumbnails = card.querySelectorAll('.thumbnail');
+    
+        thumbnails.forEach(thumb => {
+            thumb.addEventListener('click', () => {
+                mainImage.src = thumb.src;
+            });
         });
     });
-});
-</script>
+    </script>
+    
 </body>
 </html>
