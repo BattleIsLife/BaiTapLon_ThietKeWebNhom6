@@ -108,7 +108,9 @@
 
   <!-- MAIN NỘI DUNG CHI TIẾT SẢN PHẨM -->
   <main class="container mt-5 mb-5">
+    <div class ="row">
     <div class="col-md-6">
+      <div class ="product-container">
       <!-- Hình ảnh sản phẩm -->
       <div class="image-wrapper">
         <img class="main-image" src="../picture/dam-vay-picture/dam1(1).png" alt="Đầm hoa vintage">
@@ -118,7 +120,8 @@
         <img class="thumbnail" src="../picture/dam-vay-picture/dam1(3).png" style="width: 80px; height: auto; cursor: pointer;">
         <img class="thumbnail" src="../picture/dam-vay-picture/dam1(4).png" style="width: 80px; height: auto; cursor: pointer;">
     </div>
-
+    </div>
+  </div>
       <!-- Thông tin sản phẩm -->
       <div class="col-md-6">
         <h2>Đầm váy nữ dáng xòe thời trang Hè 2025</h2>
@@ -318,7 +321,7 @@
   <!-- Script dropdown hoặc thêm giỏ hàng -->
   <script src="javascript/dropdown.js"></script>
   <script>
-    document.querySelectorAll('.row').forEach(card => {
+    document.querySelectorAll('.product-container').forEach(card => {
         const mainImage = card.querySelector('.main-image');
         const thumbnails = card.querySelectorAll('.thumbnail');
     
