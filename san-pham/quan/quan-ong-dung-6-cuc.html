@@ -105,89 +105,109 @@
     <a href="#">Túi xách</a>
 </div>
 
-
-  <!-- MAIN NỘI DUNG CHI TIẾT SẢN PHẨM -->
-  <main class="container mt-5 mb-5">
-    <div class ="row">
-    <div class="col-md-6">
-      <div class ="product-container">
-      <!-- Hình ảnh sản phẩm -->
-      <div class="image-wrapper">
-        <img class="main-image" src="../../picture/clothes/quan/quan-ong-dung-6-cuc-be.jpeg" alt="Quần ống đứng 6 cúc">
-    </div>
-    <div class="thumbnail-container">
-      <img class="thumbnail" src="../../picture/clothes/quan/quan-ong-dung-6-cuc-be.jpeg" style="width: 80px; height: auto; cursor: pointer;">
-        <img class="thumbnail" src="../../picture/clothes/quan/quan-ong-dung-6-cuc-den.jpeg" style="width: 80px; height: auto; cursor: pointer;">
-        <img class="thumbnail" src="../../picture/clothes/quan/quan-ong-dung-6-cuc-nau.jpg" style="width: 80px; height: auto; cursor: pointer;">
-    </div>
-    </div>
-  </div>
-      <!-- Thông tin sản phẩm -->
-      <div class="col-md-6">
-        <h2>Quần ống đứng 6 cúc</h2>
-        <p>
-          <span class="price-old">525.000đ</span>
-          <span class="price-new">367.500đ</span>
-        </p>
-
-        <!-- Màu sắc -->
-        <div class="mb-3">
-          <label class="font-weight-bold">Màu sắc:</label><br>
-          <button class="btn btn-outline-dark btn-sm mr-2">Đen</button>
-          <button class="btn btn-outline-dark btn-sm mr-2">Be</button>
-          <button class="btn btn-outline-dark btn-sm mr-2">Nâu</button>
-        </div>
-
-        <!-- Kích thước -->
-        <div class="mb-3">
-          <label class="font-weight-bold">Size:</label><br>
-          <button class="btn btn-outline-secondary btn-sm mr-2">S</button>
-          <button class="btn btn-outline-secondary btn-sm mr-2">M</button>
-          <button class="btn btn-outline-secondary btn-sm mr-2">L</button>
-          <button class="btn btn-outline-secondary btn-sm mr-2">XL</button>
-        </div>
-
-        <!-- Số lượng -->
-        <div class="mb-3">
-          <label class="font-weight-bold">Số lượng:</label>
-          <input type="number" class="form-control d-inline-block w-auto" value="1" min="1" max="99">
-        </div>
-
-        <!-- Nút hành động -->
-        <div class="d-flex gap-3 mt-4">
-          <button class="btn btn-warning mr-3"><i class="bi bi-cart-plus"></i> Thêm vào giỏ</button>
-          <button class="btn btn-danger">Mua ngay</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Mô tả sản phẩm -->
-    <div class="mt-5">
-      <h4>Chi tiết sản phẩm</h4>
-      <p>QUẦN ỐNG ĐỨNG 6 CÚC - THANH LỊCH & TÔN DÁNG</p>
-      <ul>
-        <li>Chất liệu: <b>Polyester Weft Stripe cao cấp</b> - mềm mại, thoáng khí, giữ form tốt</li>
-        <li>Màu sắc: <b>Nâu/Đen/Be</b> - dễ dàng phối hợp với nhiều trang phục khác nhau</li>
-        <li>Lý tưởng cho đi làm, gặp gỡ bạn bè, dạo phố cuối tuần</li>
-        <li>Dễ dàng kết hợp với áo blazer, áo sơ mi, áo kiểu để tạo vẻ ngoài thanh lịch</li>
-      </ul>
-    </div>
-
-    <!-- Sản phẩm liên quan -->
-    <div class="mt-5">
-      <h4>Sản phẩm liên quan</h4>
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
-        <div class="col">
-          <div class="card">
-            <img src="../../picture/clothes/quan/quan-dap-li-ao-dai-1.jpg" class="card-img-top" alt="Quần dập li áo dài">
-            <div class="card-body">
-              <h6 class="card-title"><a href="quan-dap-li-ao-dai.html" style="text-decoration: none; color: black;">Quần dập li áo dài</a>
-            </h6>
-              <p class="text-danger font-weight-bold mb-0">625.000đ</p>
+  <main>
+    <!-- MAIN NỘI DUNG CHI TIẾT SẢN PHẨM -->
+    <div class="container mt-4">
+      <div class="row">
+        <!-- ẢNH SẢN PHẨM -->
+        <div class="col-md-5">
+          <div class="border rounded p-3 bg-white">
+            <img id="main-image" src="../../picture/clothes/quan/quan-ong-dung-6-cuc-be.jpeg" class="img-fluid mb-2" alt="Quần ống đứng 6 cúc">
+            <div class="d-flex gap-2">
+              <img src="../../picture/clothes/quan/quan-ong-dung-6-cuc-be.jpeg" class="img-thumbnail small-img" width="80" onclick="changeImage(this)">
+              <img src="../../picture/clothes/quan/quan-ong-dung-6-cuc-den.jpeg" class="img-thumbnail small-img" width="80" onclick="changeImage(this)">
+              <img src="../../picture/clothes/quan/quan-ong-dung-6-cuc-nau.jpg" class="img-thumbnail small-img" width="80" onclick="changeImage(this)">
             </div>
           </div>
         </div>
-        <!-- Thêm nhiều sản phẩm khác nếu muốn -->
+
+        <!-- THÔNG TIN SẢN PHẨM -->
+        <div class="col-md-7">
+          <div class="border rounded p-3 bg-white">
+            <h3>Quần ống đứng 6 cúc</h3>
+            <p class="text-muted">Thương hiệu: <strong>123CLOTHES</strong></p>
+            <p><span class="price-new">367.000 VNĐ</span> 
+              <span class="orginal_price" 
+              style="color: gray;
+              text-decoration: line-through;
+              font-size: small;">525.000 VNĐ</span>
+          </p>
+
+          <div class="mb-3">
+            <label class="font-weight-bold">Màu sắc:</label><br>
+            <button class="btn btn-outline-dark btn-sm mr-2">Đen</button>
+            <button class="btn btn-outline-dark btn-sm mr-2">Be</button>
+            <button class="btn btn-outline-dark btn-sm mr-2">Nâu</button>
+          </div>
+
+            <!-- Chọn size -->
+            <div class="mt-3">
+              <label class="fw-bold">Kích cỡ:</label><br>
+              <div class="btn-group" role="group">
+                <input type="radio" class="btn-check" name="size" id="sizeS" autocomplete="off" checked>
+                <label class="btn btn-outline-secondary" for="sizeS">S</label>
+
+                <input type="radio" class="btn-check" name="size" id="sizeM" autocomplete="off">
+                <label class="btn btn-outline-secondary" for="sizeM">M</label>
+
+                <input type="radio" class="btn-check" name="size" id="sizeL" autocomplete="off">
+                <label class="btn btn-outline-secondary" for="sizeL">L</label>
+
+                <input type="radio" class="btn-check" name="size" id="sizeXL" autocomplete="off">
+                <label class="btn btn-outline-secondary" for="sizeXL">XL</label>
+              </div>
+            </div>
+
+            <!-- Chọn số lượng -->
+            <div class="mt-3">
+              <label class="fw-bold">Số lượng:</label>
+              <div class="input-group" style="width: 120px;">
+                <button class="btn btn-outline-secondary" onclick="updateQty(-1)">-</button>
+                <input type="text" id="qty" class="form-control text-center" value="1" readonly>
+                <button class="btn btn-outline-secondary" onclick="updateQty(1)">+</button>
+              </div>
+            </div>
+
+            <!-- Nút chức năng -->
+            <div class="mt-4 d-flex gap-3">
+              <button class="btn btn-outline-primary px-4">Thêm vào giỏ</button>
+              <button class="btn btn-danger px-4">Mua ngay</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MÔ TẢ & GỢI Ý -->
+      <div class="row mt-5">
+        <div class="col-md-8">
+          <div class="border rounded p-3 bg-white">
+            <h4>Mô tả sản phẩm</h4>
+            <p>QUẦN ỐNG ĐỨNG 6 CÚC - THANH LỊCH & TÔN DÁNG</p>
+            <ul>
+              <li>Chất liệu: <b>Polyester Weft Stripe cao cấp</b> - mềm mại, thoáng khí, giữ form tốt</li>
+              <li>Màu sắc: <b>Nâu/Đen/Be</b> - dễ dàng phối hợp với nhiều trang phục khác nhau</li>
+              <li>Lý tưởng cho đi làm, gặp gỡ bạn bè, dạo phố cuối tuần</li>
+              <li>Dễ dàng kết hợp với áo blazer, áo sơ mi, áo kiểu để tạo vẻ ngoài thanh lịch</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="border rounded p-3 bg-white">
+            <h5>Sản phẩm tương tự</h5>
+            <div class="d-flex gap-2 mb-2">
+              <div><a href="quan-dap-li-ao-dai.html"><img class="logo" src="../../picture/clothes/quan/quan-dap-li-ao-dai-1.jpg" width="60"></a></div>
+              <div>
+                <p class="mb-0">Quần dập li áo dài</p>
+                <small class="price-new">437.500 VNĐ</small> 
+                <small class="orginal_price" 
+                  style="color: gray;
+                  text-decoration: line-through;
+                  font-size: small;">625.000 VNĐ</small>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </main>
@@ -322,16 +342,17 @@
   <!-- Script dropdown hoặc thêm giỏ hàng -->
   <script src="../../javascript/dropdown.js"></script>
   <script>
-    document.querySelectorAll('.product-container').forEach(card => {
-        const mainImage = card.querySelector('.main-image');
-        const thumbnails = card.querySelectorAll('.thumbnail');
-    
-        thumbnails.forEach(thumb => {
-            thumb.addEventListener('click', () => {
-                mainImage.src = thumb.src;
-            });
-        });
-    });
+    function changeImage(img) {
+      document.getElementById("main-image").src = img.src;
+    }
+  
+    function updateQty(change) {
+      const qtyInput = document.getElementById("qty");
+      let current = parseInt(qtyInput.value);
+      if (current + change >= 1) {
+        qtyInput.value = current + change;
+      }
+    }
     </script>
     
 </body>
