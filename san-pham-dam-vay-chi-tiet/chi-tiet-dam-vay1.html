@@ -345,17 +345,46 @@
   <!-- Script dropdown hoặc thêm giỏ hàng -->
   <script src="javascript/dropdown.js"></script>
   <script>
-    function changeImage(img) {
-      document.getElementById("main-image").src = img.src;
+    // Chuyển ảnh chính khi click vào ảnh nhỏ
+    function changeImage(element) {
+      const mainImg = document.getElementById('main-image');
+      mainImg.src = element.src;
     }
-  
+    
+    // Tăng/giảm số lượng sản phẩm
     function updateQty(change) {
-      const qtyInput = document.getElementById("qty");
-      let current = parseInt(qtyInput.value);
-      if (current + change >= 1) {
-        qtyInput.value = current + change;
-      }
+      const qtyInput = document.getElementById('qty');
+      let currentQty = parseInt(qtyInput.value);
+      currentQty += change;
+      if (currentQty < 1) currentQty = 1;
+      qtyInput.value = currentQty;
     }
-  </script>
+    
+    // Nút quay lại đầu trang
+    const backToTopBtn = document.getElementById('backToTop');
+    window.onscroll = function () {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        backToTopBtn.style.display = "block";
+      } else {
+        backToTopBtn.style.display = "none";
+      }
+    };
+    backToTopBtn.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    
+    // Floating menu toggle
+    const toggleMenu = document.getElementById("toggleMenu");
+    const closeMenu = document.getElementById("closeMenu");
+    const menuItems = document.getElementById("menuItems");
+    
+    toggleMenu.addEventListener("click", function () {
+      menuItems.style.display = "flex";
+    });
+    
+    closeMenu.addEventListener("click", function () {
+      menuItems.style.display = "none";
+    });
+    </script>
 </body>
 </html>
