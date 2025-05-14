@@ -6,9 +6,19 @@
         
         <title>123CLOTHES - Quần áo cho mọi nhà</title>
         <link rel="stylesheet" href="style/style_chung.css">
-        <link rel="stylesheet" href="style/thoi-trang-moi-nhat.css">
+        <link rel="stylesheet" href="style/style_index.css">
         <style>
-            
+            .catalog a
+            {
+                color: black;
+                text-decoration: none;
+            }
+
+            .catalog a:hover
+            {
+                color: red;
+                text-decoration: none;
+            }
         </style>
     </head>
     <body>
@@ -31,7 +41,7 @@
             <nav>
                 <a href="thoi-trang-moi-nhat.html">Hàng mới về</a>
 
-                <a href="bo-suu-tap-list.html">Bộ sưu tập</a>
+                <a href="#">Bộ sưu tập</a>
                 
                 <div class="dropdown_link"> 
                     <a href="javascript:void(0);">Áo</a>
@@ -66,8 +76,9 @@
             </nav>
 
             <div class="button_class">
-                 <a href="thoi-trang-moi-nhat.html" id="search_button"><img src="picture/icon/search-icon.png" style="width: 25px;"></a>
-
+                <button id="search_button" onclick="window.location.href='thoi-trang-moi-nhat.html'">
+                    <img src="picture/icon/search-icon.png" style="width: 25px;">
+                  </button>
                 <div class="myCart">
                     <button id="cart_button"><img src="picture/icon/cart-icon.png" style="width: 25px;"></button>
                     <div id="cart_dropdown">
@@ -82,7 +93,7 @@
         <!-- Menu dropdown -->
         <div id="menu_dropdown" class="dropdown_content">
             <a href="thoi-trang-moi-nhat.html">Hàng mới về</a>
-            <a href="bo-suu-tap-list.html">Bộ sưu tập</a>
+            <a href="#">Bộ sưu tập</a>
             <a href="#">Áo nam</a>
             <a href="#">Áo nữ</a>
             <a href="#">Quần nam</a>
@@ -98,171 +109,233 @@
             <a href="#">Túi xách</a>
         </div>
 
+        <!-- Phần chính của web -->
         <main>
-              <div class="catalog">
-                <h2>Hàng mới về</h2>
+            <!-- Catalog sản phẩm -->
+            <div class="catalog">
+                <h2>Chân váy đẹp 2025</h2>
                 <div class="list_product">
                     <!-- Thông tin sản phẩm -->
                     <div class="product_info">
                         <img class="discount" src="picture/discount/30percent_discount.png">
-                        <img class="product_img" src="picture/dam-vay-picture/dam2(1).png">
-                        <p><a href="san-pham-dam-vay-chi-tiet/chi-tiet-dam-vay2.html">Đầm Tiểu Thư Trễ Vai Xoè Tầng Đính Tag Nơ</a></p>
-                        <p><span class="price">299.000 VNĐ</span> 
+                        <img class="product_img" src="picture/clothes/chan-vay/20240719_qhO8UWOulS.jpeg">
+                        <p><a href="chan-vay/chi-tiet-chan-vay1.html">Chân váy pencil cạp bổ</a></p>
+                        <p><span class="price">500.000 VNĐ</span> 
                             <span class="orginal_price" 
                             style="color: gray;
                             text-decoration: line-through;
-                            font-size: small;">400.000 VNĐ</span>
+                            font-size: small;">600.000 VNĐ</span>
                         </p>
                     </div>
 
                     <!-- Thông tin sản phẩm -->
                     <div class="product_info">
                         <img class="discount" src="picture/discount/30percent_discount.png">
-                        <img class="product_img" src="picture/dam-vay-picture/dam1(1).png">
-                        <p><a href="san-pham-dam-vay-chi-tiet/chi-tiet-dam-vay1.html">Đầm Hoa Vintage Dự Tiệc Đỏ Sang Trọng</a></p>
-                        <p><span class="price">399.000 VNĐ</span> 
+                        <img class="product_img" src="picture/clothes/chan-vay/chan-vay2.jpeg">
+                        <p><a href="chan-vay/chi-tiet-chan-vay2.html">Chân váy DL quạt maxi</a></p>
+                        <p><span class="price">450.000 VNĐ</span> 
                             <span class="orginal_price" 
                             style="color: gray;
                             text-decoration: line-through;
-                            font-size: small;">599.000 VNĐ</span>
+                            font-size: small;">680.000 VNĐ</span>
                         </p>
                     </div>
 
                     <!-- Thông tin sản phẩm -->
                     <div class="product_info">
                         <img class="discount" src="picture/discount/30percent_discount.png">
-                        <img class="product_img" src="picture/clothes/quan/quan-tay-sidetab-gan-day-3-soc-form-slimfit-qt065-mau-den-truoc.jpg">
-                        <p><a href="san-pham/quan/quan-tay-side-tab-mau-den-nam.html">Quần Tây Sidetab Gắn Dây 3 Sọc Form Slimfit QT065 Màu Đen</a></p>
-                        <p><span class="price">297.000 VNĐ</span> 
+                        <img class="product_img" src="picture/clothes/chan-vay/20240919_OPqGeSzFrd.jpeg">
+                        <p><a href="chan-vay/chi-tiet-chan-vay1.html">Chân váy pencil cạp bổ</a></p>
+                        <p><span class="price">500.000 VNĐ</span> 
                             <span class="orginal_price" 
                             style="color: gray;
                             text-decoration: line-through;
-                            font-size: small;">425.000 VNĐ</span>
+                            font-size: small;">600.000 VNĐ</span>
                         </p>
                     </div>
 
                     <!-- Thông tin sản phẩm -->
                     <div class="product_info">
                         <img class="discount" src="picture/discount/30percent_discount.png">
-                        <img class="product_img" src="picture/dam-vay-picture/dam3(1).png">
-                        <p><a href="san-pham-dam-vay-chi-tiet/chi-tiet-dam-vay3.html">Set Váy Nữ Gồm Áo Thun Nơ Cổ + Chân Váy Xếp Ly Viền Đen</a></p>
-                        <p><span class="price">99.000 VNĐ</span> 
+                        <img class="product_img" src="picture/clothes/chan-vay/chan-vay-2-1.jpeg">
+                        <p><a href="chan-vay/chi-tiet-chan-vay2.html">Chân váy DL quạt maxi</a></p>
+                        <p><span class="price">450.000 VNĐ</span> 
                             <span class="orginal_price" 
                             style="color: gray;
                             text-decoration: line-through;
-                            font-size: small;">199.000 VNĐ</span>
+                            font-size: small;">680.000 VNĐ</span>
+                        </p>
+                    </div>
+
+                    <!-- Thông tin sản phẩm -->
+                    <div class="product_info">
+                        <img class="discount" src="picture/discount/30percent_discount.png">
+                        <img class="product_img" src="picture/clothes/chan-vay/chan-vay-3.jpeg">
+                        <p><a href="chan-vay/chi-tiet-chan-vay3.html">Chân váy Ariana skirt</a></p>
+                        <p><span class="price">490.000 VNĐ</span> 
+                            <span class="orginal_price" 
+                            style="color: gray;
+                            text-decoration: line-through;
+                            font-size: small;">700.000 VNĐ</span>
+                        </p>
+                    </div>
+
+                    <!-- Thông tin sản phẩm -->
+                    <div class="product_info">
+                        <img class="discount" src="picture/discount/30percent_discount.png">
+                        <img class="product_img" src="picture/clothes/chan-vay/chan-vay-4.jpeg">
+                        <p><a href="chan-vay/chi-tiet-chan-vay4.html">Chân váy ly xếp Jennie</a></p>
+                        <p><span class="price">499.000 VNĐ</span> 
+                            <span class="orginal_price" 
+                            style="color: gray;
+                            text-decoration: line-through;
+                            font-size: small;">699.000 VNĐ</span>
+                        </p>
+                    </div>
+
+                    <!-- Thông tin sản phẩm -->
+                    <div class="product_info">
+                        <img class="discount" src="picture/discount/30percent_discount.png">
+                        <img class="product_img" src="picture/clothes/chan-vay/chan-vay-3-1.jpeg">
+                        <p><a href="chan-vay/chi-tiet-chan-vay3.html">Chân váy Ariana skirt</a></p>
+                        <p><span class="price">490.000 VNĐ</span> 
+                            <span class="orginal_price" 
+                            style="color: gray;
+                            text-decoration: line-through;
+                            font-size: small;">700.000 VNĐ</span>
+                        </p>
+                    </div>
+
+                    <!-- Thông tin sản phẩm -->
+                    <div class="product_info">
+                        <img class="discount" src="picture/discount/30percent_discount.png">
+                        <img class="product_img" src="picture/clothes/chan-vay/chan-vay-4-2.jpeg">
+                        <p><a href="chan-vay/chi-tiet-chan-vay4.html">Chân váy ly xếp Jennie</a></p>
+                        <p><span class="price">499.000 VNĐ</span> 
+                            <span class="orginal_price" 
+                            style="color: gray;
+                            text-decoration: line-through;
+                            font-size: small;">699.000 VNĐ</span>
                         </p>
                     </div>
                 </div>
-                <video class="full-width-video" autoplay muted loop controls>
-                    <source src="video/2126721_Man_Business_3840x2160.mp4" type="video/mp4">
-                  </video>    
-                <div class="catalog">
-                    <div class="list_product">
+            </div>
+
+            <!-- Hình mẫu các thứ -->
+            <div class="model_picture">
+                <img src="picture/banner/display_placeholder.jpg">
+                <img src="picture/banner/display_placeholder2.jpg">
+                <img src="picture/banner/istockphoto-1257563298-1024x1024.jpg">
+                <img src="picture/banner/display_placeholder.jpg">
+            </div>
+
+            <!-- Catalog sản phẩm -->
+            <div class="catalog">
+                <h2>Chân váy đẹp 2024</h2>
+                <div class="list_product">
                     <!-- Thông tin sản phẩm -->
                     <div class="product_info">
                         <img class="discount" src="picture/discount/30percent_discount.png">
-                        <img class="product_img" src="picture/dam-vay-picture/dam2(1).png">
-                        <p><a href="san-pham-dam-vay-chi-tiet/chi-tiet-dam-vay2.html">Đầm Tiểu Thư Trễ Vai Xoè Tầng Đính Tag Nơ</a></p>
-                        <p><span class="price">299.000 VNĐ</span> 
+                        <img class="product_img" src="picture/clothes/chan-vay/chan-vay-3-2.jpeg">
+                        <p><a href="chan-vay/chi-tiet-chan-vay3.html">Chân váy Ariana skirt</a></p>
+                        <p><span class="price">490.000 VNĐ</span> 
                             <span class="orginal_price" 
                             style="color: gray;
                             text-decoration: line-through;
-                            font-size: small;">400.000 VNĐ</span>
+                            font-size: small;">700.000 VNĐ</span>
                         </p>
                     </div>
 
                     <!-- Thông tin sản phẩm -->
                     <div class="product_info">
                         <img class="discount" src="picture/discount/30percent_discount.png">
-                        <img class="product_img" src="picture/dam-vay-picture/dam1(1).png">
-                        <p><a href="san-pham-dam-vay-chi-tiet/chi-tiet-dam-vay1.html">Đầm Hoa Vintage Dự Tiệc Đỏ Sang Trọng</a></p>
-                        <p><span class="price">399.000 VNĐ</span> 
+                        <img class="product_img" src="picture/clothes/chan-vay/chan-vay-4-2.jpeg">
+                        <p><a href="chan-vay/chi-tiet-chan-vay4.html">Chân váy ly xếp Jennie</a></p>
+                        <p><span class="price">499.000 VNĐ</span> 
                             <span class="orginal_price" 
                             style="color: gray;
                             text-decoration: line-through;
-                            font-size: small;">599.000 VNĐ</span>
+                            font-size: small;">699.000 VNĐ</span>
                         </p>
                     </div>
 
                     <!-- Thông tin sản phẩm -->
                     <div class="product_info">
                         <img class="discount" src="picture/discount/30percent_discount.png">
-                        <img class="product_img" src="picture/clothes/quan/quan-tay-sidetab-gan-day-3-soc-form-slimfit-qt065-mau-den-truoc.jpg">
-                        <p><a href="san-pham/quan/quan-tay-side-tab-mau-den-nam.html">Quần Tây Sidetab Gắn Dây 3 Sọc Form Slimfit QT065 Màu Đen</a></p>
-                        <p><span class="price">297.000 VNĐ</span> 
+                        <img class="product_img" src="picture/clothes/chan-vay/chan-vay-3-1.jpeg">
+                        <p><a href="chan-vay/chi-tiet-chan-vay3.html">Chân váy Ariana skirt</a></p>
+                        <p><span class="price">490.000 VNĐ</span> 
                             <span class="orginal_price" 
                             style="color: gray;
                             text-decoration: line-through;
-                            font-size: small;">425.000 VNĐ</span>
+                            font-size: small;">700.000 VNĐ</span>
                         </p>
                     </div>
 
                     <!-- Thông tin sản phẩm -->
                     <div class="product_info">
                         <img class="discount" src="picture/discount/30percent_discount.png">
-                        <img class="product_img" src="picture/dam-vay-picture/dam3(1).png">
-                        <p><a href="san-pham-dam-vay-chi-tiet/chi-tiet-dam-vay3.html">Set Váy Nữ Gồm Áo Thun Nơ Cổ + Chân Váy Xếp Ly Viền Đen</a></p>
-                        <p><span class="price">99.000 VNĐ</span> 
+                        <img class="product_img" src="picture/clothes/chan-vay/chan-vay-4-1.jpeg">
+                        <p><a href="chan-vay/chi-tiet-chan-vay4.html">Chân váy ly xếp Jennie</a></p>
+                        <p><span class="price">499.000 VNĐ</span> 
                             <span class="orginal_price" 
                             style="color: gray;
                             text-decoration: line-through;
-                            font-size: small;">199.000 VNĐ</span>
+                            font-size: small;">699.000 VNĐ</span>
                         </p>
                     </div>
 
                     <!-- Thông tin sản phẩm -->
                     <div class="product_info">
                         <img class="discount" src="picture/discount/30percent_discount.png">
-                        <img class="product_img" src="picture/dam-vay-picture/dam4(1).png">
-                        <p><a href="san-pham-dam-vay-chi-tiet/chi-tiet-dam-vay4.html">Váy đi biển trễ vai Đầm bigsize nữ thời trang mới váy dài váy rộng</a></p>
-                        <p><span class="price">136.000 VNĐ</span> 
+                        <img class="product_img" src="picture/clothes/chan-vay/20250228_sQogmMPDl0.jpeg">
+                        <p><a href="chan-vay/chi-tiet-chan-vay1.html">Chân váy pencil cạp bổ</a></p>
+                        <p><span class="price">500.000 VNĐ</span> 
                             <span class="orginal_price" 
                             style="color: gray;
                             text-decoration: line-through;
-                            font-size: small;">241.000 VNĐ</span>
+                            font-size: small;">600.000 VNĐ</span>
                         </p>
                     </div>
 
                     <!-- Thông tin sản phẩm -->
                     <div class="product_info">
                         <img class="discount" src="picture/discount/30percent_discount.png">
-                        <img class="product_img" src="picture/clothes/quan/quan-ong-dung-6-cuc-be.jpeg">
-                        <p><a href="san-pham/quan/quan-ong-dung-6-cuc.html">Quần ống đứng 6 cúc</a></p>
-                        <p><span class="price">367.000 VNĐ</span> 
+                        <img class="product_img" src="picture/clothes/chan-vay/chan-vay-2-2.jpeg">
+                        <p><a href="chan-vay/chi-tiet-chan-vay2.html">Chân váy DL quạt maxi</a></p>
+                        <p><span class="price">450.000 VNĐ</span> 
                             <span class="orginal_price" 
                             style="color: gray;
                             text-decoration: line-through;
-                            font-size: small;">525.000 VNĐ</span>
+                            font-size: small;">680.000 VNĐ</span>
                         </p>
                     </div>
 
                     <!-- Thông tin sản phẩm -->
                     <div class="product_info">
                         <img class="discount" src="picture/discount/30percent_discount.png">
-                        <img class="product_img" src="picture/clothes/quan/quan-tay-sidetab-2-ben-form-front.jpg">
-                        <p><a href="san-pham/quan/quan-tay-sidetab-2-ben-form.html">Quần Tây Sidetab 2 Bên Form Regular QT068 Màu Trắng Kem</a></p>
-                        <p><span class="price">475.000 VNĐ</span> 
+                        <img class="product_img" src="picture/clothes/chan-vay/20240919_OPqGeSzFrd.jpeg">
+                        <p><a href="chan-vay/chi-tiet-chan-vay1.html">Chân váy pencil cạp bổ</a></p>
+                        <p><span class="price">500.000 VNĐ</span> 
                             <span class="orginal_price" 
                             style="color: gray;
                             text-decoration: line-through;
-                            font-size: small;">332.500 VNĐ</span>
+                            font-size: small;">600.000 VNĐ</span>
                         </p>
                     </div>
 
                     <!-- Thông tin sản phẩm -->
                     <div class="product_info">
                         <img class="discount" src="picture/discount/30percent_discount.png">
-                        <img class="product_img" src="picture/clothes/quan/quan-dap-li-ao-dai-1.jpg">
-                        <p><a href="san-pham/quan/quan-dap-li-ao-dai.html">Quần dập li áo dài</a></p>
-                        <p><span class="price">437.000 VNĐ</span> 
+                        <img class="product_img" src="picture/clothes/chan-vay/chan-vay-2-1.jpeg">
+                        <p><a href="chan-vay/chi-tiet-chan-vay2.html">Chân váy DL quạt maxi</a></p>
+                        <p><span class="price">450.000 VNĐ</span> 
                             <span class="orginal_price" 
                             style="color: gray;
                             text-decoration: line-through;
-                            font-size: small;">625.000 VNĐ</span>
+                            font-size: small;">680.000 VNĐ</span>
                         </p>
                     </div>
-                </div>
                 </div>
             </div>
 
@@ -363,11 +436,11 @@
               </button>
             </div>
           </div>
-          
+
         <div class="back_to_top" id="backToTop">
             <span class="arrow-up"></span>
         </div> 
-
+               
         <footer>
             <div class="main_footer">
                 <div><p id="copyright">Copyright 2025 - By <b>123CLOTHES</b> Design Team</p>
