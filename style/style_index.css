@@ -224,6 +224,23 @@
     font-size: 0.9em;
 }
 
+.product_info:hover .order-btn {
+    opacity: 1;
+}
+
+.order-btn {
+    left: 50%;
+    transform: translateX(0);
+    background-color: #e91e63;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
 /* Hiệu ứng làm sản phẩm giữa nổi bật hơn */
 .list_product::-webkit-scrollbar {
     display: none;
