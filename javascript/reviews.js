@@ -1,75 +1,80 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const productId = 'dam3'; // Adjust for other products
-  const storageKey = `reviews_${productId}`;
+  // Lấy ID sản phẩm từ URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const productId = urlParams.get('id');
+  if (!productId) return;
 
-  loadReviews();
+  const reviewsKey = `reviews_${productId}`; // Khóa LocalStorage riêng cho sản phẩm
+  const reviewsContainer = document.getElementById('reviews-container');
+  const reviewForm = document.getElementById('review-form');
 
-  document.getElementById('review-form').addEventListener('submit', (event) => {
-    event.preventDefault();
+  // Hàm hiển thị sao
+  const renderStars = (rating) => {
+    const star = '★';
+    const emptyStar = '☆';
+    return star.repeat(rating) + emptyStar.repeat(5 - rating);
+  };
 
-    const reviewerName = document.getElementById('reviewer-name').value.trim();
-    const rating = parseInt(document.getElementById('rating').value);
+  // Hàm hiển thị đánh giá
+  const displayReviews = () => {
+    const reviews = JSON.parse(localStorage.getItem(reviewsKey)) || [];
+    reviewsContainer.innerHTML = '';
+
+    if (reviews.length === 0) {
+      reviewsContainer.innerHTML = '<p class="text-muted">Chưa có đánh giá nào cho sản phẩm này.</p>';
+      return;
+    }
+
+    reviews.forEach((review) => {
+      const reviewElement = document.createElement('div');
+      reviewElement.className = 'review-item mb-3 p-3 border rounded';
+      reviewElement.innerHTML = `
+        <div class="d-flex justify-content-between">
+          <div>
+            <strong>${review.name}</strong>
+            <div class="text-warning">${renderStars(review.rating)}</div>
+          </div>
+          <small class="text-muted">${review.date}</small>
+        </div>
+        <p class="mt-2 mb-0">${review.comment}</p>
+      `;
+      reviewsContainer.appendChild(reviewElement);
+    });
+  };
+
+  // Xử lý gửi đánh giá
+  reviewForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById('reviewer-name').value.trim();
+    const rating = document.getElementById('rating').value;
     const comment = document.getElementById('comment').value.trim();
 
-    if (!reviewerName || !rating || !comment) {
-      alert('Vui lòng điền đầy đủ thông tin.');
+    if (!name || !rating || !comment) {
+      alert('Vui lòng điền đầy đủ thông tin!');
       return;
     }
 
     const review = {
-      id: Date.now(),
-      name: reviewerName,
-      rating: rating,
-      comment: comment,
-      date: new Date().toLocaleDateString('vi-VN', {
+      name,
+      rating: parseInt(rating),
+      comment,
+      date: new Date().toLocaleString('vi-VN', {
         day: '2-digit',
         month: '2-digit',
-        year: 'numeric'
-      })
+        year: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+      }),
     };
 
-    saveReview(review);
-    addReviewToPage(review);
-    event.target.reset();
-    alert('Cảm ơn bạn đã gửi đánh giá!');
+    const reviews = JSON.parse(localStorage.getItem(reviewsKey)) || [];
+    reviews.unshift(review);
+    localStorage.setItem(reviewsKey, JSON.stringify(reviews));
+
+    reviewForm.reset();
+    displayReviews();
   });
 
-  function saveReview(review) {
-    let reviews = JSON.parse(localStorage.getItem(storageKey)) || [];
-    reviews.push(review);
-    localStorage.setItem(storageKey, JSON.stringify(reviews));
-  }
-
-  function loadReviews() {
-    let reviews = JSON.parse(localStorage.getItem(storageKey)) || [];
-    reviews.sort((a, b) => b.id - a.id);
-    reviews.forEach(review => addReviewToPage(review));
-  }
-
-  function addReviewToPage(review) {
-    const reviewsContainer = document.getElementById('reviews-container');
-    const reviewCard = document.createElement('div');
-    reviewCard.className = 'review-card';
-    const reviewHeader = document.createElement('div');
-    reviewHeader.className = 'review-header';
-    const reviewerName = document.createElement('span');
-    reviewerName.className = 'reviewer-name';
-    reviewerName.textContent = review.name;
-    const ratingDiv = document.createElement('div');
-    ratingDiv.className = 'rating';
-    const stars = '★★★★★'.slice(0, review.rating) + '☆☆☆☆☆'.slice(review.rating);
-    ratingDiv.innerHTML = stars.split('').map(star => `<span class="star">${star}</span>`).join('');
-    reviewHeader.appendChild(reviewerName);
-    reviewHeader.appendChild(ratingDiv);
-    const comment = document.createElement('p');
-    comment.className = 'review-comment';
-    comment.textContent = review.comment;
-    const date = document.createElement('span');
-    date.className = 'review-date';
-    date.textContent = review.date;
-    reviewCard.appendChild(reviewHeader);
-    reviewCard.appendChild(comment);
-    reviewCard.appendChild(date);
-    reviewsContainer.insertBefore(reviewCard, reviewsContainer.firstChild);
-  }
+  displayReviews();
 });

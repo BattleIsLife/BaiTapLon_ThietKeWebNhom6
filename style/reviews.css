@@ -1,62 +1,29 @@
-/* Customer Reviews Section */
 .customer-reviews {
-  padding: 15px;
+  padding: 20px;
 }
 
-/* Submit Review Form */
-.submit siedu {
-  padding-top: 0;
+.review-item {
+  background-color: #f8f9fa;
+  transition: all 0.2s ease;
 }
 
-/* Reviews Container */
-.reviews-container {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+.review-item:hover {
+  background-color: #e9ecef;
 }
 
-.review-card {
-  border-bottom: 1px solid #e9ecef;
-  padding: 10px 0;
+.text-warning {
+  font-size: 18px;
 }
 
-.review-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 5px;
+.submit-review .form-control-sm {
+  font-size: 14px;
 }
 
-.reviewer-name {
-  font-weight: 600;
-  font-size: 0.9rem;
-  color: #333;
+.submit-review .btn-sm {
+  padding: 5px 10px;
+  font-size: 14px;
 }
 
-.rating .star {
-  color: #f1c40f; /* Gold color for stars */
-  font-size: 0.9rem;
-}
-
-.review-comment {
-  font-size: 0.85rem;
-  color: #555;
-  margin: 5px 0;
-}
-
-.review-date {
-  font-size: 0.8rem;
-  color: #999;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .submit-review .row {
-    flex-direction: column;
-  }
-  .submit-review .col-md-3,
-  .submit-review .col-md-4,
-  .submit-review .col-md-2 {
-    width: 100%;
-  }
+.reviews-container p.text-muted {
+  font-style: italic;
 }
