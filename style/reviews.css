@@ -1,83 +1,62 @@
 /* Customer Reviews Section */
 .customer-reviews {
-  padding: 20px;
-  text-align: center;
-}
-
-.customer-reviews h4 {
-  font-size: 1.75rem;
-  margin-bottom: 20px;
-  color: #333;
+  padding: 15px;
 }
 
 /* Submit Review Form */
-.submit-review {
-  background: #f9f9f9;
-  padding: 20px;
-  border-radius: 8px;
-  margin-bottom: 30px;
-}
-
-.submit-review h5 {
-  font-size: 1.25rem;
-  margin-bottom: 20px;
+.submit siedu {
+  padding-top: 0;
 }
 
 /* Reviews Container */
 .reviews-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .review-card {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
-  text-align: left;
-  transition: box-shadow 0.3s ease;
-}
-
-.review-card:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #e9ecef;
+  padding: 10px 0;
 }
 
 .review-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .reviewer-name {
-  font-weight: bold;
+  font-weight: 600;
+  font-size: 0.9rem;
   color: #333;
 }
 
 .rating .star {
   color: #f1c40f; /* Gold color for stars */
-  font-size: 1.2rem;
+  font-size: 0.9rem;
 }
 
 .review-comment {
-  font-size: 1rem;
+  font-size: 0.85rem;
   color: #555;
-  margin: 10px 0;
+  margin: 5px 0;
 }
 
 .review-date {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: #999;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .reviews-container {
-    grid-template-columns: 1fr;
+  .submit-review .row {
+    flex-direction: column;
   }
-
-  .submit-review {
-    padding: 15px;
+  .submit-review .col-md-3,
+  .submit-review .col-md-4,
+  .submit-review .col-md-2 {
+    width: 100%;
   }
 }
