@@ -165,3 +165,16 @@
 .box{
     display:flex;
 }
+/* Responsive */
+@media (max-width: 1024px) {
+  .product-card {
+    flex: 1 1 45%; /* 2 sp mỗi hàng */
+    max-width: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .product-card {
+    flex: 1 1 100%; /* 1 sp mỗi hàng */
+  }
+}
