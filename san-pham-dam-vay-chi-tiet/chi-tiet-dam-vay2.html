@@ -233,7 +233,42 @@
       </div>
     </div>
   </div>
-  
+  <div class="row mt-5">
+      <div class="col-12">
+        <div class="border rounded p-3 bg-white customer-reviews">
+          <h4 class="mb-4">Đánh Giá Sản Phẩm</h4>
+          <div class="submit-review mb-4">
+            <form id="review-form">
+              <div class="row g-2">
+                <div class="col-md-3">
+                  <input type="text" class="form-control form-control-sm" id="reviewer-name" name="reviewer-name" placeholder="Tên của bạn" required>
+                </div>
+                <div class="col-md-3">
+                  <select class="form-control form-control-sm" id="rating" name="rating" required>
+                    <option value="" disabled selected>Chọn đánh giá</option>
+                    <option value="5">★★★★★</option>
+                    <option value="4">★★★★☆</option>
+                    <option value="3">★★★☆☆</option>
+                    <option value="2">★★☆☆☆</option>
+                    <option value="1">★☆☆☆☆</option>
+                  </select>
+                </div>
+                <div class="col-md-4">
+                  <input type="text" class="form-control form-control-sm" id="comment" name="comment" placeholder="Nhập bình luận của bạn" required>
+                </div>
+                <div class="col-md-2">
+                  <button type="submit" class="btn btn-danger btn-sm w-100">Gửi</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div id="reviews-container" class="reviews-container">
+            <!-- Reviews will be dynamically added here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- FOOTER -->
   <div class="top_footer">
     <div class="more_info">
