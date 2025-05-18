@@ -11,6 +11,7 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="../../style/style_chung.css">
   <link rel="stylesheet" href="../../style/san-pham-dam-vay.css">
+  <link rel="stylesheet" href="../../style/reviews.css">
 </head>
 <body>
 
@@ -187,22 +188,49 @@
 
         <div class="col-md-4">
           <div class="border rounded p-3 bg-white">
-            <h5>Sản phẩm tương tự</h5>
-            <div class="d-flex gap-2 mb-2">
-              <div><a href="quan-tay-sidetab-2-ben-form.html"><img class="logo" src="../../picture/clothes/quan/quan-tay-sidetab-2-ben-form-front.jpg" width="60"></a></div>
-              <div>
-                <p class="mb-0">Quần Tây Sidetab 2 Bên Form Regular QT068 Màu Trắng Kem</p>
-                <small class="price-new">332.500 VNĐ</small> 
-                <small class="orginal_price" 
-                  style="color: gray;
-                  text-decoration: line-through;
-                  font-size: small;">475.000 VNĐ</small>
+            <!-- Sản phẩm tương tự sẽ được thêm động bởi JavaScript -->
+          </div>
+        </div>
+      </div>
+
+    <!-- CUSTOMER REVIEWS SECTION (Shopee Style) -->
+    <div class="row mt-5">
+      <div class="col-12">
+        <div class="border rounded p-3 bg-white customer-reviews">
+          <h4 class="mb-4">Đánh Giá Sản Phẩm</h4>
+          <div class="submit-review mb-4">
+            <form id="review-form">
+              <div class="row g-2">
+                <div class="col-md-3">
+                  <input type="text" class="form-control form-control-sm" id="reviewer-name" name="reviewer-name" placeholder="Tên của bạn" required>
+                </div>
+                <div class="col-md-3">
+                  <select class="form-control form-control-sm" id="rating" name="rating" required>
+                    <option value="" disabled selected>Chọn đánh giá</option>
+                    <option value="5">★★★★★</option>
+                    <option value="4">★★★★☆</option>
+                    <option value="3">★★★☆☆</option>
+                    <option value="2">★★☆☆☆</option>
+                    <option value="1">★☆☆☆☆</option>
+                  </select>
+                </div>
+                <div class="col-md-4">
+                  <input type="text" class="form-control form-control-sm" id="comment" name="comment" placeholder="Nhập bình luận của bạn" required>
+                </div>
+                <div class="col-md-2">
+                  <button type="submit" class="btn btn-danger btn-sm w-100">Gửi</button>
+                </div>
               </div>
-            </div>
+            </form>
+          </div>
+          <div id="reviews-container" class="reviews-container">
+            <!-- Reviews will be dynamically added here -->
           </div>
         </div>
       </div>
     </div>
+
+  </div>
   </main>
   <!-- FOOTER -->
   <div class="top_footer">
@@ -334,7 +362,14 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Script dropdown hoặc thêm giỏ hàng -->
   <script src="../../javascript/dropdown.js"></script>
+  <!-- Script review -->
+   <script src="../../javascript/reviews.js"></script>
+   <script src="../../javascript/similar-products.js"></script>
   <script>
+    // Định nghĩa productId cho sản phẩm này
+    const productId = 'quan-tay-side-tab-mau-den-nam';
+
+
     function changeImage(img) {
       document.getElementById("main-image").src = img.src;
     }
@@ -346,6 +381,29 @@
         qtyInput.value = current + change;
       }
     }
-    </script>
+    // Danh sách sản phẩm và logic đề xuất sản phẩm tương tự
+    const products = [
+      {
+        id: 'quan-tay-side-tab-mau-den-nam',
+        name: 'Quần Tây Sidetab Gắn Dây 3 Sọc Form Slimfit QT065 Màu Đen',
+        link: 'quan-tay-side-tab-mau-den-nam.html',
+        image: '../../picture/clothes/quan/quan-tay-sidetab-gan-day-3-soc-form-slimfit-qt065-mau-den-truoc.jpg',
+        price_new: '297.500 VNĐ',
+        price_old: '425.000 VNĐ',
+        category: 'Quần nam',
+      },
+
+      {
+        id: 'quan-tay-sidetab-2-ben-form',
+        name: 'Quần Tây Sidetab 2 Bên Form Regular QT068 Màu Trắng Kem',
+        link: 'quan-tay-sidetab-2-ben-form.html',
+        image: '../../picture/clothes/quan/quan-tay-sidetab-2-ben-form-front.jpg',
+        price_new: '332.000 VNĐ',
+        price_old: '475.000 VNĐ',
+        category: 'Quần nam',
+      },
+    ];
+  </script>
+    
 </body>
 </html>
