@@ -1,21 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Lấy ID sản phẩm từ URL
   const urlParams = new URLSearchParams(window.location.search);
-  const productId = urlParams.get('id');
-  if (!productId) return;
+  const productId = urlParams.get('id') || 'default'; // nếu không có id, dùng key mặc định
 
-  const reviewsKey = `reviews_${productId}`; // Khóa LocalStorage riêng cho sản phẩm
+  const reviewsKey = `reviews_${productId}`;
   const reviewsContainer = document.getElementById('reviews-container');
   const reviewForm = document.getElementById('review-form');
 
-  // Hàm hiển thị sao
   const renderStars = (rating) => {
     const star = '★';
     const emptyStar = '☆';
     return star.repeat(rating) + emptyStar.repeat(5 - rating);
   };
 
-  // Hàm hiển thị đánh giá
   const displayReviews = () => {
     const reviews = JSON.parse(localStorage.getItem(reviewsKey)) || [];
     reviewsContainer.innerHTML = '';
@@ -42,13 +38,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
-  // Xử lý gửi đánh giá
   reviewForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const name = document.getElementById('reviewer-name').value.trim();
-    const rating = document.getElementById('rating').value;
-    const comment = document.getElementById('comment').value.trim();
+    const name = document.getElementById('reviewer-name')?.value.trim();
+    const rating = document.getElementById('rating')?.value;
+    const comment = document.getElementById('comment')?.value.trim();
 
     if (!name || !rating || !comment) {
       alert('Vui lòng điền đầy đủ thông tin!');
