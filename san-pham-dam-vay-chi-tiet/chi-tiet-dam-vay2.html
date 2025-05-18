@@ -6,87 +6,80 @@
   <title>Chi tiết sản phẩm - 123CLOTHES</title>
   <!-- Bootstrap 4 CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <!-- Bootstrap Icons (nếu dùng icon như bi bi-cart-plus) -->
+  <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="../style/style_chung.css">
   <link rel="stylesheet" href="../style/san-pham-dam-vay.css">
+  <link rel="stylesheet" href="../style/reviews.css">
 </head>
 <body>
-
   <!-- HEADER -->
   <header>
     <div class="top_header">
-        <div><img src="../picture/icon/phone.png" 
-            style="width: 19px; 
-            margin-right: 10px; 
-            margin-bottom: -5px;">SĐT: <span class="tel">0123.456.789</span></div>
-        <div>
-            <a href="../huong-dan-chon-size.html">Cách chọn size</a>
-            <a href="../huong-dan-dat-hang.html">Hướng dẫn đặt hàng</a>
-            <a href="#">Giới thiệu</a>
-        </div>
+      <div>
+        <img src="../picture/icon/phone.png" style="width: 19px; margin-right: 10px; margin-bottom: -5px;">
+        SĐT: <span class="tel">0123.456.789</span>
+      </div>
+      <div>
+        <a href="../huong-dan-chon-size.html">Cách chọn size</a>
+        <a href="../huong-dan-dat-hang.html">Hướng dẫn đặt hàng</a>
+        <a href="#">Giới thiệu</a>
+      </div>
     </div>
   </header>
 
   <!-- THANH ĐIỀU HƯỚNG + LOGO -->
-  
   <div class="main_header">
     <div><a href="../index.html"><img class="logo" src="../picture/ShopLogo.png"></a></div>
     <nav>
-        <a href="../thoi-trang-moi-nhat.html">Hàng mới về</a>
-
-        <a href="../bo-suu-tap-list.html">Bộ sưu tập</a>
-        
-        <div class="dropdown_link"> 
-            <a href="javascript:void(0);">Áo</a>
-            <div class="dropdown_section_clothes_list">
-                <a href="#">Áo nam</a>
-                <a href="#">Áo nữ</a>
-            </div>
+      <a href="../thoi-trang-moi-nhat.html">Hàng mới về</a>
+      <a href="../bo-suu-tap-list.html">Bộ sưu tập</a>
+      <div class="dropdown_link">
+        <a href="javascript:void(0);">Áo</a>
+        <div class="dropdown_section_clothes_list">
+          <a href="#">Áo nam</a>
+          <a href="#">Áo nữ</a>
         </div>
-
-        <div class="dropdown_link"> 
-            <a href="javascript:void(0);">Quần</a>
-            <div class="dropdown_section_clothes_list">
-                <a href="#">Quần nam</a>
-                <a href="#">Quần nữ</a>
-            </div>
+      </div>
+      <div class="dropdown_link">
+        <a href="javascript:void(0);">Quần</a>
+        <div class="dropdown_section_clothes_list">
+          <a href="#">Quần nam</a>
+          <a href="#">Quần nữ</a>
         </div>
-
-        <a href="../vay.html">Váy</a>
-        <a href="../san-pham-dam-vay.html">Đầm</a>
-        <div class="dropdown_link"> 
-            <a href="javascript:void(0);">Phụ kiện</a>
-            <div class="dropdown_section_clothes_list">
-                <a href="../giaydep.html">Giày dép</a>
-                <a href="#">Thắt lưng</a>
-                <a href="#">Ví da</a>
-                <a href="#">Cà vạt</a>
-                <a href="#">Nơ</a>
-                <a href="#">Mũ nón</a>
-                <a href="#">Túi xách</a>
-            </div>
+      </div>
+      <a href="../vay.html">Váy</a>
+      <a href="../san-pham-dam-vay.html">Đầm</a>
+      <div class="dropdown_link">
+        <a href="javascript:void(0);">Phụ kiện</a>
+        <div class="dropdown_section_clothes_list">
+          <a href="../giaydep.html">Giày dép</a>
+          <a href="#">Thắt lưng</a>
+          <a href="#">Ví da</a>
+          <a href="#">Cà vạt</a>
+          <a href="#">Nơ</a>
+          <a href="#">Mũ nón</a>
+          <a href="#">Túi xách</a>
         </div>
+      </div>
     </nav>
-
     <div class="button_class">
-        <button id="search_button" onclick="window.location.href='../thoi-trang-moi-nhat.html'">
-            <img src="../picture/icon/search-icon.png" style="width: 25px;">
-          </button>
-        <div class="myCart">
-            <button id="cart_button"><img src="../picture/icon/cart-icon.png" style="width: 25px;"></button>
-            <div id="cart_dropdown">
-                <p>Giỏ hàng của bạn đang trống, nhanh chóng mua hàng nào!!</p>
-            </div>
+      <button id="search_button" onclick="window.location.href='../thoi-trang-moi-nhat.html'">
+        <img src="../picture/icon/search-icon.png" style="width: 25px;">
+      </button>
+      <div class="myCart">
+        <button id="cart_button"><img src="../picture/icon/cart-icon.png" style="width: 25px;"></button>
+        <div id="cart_dropdown">
+          <p>Giỏ hàng của bạn đang trống, nhanh chóng mua hàng nào!!</p>
         </div>
-
-        <button id="menu_button" class="dropBtn"><img src="../picture/icon/menu_icon.png" style="width: 25px;"></button>
+      </div>
+      <button id="menu_button" class="dropBtn"><img src="../picture/icon/menu_icon.png" style="width: 25px;"></button>
     </div>
-    
-</div>
-<!-- Menu dropdown -->
-<div id="menu_dropdown" class="dropdown_content">
+  </div>
+
+  <!-- Menu dropdown -->
+  <div id="menu_dropdown" class="dropdown_content">
     <a href="../thoi-trang-moi-nhat.html">Hàng mới về</a>
     <a href="../bo-suu-tap-list.html">Bộ sưu tập</a>
     <a href="#">Áo nam</a>
@@ -95,7 +88,6 @@
     <a href="#">Quần nữ</a>
     <a href="../vay.html">Váy</a>
     <a href="../san-pham-dam-vay.html">Đầm</a>
-    <a href="#">Giày dép</a>
     <a href="../giaydep.html">Giày dép</a>
     <a href="#">Thắt lưng</a>
     <a href="#">Ví da</a>
@@ -103,8 +95,7 @@
     <a href="#">Nơ</a>
     <a href="#">Mũ nón</a>
     <a href="#">Túi xách</a>
-</div>
-
+  </div>
 
   <!-- MAIN NỘI DUNG CHI TIẾT SẢN PHẨM -->
   <div class="container mt-4">
@@ -121,50 +112,40 @@
           </div>
         </div>
       </div>
-  
+
       <!-- THÔNG TIN SẢN PHẨM -->
       <div class="col-md-7">
         <div class="border rounded p-3 bg-white">
           <h3>Đầm Tiểu Thư Trễ Vai Xoè Tầng Đính Tag Nơ</h3>
           <p class="text-muted">Thương hiệu: <strong>123CLOTHES</strong></p>
-          <p><span class="price-new">299.000 VNĐ</span> 
-            <span class="orginal_price" 
-            style="color: gray;
-            text-decoration: line-through;
-            font-size: small;">400.000 VNĐ</span>
-        </p>
-        <div class="mt-3">
+          <p>
+            <span class="price-new">299.000 VNĐ</span>
+            <span class="orginal_price" style="color: gray; text-decoration: line-through; font-size: small;">400.000 VNĐ</span>
+          </p>
+          <div class="mt-3">
             <label class="fw-bold">Màu sắc:</label><br>
             <div class="btn-group" role="group">
               <input type="radio" class="btn-check" name="color" id="white" autocomplete="off">
               <label class="btn btn-outline-secondary" for="white">Trắng</label>
-  
               <input type="radio" class="btn-check" name="color" id="black" autocomplete="off">
               <label class="btn btn-outline-secondary" for="black">Đen</label>
-
               <input type="radio" class="btn-check" name="color" id="pink" autocomplete="off">
               <label class="btn btn-outline-secondary" for="pink">Hồng</label>
             </div>
           </div>
-          <!-- Chọn size -->
           <div class="mt-3">
             <label class="fw-bold">Kích cỡ:</label><br>
             <div class="btn-group" role="group">
               <input type="radio" class="btn-check" name="size" id="sizeS" autocomplete="off" checked>
               <label class="btn btn-outline-secondary" for="sizeS">S</label>
-  
               <input type="radio" class="btn-check" name="size" id="sizeM" autocomplete="off">
               <label class="btn btn-outline-secondary" for="sizeM">M</label>
-  
               <input type="radio" class="btn-check" name="size" id="sizeL" autocomplete="off">
               <label class="btn btn-outline-secondary" for="sizeL">L</label>
-
               <input type="radio" class="btn-check" name="size" id="sizeXL" autocomplete="off">
               <label class="btn btn-outline-secondary" for="sizeXL">XL</label>
             </div>
           </div>
-  
-          <!-- Chọn số lượng -->
           <div class="mt-3">
             <label class="fw-bold">Số lượng:</label>
             <div class="input-group" style="width: 120px;">
@@ -173,8 +154,6 @@
               <button class="btn btn-outline-secondary" onclick="updateQty(1)">+</button>
             </div>
           </div>
-  
-          <!-- Nút chức năng -->
           <div class="mt-4 d-flex gap-3">
             <button class="btn btn-outline-primary px-4">Thêm vào giỏ</button>
             <button class="btn btn-danger px-4">Mua ngay</button>
@@ -182,7 +161,7 @@
         </div>
       </div>
     </div>
-  
+
     <!-- MÔ TẢ & GỢI Ý -->
     <div class="row mt-5">
       <div class="col-md-8">
@@ -192,9 +171,9 @@
           <ul>
             <li>Chất liệu: Tơ xốp</li>
             <li>Xuất xứ: Việt Nam</li>
-            <li>Màu sắc: kem/hồng/đen</li>
+            <li>Màu sắc: Kem/Hồng/Đen</li>
           </ul>
-          <p>🌞HƯỚNG DẪN SỬ DỤNG:</p>
+          <p>🌞 HƯỚNG DẪN SỬ DỤNG:</p>
           <ul>
             <li>Giặt máy ở nhiệt độ thường khuyến khích giặt tay</li>
             <li>Không sử dụng nước tẩy chứa CLO</li>
@@ -203,37 +182,15 @@
           </ul>
         </div>
       </div>
-  
       <div class="col-md-4">
         <div class="border rounded p-3 bg-white">
-          <h5>Sản phẩm tương tự</h5>
-          <div class="d-flex gap-2 mb-2">
-            <div><a href="chi-tiet-dam-vay3.html"><img class="logo" src="../picture/dam-vay-picture/dam3(1).png" width="60"></a></div>
-            <div>
-              <p class="mb-0">Set Váy nữ</p>
-              <small class="price-new">99.000 VNĐ</small> 
-              <small class="orginal_price" 
-                style="color: gray;
-                text-decoration: line-through;
-                font-size: small;">199.000 VNĐ</small>
-            </div>
-          </div>
-          <div class="d-flex gap-2">
-            <div><a href="#"><img class="logo" src="../picture/dam-vay-picture/dam1(1).png" width="60"></a></div>
-            <div>
-              <p class="mb-0">Đầm Dạ Hội Dài</p>
-              <small class="price-new">399.000 VNĐ</small> 
-              <small class="orginal_price" 
-                style="color: gray;
-                text-decoration: line-through;
-                font-size: small;">599.000 VNĐ</small>
-            </div>
-          </div>
+          <!-- Sản phẩm tương tự sẽ được thêm động bởi JavaScript -->
         </div>
       </div>
     </div>
-  </div>
-  <div class="row mt-5">
+
+    <!-- CUSTOMER REVIEWS SECTION (Shopee Style) -->
+    <div class="row mt-5">
       <div class="col-12">
         <div class="border rounded p-3 bg-white customer-reviews">
           <h4 class="mb-4">Đánh Giá Sản Phẩm</h4>
@@ -262,94 +219,84 @@
               </div>
             </form>
           </div>
-          <div id="reviews-container" class="reviews-container">
-            <!-- Reviews will be dynamically added here -->
-          </div>
+          <div id="reviews-container" class="reviews-container"></div>
         </div>
       </div>
     </div>
   </div>
-  <!-- FOOTER -->
+
   <div class="top_footer">
     <div class="more_info">
-        <h3><img src="../picture/icon/plane_icon_darker.png" style="width: 25px;"> Thanh toán & giao hàng</h3>
-        <p>Miễn phí vận chuyển cho đơn hàng trên 200.000 VNĐ
-            <br>- Giao hàng và thu tiền tận nơi
-            <br>- Chuyển khoản và giao hàng
-            <br>- Mua trực tiếp tại shop
-        </p>
+      <h3><img src="../picture/icon/plane_icon_darker.png" style="width: 25px;"> Thanh toán & giao hàng</h3>
+      <p>Miễn phí vận chuyển cho đơn hàng trên 200.000 VNĐ
+        <br>- Giao hàng và thu tiền tận nơi
+        <br>- Chuyển khoản và giao hàng
+        <br>- Mua trực tiếp tại shop
+      </p>
     </div>
-
     <div class="more_info">
-        <h3><img src="../picture/icon/clock_icon_darker.png" style="width: 25px;"> Giờ mở cửa</h3>
-        <p><b>7:00 - 23:00</b>
-            <br>- Từ thứ Hai đến thứ Sáu
-            <br><b>7:00 - 18:00</b> vào thứ Bảy
-            <br>- Áp dụng cho mọi chi nhánh của 123CLOTHES
-        </p>
+      <h3><img src="../picture/icon/clock_icon_darker.png" style="width: 25px;"> Giờ mở cửa</h3>
+      <p><b>7:00 - 23:00</b>
+        <br>- Từ thứ Hai đến thứ Sáu
+        <br><b>7:00 - 18:00</b> vào thứ Bảy
+        <br>- Áp dụng cho mọi chi nhánh của 123CLOTHES
+      </p>
     </div>
-
     <div class="more_info">
-        <h3><img src="../picture/icon/headphone_darker.png" style="width: 25px;"> Đội ngũ hỗ trợ nhiệt tình</h3>
-        <p>Liên hệ ngay nếu bạn có thắc mắc
-            <br>- 0123.456.789
-        </p>
+      <h3><img src="../picture/icon/headphone_darker.png" style="width: 25px;"> Đội ngũ hỗ trợ nhiệt tình</h3>
+      <p>Liên hệ ngay nếu bạn có thắc mắc
+        <br>- 0123.456.789
+      </p>
     </div>
+  </div>
 
-    </div>
-</div>
-
-<div class="lower_footer">
+  <div class="lower_footer">
     <div class="row">
-        <p><img class="logo" src="../picture/ShopLogoDark.png" style="min-width: 170px;"></p>
-        <ul class="list_footer">
-            <li><a href="#">Giới thiệu</a></li>
-            <li><a href="#">Liên hệ</a></li>
-            <li><a href="../tuyen-dung.html">Tuyển dụng</a></li>
-            <li><a href="#">Tin tức</a></li>
-        </ul>
-        <ul class="list_info">
-            <li><img src="../picture/icon/email_icon.png" style="width: 15px; margin-right: 10px;">Email:<a href="mailto:placeholder@mail.com">placeholder@mail.com</a></li>
-            <li><img src="../picture/icon/phone.png" style="width: 15px; margin-right: 10px;">Hotline:<a href="tel:0123456789">0123.456.789</a></li>
-        </ul>
-        <p>Đăng kí để có cơ hội nhận ưu đãi khủng lên tới 80%
-            <br><input inputmode="email" placeholder="Email của bạn"><button>Đăng kí</button>
-        </p>
+      <p><img class="logo" src="../picture/ShopLogoDark.png" style="min-width: 170px;"></p>
+      <ul class="list_footer">
+        <li><a href="#">Giới thiệu</a></li>
+        <li><a href="#">Liên hệ</a></li>
+        <li><a href="../tuyen-dung.html">Tuyển dụng</a></li>
+        <li><a href="#">Tin tức</a></li>
+      </ul>
+      <ul class="list_info">
+        <li><img src="../picture/icon/email_icon.png" style="width: 15px; margin-right: 10px;">Email:<a href="mailto:placeholder@mail.com">placeholder@mail.com</a></li>
+        <li><img src="../picture/icon/phone.png" style="width: 15px; margin-right: 10px;">Hotline:<a href="tel:5">0123.456.789</a></li>
+      </ul>
+      <p>Đăng kí để có cơ hội nhận ưu đãi khủng lên tới 80%
+        <br><input inputmode="email" placeholder="Email của bạn"><button>Đăng kí</button>
+      </p>
     </div>
-
     <div class="row">
-        <h3>Hỗ trợ khách hàng</h3>
-        <ul class="list_footer">
-            <li><a href="../huong-dan-dat-hang.html">Hướng dẫn đặt hàng</a></li>
-            <li><a href="../huong-dan-chon-size.html">Hướng dẫn chọn size</a></li>
-            <li><a href="#">Câu hỏi thường gặp</a></li>
-            <li><a href="#">Chính sách thanh toán - giao hàng</a></li>
-            <li><a href="../chinh-sach-doi-hang.html">Chính sách đổi hàng</a></li>
-        </ul>
+      <h3>Hỗ trợ khách hàng</h3>
+      <ul class="list_footer">
+        <li><a href="../huong-dan-dat-hang.html">Hướng dẫn đặt hàng</a></li>
+        <li><a href="../huong-dan-chon-size.html">Hướng dẫn chọn size</a></li>
+        <li><a href="#">Câu hỏi thường gặp</a></li>
+        <li><a href="#">Chính sách thanh toán - giao hàng</a></li>
+        <li><a href="../chinh-sach-doi-hang.html">Chính sách đổi hàng</a></li>
+      </ul>
     </div>
-
     <div class="row">
-        <h3>Hệ thống cửa hàng</h3>
-        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1REXadsuW2pGVsKbCZFbAzC-lQmAXDpo&ehbc=2E312F&noprof=1"width="250" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <h3>Hệ thống cửa hàng</h3>
+      <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1REXadsuW2pGVsKbCZFbAzC-lQmAXDpo&ehbc=2E312F&noprof=1" width="250" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
-
     <div class="row">
-        <h3>Kết nối với chúng tôi</h3>
-        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FLienquanMobile&tabs=timeline&width=250&height=250&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="250" height="250" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-        <div style="display: flex; justify-content: center;">        
-            <a href="https://youtu.be/dQw4w9WgXcQ?si=rMVVerkm2dpWlwAl"><img src="../picture/icon/facebook_icon.png"></a>
-            <a href="https://youtu.be/dQw4w9WgXcQ?si=rMVVerkm2dpWlwAl"><img src="../picture/icon/youtube_icon.png"></a>
-            <a href="https://youtu.be/dQw4w9WgXcQ?si=rMVVerkm2dpWlwAl"><img src="../picture/icon/instagram_icon.png"></a>
-        </div>
+      <h3>Kết nối với chúng tôi</h3>
+      <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FLienquanMobile&tabs=timeline&width=250&height=250&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="250" height="250" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+      <div style="display: flex; justify-content: center;">
+        <a href="https://youtu.be/dQw4w9WgXcQ?si=rMVVerkm2dpWlwAl"><img src="../picture/icon/facebook_icon.png"></a>
+        <a href="https://youtu.be/dQw4w9WgXcQ?si=rMVVerkm2dpWlwAl"><img src="../picture/icon/youtube_icon.png"></a>
+        <a href="https://youtu.be/dQw4w9WgXcQ?si=rMVVerkm2dpWlwAl"><img src="../picture/icon/instagram_icon.png"></a>
+      </div>
     </div>
-</div>
+  </div>
 
-<div class="floating-menu">
+  <div class="floating-menu">
     <button class="main-btn" id="toggleMenu">
       <img src="../picture/icon/help-desk.png" alt="Main Icon">
       <span class="ripple-effect"></span>
     </button>
-  
     <div class="menu-items" id="menuItems">
       <a href="tel:0123456789" class="menu-icon">
         <img src="../picture/icon/phone.png" alt="Call">
@@ -366,47 +313,49 @@
     </div>
   </div>
 
-<div class="back_to_top" id="backToTop">
+  <div class="back_to_top" id="backToTop">
     <span class="arrow-up"></span>
-</div> 
-       
-<footer>
+  </div>
+
+  <footer>
     <div class="main_footer">
-        <div><p id="copyright">Copyright 2025 - By <b>123CLOTHES</b> Design Team</p>
-            <p id="owner_info">
-                Chủ quán: Ông Nguyễn Văn A
-                <br>SĐT cá nhân: 0123456789
-                <br>Số ĐKKD: 12A3456789 do UBND Phường Phương Liệt - Tp.Hà Nội cấp ngày 18/04/2025
-            </p>
-            <p id="ownership">Nhãn hiệu "123CLOTHES" đã được đăng kí độc quyền tại Cục sở hữu trí tuệ Việt Nam</p>
-        </div>
-        <p><img class="logo" src="../picture/ShopLogoDark.png" style="min-width: 170px;"></p>
-        
+      <div>
+        <p id="copyright">Copyright 2025 - By <b>123CLOTHES</b> Design Team</p>
+        <p id="owner_info">
+          Chủ quán: Ông Nguyễn Văn A
+          <br>SĐT cá nhân: 0123456789
+          <br>Số ĐKKD: 12A3456789 do UBND Phường Phương Liệt - Tp.Hà Nội cấp ngày 18/04/2025
+        </p>
+        <p id="ownership">Nhãn hiệu "123CLOTHES" đã được đăng kí độc quyền tại Cục sở hữu trí tuệ Việt Nam</p>
+      </div>
+      <p><img class="logo" src="../picture/ShopLogoDark.png" style="min-width: 170px;"></p>
     </div>
-</footer>
-<script src="../../javascript/dropdown.js"></script>
-<!-- Loader hiệu ứng 4 chấm quay -->
-<div id="page-loader" class="loader-wrapper">
+  </footer>
+
+  <!-- Loader hiệu ứng 4 chấm quay -->
+  <div id="page-loader" class="loader-wrapper">
     <div class="loader">
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
     </div>
-</div>
+  </div>
+
   <!-- Bootstrap JS & jQuery -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Script dropdown hoặc thêm giỏ hàng -->
+  <!-- Custom Scripts -->
   <script src="../javascript/dropdown.js"></script>
+  <script src="../javascript/reviews.js"></script>
   <script>
-    // Chuyển ảnh chính khi click vào ảnh nhỏ
+    // Định nghĩa productId cho sản phẩm này
+    const productId = 'chi-tiet-dam-vay2';
+
     function changeImage(element) {
       const mainImg = document.getElementById('main-image');
       mainImg.src = element.src;
     }
-    
-    // Tăng/giảm số lượng sản phẩm
     function updateQty(change) {
       const qtyInput = document.getElementById('qty');
       let currentQty = parseInt(qtyInput.value);
@@ -414,8 +363,6 @@
       if (currentQty < 1) currentQty = 1;
       qtyInput.value = currentQty;
     }
-    
-    // Nút quay lại đầu trang
     const backToTopBtn = document.getElementById('backToTop');
     window.onscroll = function () {
       if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
@@ -427,19 +374,122 @@
     backToTopBtn.addEventListener('click', function () {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
-    
-    // Floating menu toggle
     const toggleMenu = document.getElementById("toggleMenu");
     const closeMenu = document.getElementById("closeMenu");
     const menuItems = document.getElementById("menuItems");
-    
     toggleMenu.addEventListener("click", function () {
       menuItems.style.display = "flex";
     });
-    
     closeMenu.addEventListener("click", function () {
       menuItems.style.display = "none";
     });
-    </script>
-  </body>
+
+    // Danh sách sản phẩm và logic đề xuất sản phẩm tương tự
+    const products = [
+      {
+        id: 'chi-tiet-dam-vay1',
+        name: 'Đầm Hoa Vintage',
+        link: 'chi-tiet-dam-vay1.html',
+        image: '../picture/dam-vay-picture/dam1(1).png',
+        price_new: '399.000 VNĐ',
+        price_old: '599.000 VNĐ',
+        category: 'Đầm',
+      },
+      {
+        id: 'chi-tiet-dam-vay2',
+        name: 'Đầm Tiểu Thư',
+        link: 'chi-tiet-dam-vay2.html',
+        image: '../picture/dam-vay-picture/dam2(3).png',
+        price_new: '299.000 VNĐ',
+        price_old: '400.000 VNĐ',
+        category: 'Đầm',
+      },
+      {
+        id: 'chi-tiet-dam-vay3',
+        name: 'Set Váy Nữ Gồm Áo Thun Nơ Cổ + Chân Váy Xếp Ly Viền Đen',
+        link: 'chi-tiet-dam-vay3.html',
+        image: '../picture/dam-vay-picture/dam3(3).png',
+        price_new: '99.000 VNĐ',
+        price_old: '199.000 VNĐ',
+        category: 'Đầm',
+      },
+      {
+        id: 'chi-tiet-dam-vay4',
+        name: 'Váy Đi Biển Trễ Vai',
+        link: 'chi-tiet-dam-vay4.html',
+        image: '../picture/dam-vay-picture/dam4(1).png',
+        price_new: '136.000 VNĐ',
+        price_old: '241.000 VNĐ',
+        category: 'Váy',
+      },
+      {
+        id: 'chi-tiet-dam-vay5',
+        name: 'Đầm Thư Sinh',
+        link: 'chi-tiet-dam-vay5.html',
+        image: '../picture/dam-vay-picture/dam5(1).png',
+        price_new: '199.000 VNĐ',
+        price_old: '299.000 VNĐ',
+        category: 'Đầm',
+      },
+    ];
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const currentProductId = window.location.pathname.split('/').pop().replace('.html', '');
+      const currentProduct = products.find((p) => p.id === currentProductId);
+      if (!currentProduct) return;
+
+      const sameCategoryProducts = products.filter(
+        (p) => p.category === currentProduct.category && p.id !== currentProductId
+      );
+      const otherProducts = products.filter((p) => p.id !== currentProductId);
+
+      const selectedProducts = [];
+      const maxSuggestions = 2;
+
+      while (
+        selectedProducts.length < maxSuggestions &&
+        sameCategoryProducts.length > 0
+      ) {
+        const randomIndex = Math.floor(Math.random() * sameCategoryProducts.length);
+        selectedProducts.push(sameCategoryProducts[randomIndex]);
+        sameCategoryProducts.splice(randomIndex, 1);
+      }
+
+      while (
+        selectedProducts.length < maxSuggestions &&
+        otherProducts.length > 0
+      ) {
+        const randomIndex = Math.floor(Math.random() * otherProducts.length);
+        const product = otherProducts[randomIndex];
+        if (!selectedProducts.includes(product)) {
+          selectedProducts.push(product);
+        }
+        otherProducts.splice(randomIndex, 1);
+      }
+
+      const similarProductsContainer = document.querySelector(
+        '.col-md-4 .border.rounded.p-3.bg-white'
+      );
+      const similarProductsHtml = selectedProducts
+        .map(
+          (product) => `
+          <div class="d-flex gap-2 mb-2">
+            <div><a href="${product.link}"><img class="logo" src="${product.image}" width="60"></a></div>
+            <div>
+              <p class="mb-0">${product.name}</p>
+              <small class="price-new">${product.price_new}</small>
+              <small class="orginal_price" style="color: gray; text-decoration: line-through; font-size: small;">${product.price_old}</small>
+            </div>
+          </div>
+        `
+        )
+        .join('');
+
+      similarProductsContainer.innerHTML = `
+        <h5>Sản phẩm tương tự</h5>
+        ${similarProductsHtml}
+      `;
+    });
+  </script>
+</body>
 </html>
