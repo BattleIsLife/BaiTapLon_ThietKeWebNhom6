@@ -159,7 +159,7 @@
           <p>Hàng xưởng Việt Nam may sẵn</p>
           <p>Vì là hàng Freesize nên sẽ phụ thuộc vào số đo cơ thể của từng khách.</p>
           <ul>
-            <li>Size: Freesize &lt; 52kg tùy dáng</li>
+            <li>Size: Freesize < 52kg tùy dáng</li>
             <li>Chất liệu: Thô</li>
             <li>Màu sắc: Đen phối trắng</li>
             <li>Kỹ thuật may: Đường may kỹ lưỡng, chất lượng, không bung xước</li>
@@ -174,7 +174,7 @@
         </div>
       </div>
       <div class="col-md-4">
-        <div class="border rounded p-3 bg-white">
+        <div class="border rounded p-3 bg-white" style="display: block; min-height: 100px;">
           <!-- Sản phẩm tương tự sẽ được thêm động bởi JavaScript -->
         </div>
       </div>
@@ -340,9 +340,10 @@
   <!-- Custom Scripts -->
   <script src="../javascript/dropdown.js"></script>
   <script src="../javascript/reviews.js"></script>
+  <script src="../javascript/similar-products.js"></script>
   <script>
     // Định nghĩa productId cho sản phẩm này
-    const productId = 'chi-tiet-dam-vay6';
+    window.productId = 'chi-tiet-dam-vay6';
 
     function changeImage(element) {
       const mainImg = document.getElementById('main-image');
@@ -374,122 +375,6 @@
     });
     closeMenu.addEventListener("click", function () {
       menuItems.style.display = "none";
-    });
-
-    // Danh sách sản phẩm và logic đề xuất sản phẩm tương tự
-    const products = [
-      {
-        id: 'chi-tiet-dam-vay1',
-        name: 'Đầm Hoa Vintage',
-        link: 'chi-tiet-dam-vay1.html',
-        image: '../picture/dam-vay-picture/dam1(1).png',
-        price_new: '399.000 VNĐ',
-        price_old: '599.000 VNĐ',
-        category: 'Đầm',
-      },
-      {
-        id: 'chi-tiet-dam-vay2',
-        name: 'Đầm Tiểu Thư',
-        link: 'chi-tiet-dam-vay2.html',
-        image: '../picture/dam-vay-picture/dam2(3).png',
-        price_new: '299.000 VNĐ',
-        price_old: '400.000 VNĐ',
-        category: 'Đầm',
-      },
-      {
-        id: 'chi-tiet-dam-vay3',
-        name: 'Set Váy Nữ Gồm Áo Thun Nơ Cổ + Chân Váy Xếp Ly Viền Đen',
-        link: 'chi-tiet-dam-vay3.html',
-        image: '../picture/dam-vay-picture/dam3(3).png',
-        price_new: '99.000 VNĐ',
-        price_old: '199.000 VNĐ',
-        category: 'Đầm',
-      },
-      {
-        id: 'chi-tiet-dam-vay4',
-        name: 'Váy Đi Biển Trễ Vai',
-        link: 'chi-tiet-dam-vay4.html',
-        image: '../picture/dam-vay-picture/dam4(1).png',
-        price_new: '136.000 VNĐ',
-        price_old: '241.000 VNĐ',
-        category: 'Váy',
-      },
-      {
-        id: 'chi-tiet-dam-vay5',
-        name: 'Đầm Nữ Sinh Hàn Quốc',
-        link: 'chi-tiet-dam-vay5.html',
-        image: '../picture/dam-vay-picture/dam5(1).png',
-        price_new: '189.000 VNĐ',
-        price_old: '289.000 VNĐ',
-        category: 'Đầm',
-      },
-      {
-        id: 'chi-tiet-dam-vay7',
-        name: 'Đầm Xòe Dạ Hội',
-        link: 'chi-tiet-dam-vay7.html',
-        image: '../picture/dam-vay-picture/dam7(1).png',
-        price_new: '499.000 VNĐ',
-        price_old: '699.000 VNĐ',
-        category: 'Đầm',
-      },
-    ];
-
-    document.addEventListener('DOMContentLoaded', () => {
-      const currentProductId = window.location.pathname.split('/').pop().replace('.html', '');
-      const currentProduct = products.find((p) => p.id === currentProductId);
-      if (!currentProduct) return;
-
-      const sameCategoryProducts = products.filter(
-        (p) => p.category === currentProduct.category && p.id !== currentProductId
-      );
-      const otherProducts = products.filter((p) => p.id !== currentProductId);
-
-      const selectedProducts = [];
-      const maxSuggestions = 2;
-
-      while (
-        selectedProducts.length < maxSuggestions &&
-        sameCategoryProducts.length > 0
-      ) {
-        const randomIndex = Math.floor(Math.random() * sameCategoryProducts.length);
-        selectedProducts.push(sameCategoryProducts[randomIndex]);
-        sameCategoryProducts.splice(randomIndex, 1);
-      }
-
-      while (
-        selectedProducts.length < maxSuggestions &&
-        otherProducts.length > 0
-      ) {
-        const randomIndex = Math.floor(Math.random() * otherProducts.length);
-        const product = otherProducts[randomIndex];
-        if (!selectedProducts.includes(product)) {
-          selectedProducts.push(product);
-        }
-        otherProducts.splice(randomIndex, 1);
-      }
-
-      const similarProductsContainer = document.querySelector(
-        '.col-md-4 .border.rounded.p-3.bg-white'
-      );
-      const similarProductsHtml = selectedProducts
-        .map(
-          (product) => `
-          <div class="d-flex gap-2 mb-2">
-            <div><a href="${product.link}"><img class="logo" src="${product.image}" width="60"></a></div>
-            <div>
-              <p class="mb-0">${product.name}</p>
-              <small class="price-new">${product.price_new}</small>
-              <small class="orginal_price" style="color: gray; text-decoration: line-through; font-size: small;">${product.price_old}</small>
-            </div>
-          </div>
-        `
-        )
-        .join('');
-
-      similarProductsContainer.innerHTML = `
-        <h5>Sản phẩm tương tự</h5>
-        ${similarProductsHtml}
-      `;
     });
   </script>
 </body>

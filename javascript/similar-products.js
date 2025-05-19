@@ -1,67 +1,176 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Lấy ID sản phẩm hiện tại từ tên file HTML
-  const currentProductId = window.location.pathname.split('/').pop().replace('.html', '');
+  console.log('similar-products.js loaded');
+  console.log('productId:', window.productId);
 
-  // Tìm sản phẩm hiện tại
+  // Kiểm tra productId
+  if (!window.productId) {
+    console.error('productId không được định nghĩa trong HTML');
+    const similarProductsContainer = document.querySelector('.col-md-4 .border.rounded.p-3.bg-white');
+    if (similarProductsContainer) {
+      similarProductsContainer.innerHTML = '<h5>Sản phẩm tương tự</h5><p class="text-muted">Không có sản phẩm tương tự.</p>';
+    }
+    return;
+  }
+
+  // Danh sách sản phẩm
+  const products = [
+    {
+      id: 'chi-tiet-dam-vay1',
+      name: 'Đầm Hoa Vintage Dự Tiệc',
+      link: 'chi-tiet-dam-vay1.html',
+      image: '../picture/dam-vay-picture/dam1(1).png',
+      price_new: '399.000 VNĐ',
+      price_old: '599.000 VNĐ',
+      category: 'Đầm',
+    },
+    {
+      id: 'chi-tiet-dam-vay2',
+      name: 'Đầm Tiểu Thư Trễ Vai Xoè Tầng',
+      link: 'chi-tiet-dam-vay2.html',
+      image: '../picture/dam-vay-picture/dam2(3).png',
+      price_new: '299.000 VNĐ',
+      price_old: '400.000 VNĐ',
+      category: 'Đầm',
+    },
+    {
+      id: 'chi-tiet-dam-vay3',
+      name: 'Set Váy Nữ Gồm Áo Thun Nơ Cổ + Chân Váy Xếp Ly Viền Đen',
+      link: 'chi-tiet-dam-vay3.html',
+      image: '../picture/dam-vay-picture/dam3(3).png',
+      price_new: '99.000 VNĐ',
+      price_old: '199.000 VNĐ',
+      category: 'Đầm',
+    },
+    {
+      id: 'chi-tiet-dam-vay4',
+      name: 'Váy Đi Biển Trễ Vai',
+      link: 'chi-tiet-dam-vay4.html',
+      image: '../picture/dam-vay-picture/dam4(1).png',
+      price_new: '136.000 VNĐ',
+      price_old: '241.000 VNĐ',
+      category: 'Váy',
+    },
+    {
+      id: 'chi-tiet-dam-vay5',
+      name: 'Đầm Thư Sinh Hàn Quốc',
+      link: 'chi-tiet-dam-vay5.html',
+      image: '../picture/dam-vay-picture/dam5(1).png',
+      price_new: '199.000 VNĐ',
+      price_old: '299.000 VNĐ',
+      category: 'Đầm',
+    },
+    {
+      id: 'chi-tiet-dam-vay6',
+      name: 'Đầm Xòe Dự Tiệc',
+      link: 'chi-tiet-dam-vay6.html',
+      image: '../picture/dam-vay-picture/dam6(1).png',
+      price_new: '399.000 VNĐ',
+      price_old: '599.000 VNĐ',
+      category: 'Đầm',
+    },
+    {
+      id: 'chi-tiet-dam-vay7',
+      name: 'Đầm Xòe Cổ Vuông',
+      link: 'chi-tiet-dam-vay7.html',
+      image: '../picture/dam-vay-picture/dam7(1).png',
+      price_new: '299.000 VNĐ',
+      price_old: '399.000 VNĐ',
+      category: 'Đầm',
+    },
+    {
+      id: 'chi-tiet-dam-vay8',
+      name: 'Váy Đầm Dự Tiệc Đỏ Sang Trọng',
+      link: 'chi-tiet-dam-vay8.html',
+      image: '../picture/dam-vay-picture/dam8(1).png',
+      price_new: '399.000 VNĐ',
+      price_old: '599.000 VNĐ',
+      category: 'Váy',
+    },
+    {
+      id: 'chi-tiet-dam-vay9',
+      name: 'Đầm Xòe Cổ Vuông',
+      link: 'chi-tiet-dam-vay9.html',
+      image: '../picture/dam-vay-picture/dam9(1).png',
+      price_new: '556.000 VNĐ',
+      price_old: '695.000 VNĐ',
+      category: 'Đầm',      
+    }
+  ];
+
+  const currentProductId = window.productId;
   const currentProduct = products.find((p) => p.id === currentProductId);
-  if (!currentProduct) return;
+  console.log('Current Product:', currentProduct);
 
-  // Lọc sản phẩm cùng danh mục (trừ sản phẩm hiện tại)
+  // Xử lý trường hợp không tìm thấy sản phẩm
+  const similarProductsContainer = document.querySelector('.col-md-4 .border.rounded.p-3.bg-white');
+  console.log('Container:', similarProductsContainer);
+  if (!currentProduct || !similarProductsContainer) {
+    if (similarProductsContainer) {
+      similarProductsContainer.innerHTML = '<h5>Sản phẩm tương tự</h5><p class="text-muted">Không có sản phẩm tương tự.</p>';
+    }
+    console.error('Không tìm thấy sản phẩm hoặc container');
+    return;
+  }
+
+  // Lọc sản phẩm
   const sameCategoryProducts = products.filter(
     (p) => p.category === currentProduct.category && p.id !== currentProductId
   );
-
-  // Lọc tất cả sản phẩm khác (trừ sản phẩm hiện tại)
   const otherProducts = products.filter((p) => p.id !== currentProductId);
+  console.log('Same Category Products:', sameCategoryProducts);
+  console.log('Other Products:', otherProducts);
 
-  // Chọn 2 sản phẩm ngẫu nhiên
   const selectedProducts = [];
   const maxSuggestions = 2;
 
-  // Ưu tiên sản phẩm cùng danh mục
-  while (
-    selectedProducts.length < maxSuggestions &&
-    sameCategoryProducts.length > 0
-  ) {
-    const randomIndex = Math.floor(Math.random() * sameCategoryProducts.length);
-    selectedProducts.push(sameCategoryProducts[randomIndex]);
-    sameCategoryProducts.splice(randomIndex, 1); // Xóa để tránh trùng
+  // Hàm chọn ngẫu nhiên
+  const pickRandomProduct = (arr) => {
+    if (arr.length === 0) return null;
+    const randomIndex = Math.floor(Math.random() * arr.length);
+    const product = arr[randomIndex];
+    arr.splice(randomIndex, 1);
+    return product;
+  };
+
+  // Chọn sản phẩm cùng danh mục
+  while (selectedProducts.length < maxSuggestions && sameCategoryProducts.length > 0) {
+    const product = pickRandomProduct(sameCategoryProducts);
+    if (product) selectedProducts.push(product);
   }
 
-  // Nếu thiếu, bổ sung từ các sản phẩm khác
-  while (
-    selectedProducts.length < maxSuggestions &&
-    otherProducts.length > 0
-  ) {
-    const randomIndex = Math.floor(Math.random() * otherProducts.length);
-    const product = otherProducts[randomIndex];
-    if (!selectedProducts.includes(product)) {
+  // Chọn sản phẩm khác nếu chưa đủ
+  while (selectedProducts.length < maxSuggestions && otherProducts.length > 0) {
+    const product = pickRandomProduct(otherProducts);
+    if (product && !selectedProducts.includes(product)) {
       selectedProducts.push(product);
     }
-    otherProducts.splice(randomIndex, 1);
   }
 
-  // Cập nhật giao diện
-  const similarProductsContainer = document.querySelector(
-    '.col-md-4 .border.rounded.p-3.bg-white'
-  );
-  const similarProductsHtml = selectedProducts
-    .map(
-      (product) => `
-      <div class="d-flex gap-2 mb-2">
-        <div><a href="${product.link}"><img class="logo" src="${product.image}" width="60"></a></div>
-        <div>
-          <p class="mb-0">${product.name}</p>
-          <small class="price-new">${product.price_new}</small>
-          <small class="orginal_price" style="color: gray; text-decoration: line-through; font-size: small;">${product.price_old}</small>
-        </div>
-      </div>
-    `
-    )
-    .join('');
+  console.log('Selected Products:', selectedProducts);
 
-  similarProductsContainer.innerHTML = `
-    <h5>Sản phẩm tương tự</h5>
-    ${similarProductsHtml}
-  `;
+  // Hiển thị sản phẩm tương tự
+  if (selectedProducts.length === 0) {
+    similarProductsContainer.innerHTML = '<h5>Sản phẩm tương tự</h5><p class="text-muted">Không có sản phẩm tương tự.</p>';
+  } else {
+    const similarProductsHtml = selectedProducts
+      .map(
+        (product) => `
+        <div class="d-flex gap-2 mb-2 align-items-center">
+          <div><a href="${product.link}"><img src="${product.image}" width="60" alt="${product.name}" style="object-fit: cover;"></a></div>
+          <div>
+            <p class="mb-0" style="font-size: 14px; line-height: 1.2;">${product.name}</p>
+            <small class="price-new text-danger">${product.price_new}</small>
+            <small class="orginal_price" style="color: gray; text-decoration: line-through; font-size: 12px;">${product.price_old}</small>
+          </div>
+        </div>
+      `
+      )
+      .join('');
+
+    console.log('HTML to render:', similarProductsHtml);
+    similarProductsContainer.innerHTML = `
+      <h5 class="mb-3">Sản phẩm tương tự</h5>
+      ${similarProductsHtml}
+    `;
+  }
 });

@@ -103,7 +103,7 @@
       <!-- ẢNH SẢN PHẨM -->
       <div class="col-md-5">
         <div class="border rounded p-3 bg-white">
-          <img id="main-image" src="../picture/dam-vay-picture/dam3(3).png" class="img-fluid mb-2" alt="Đầm đen trắng">
+          <img id="main-image" src="../picture/dam-vay-picture/dam3(3).png" class="img-fluid mb-2" alt="Set váy nữ">
           <div class="d-flex gap-2">
             <img src="../picture/dam-vay-picture/dam3(1).png" class="img-thumbnail small-img" width="80" onclick="changeImage(this)">
             <img src="../picture/dam-vay-picture/dam3(2).png" class="img-thumbnail small-img" width="80" onclick="changeImage(this)">
@@ -125,7 +125,7 @@
           <div class="mt-3">
             <label class="fw-bold">Màu sắc:</label><br>
             <div class="btn-group" role="group">
-              <input type="radio" class="btn-check" name="color" id="white" autocomplete="off">
+              <input type="radio" class="btn-check" name="color" id="white" autocomplete="off" checked>
               <label class="btn btn-outline-secondary" for="white">Trắng</label>
               <input type="radio" class="btn-check" name="color" id="black" autocomplete="off">
               <label class="btn btn-outline-secondary" for="black">Đen</label>
@@ -181,13 +181,13 @@
         </div>
       </div>
       <div class="col-md-4">
-        <div class="border rounded p-3 bg-white">
+        <div class="border rounded p-3 bg-white" style="display: block; min-height: 100px;">
           <!-- Sản phẩm tương tự sẽ được thêm động bởi JavaScript -->
         </div>
       </div>
     </div>
 
-    <!-- CUSTOMER REVIEWS SECTION (Shopee Style) -->
+    <!-- CUSTOMER REVIEWS SECTION -->
     <div class="row mt-5">
       <div class="col-12">
         <div class="border rounded p-3 bg-white customer-reviews">
@@ -346,9 +346,10 @@
   <!-- Custom Scripts -->
   <script src="../javascript/dropdown.js"></script>
   <script src="../javascript/reviews.js"></script>
+  <script src="../javascript/similar-products.js"></script>
   <script>
     // Định nghĩa productId cho sản phẩm này
-    const productId = 'chi-tiet-dam-vay3';
+    window.productId = 'chi-tiet-dam-vay3';
 
     function changeImage(element) {
       const mainImg = document.getElementById('main-image');
@@ -380,122 +381,6 @@
     });
     closeMenu.addEventListener("click", function () {
       menuItems.style.display = "none";
-    });
-
-    // Danh sách sản phẩm và logic đề xuất sản phẩm tương tự
-    const products = [
-      {
-        id: 'chi-tiet-dam-vay1',
-        name: 'Đầm Hoa Vintage',
-        link: 'chi-tiet-dam-vay1.html',
-        image: '../picture/dam-vay-picture/dam1(1).png',
-        price_new: '399.000 VNĐ',
-        price_old: '599.000 VNĐ',
-        category: 'Đầm',
-      },
-      {
-        id: 'chi-tiet-dam-vay2',
-        name: 'Đầm Tiểu Thư',
-        link: 'chi-tiet-dam-vay2.html',
-        image: '../picture/dam-vay-picture/dam2(3).png',
-        price_new: '299.000 VNĐ',
-        price_old: '400.000 VNĐ',
-        category: 'Đầm',
-      },
-      {
-        id: 'chi-tiet-dam-vay4',
-        name: 'Váy Đi Biển Trễ Vai',
-        link: 'chi-tiet-dam-vay4.html',
-        image: '../picture/dam-vay-picture/dam4(1).png',
-        price_new: '136.000 VNĐ',
-        price_old: '241.000 VNĐ',
-        category: 'Váy',
-      },
-      {
-        id: 'chi-tiet-dam-vay5',
-        name: 'Đầm thư sinh',
-        link: 'chi-tiet-dam-vay5.html',
-        image: '../picture/dam-vay-picture/dam5(1).png',
-        price_new: '199.000 VNĐ',
-        price_old: '299.000 VNĐ',
-        category: 'Đầm',
-      },
-      {
-        id: 'chi-tiet-dam-vay6',
-        name: 'Đầm Xòe Dạo Phố',
-        link: 'chi-tiet-dam-vay6.html',
-        image: '../picture/dam-vay-picture/dam6(1).png',
-        price_new: '299.000 VNĐ',
-        price_old: '399.000 VNĐ',
-        category: 'Đầm',
-      },
-      {
-        id: 'chi-tiet-dam-vay7',
-        name: 'Đầm Xòe Cổ Tim',
-        link: 'chi-tiet-dam-vay7.html',
-        image: '../picture/dam-vay-picture/dam7(1).png',
-        price_new: '199.000 VNĐ',
-        price_old: '299.000 VNĐ',
-        category: 'Đầm',
-      },
-    ];
-
-    document.addEventListener('DOMContentLoaded', () => {
-      const currentProductId = window.location.pathname.split('/').pop().replace('.html', '');
-      const currentProduct = products.find((p) => p.id === currentProductId);
-      if (!currentProduct) return;
-
-      const sameCategoryProducts = products.filter(
-        (p) => p.category === currentProduct.category && p.id !== currentProductId
-      );
-      const otherProducts = products.filter((p) => p.id !== currentProductId);
-
-      const selectedProducts = [];
-      const maxSuggestions = 2;
-
-      while (
-        selectedProducts.length < maxSuggestions &&
-        sameCategoryProducts.length > 0
-      ) {
-        const randomIndex = Math.floor(Math.random() * sameCategoryProducts.length);
-        selectedProducts.push(sameCategoryProducts[randomIndex]);
-        sameCategoryProducts.splice(randomIndex, 1);
-      }
-
-      while (
-        selectedProducts.length < maxSuggestions &&
-        otherProducts.length > 0
-      ) {
-        const randomIndex = Math.floor(Math.random() * otherProducts.length);
-        const product = otherProducts[randomIndex];
-        if (!selectedProducts.includes(product)) {
-          selectedProducts.push(product);
-        }
-        otherProducts.splice(randomIndex, 1);
-      }
-
-      const similarProductsContainer = document.querySelector(
-        '.col-md-4 .border.rounded.p-3.bg-white'
-      );
-      const similarProductsHtml = selectedProducts
-        .map(
-          (product) => `
-          <div class="d-flex gap-2 mb-2">
-            <div><a href="${product.link}"><img class="logo" src="${product.image}" width="60"></a></div>
-            <div>
-              <p class="mb-0">${product.name}</p>
-              <small class="price-new">${product.price_new}</small>
-              <small class="orginal_price" style="color: gray; text-decoration: line-through; font-size: small;">${product.price_old}</small>
-            </div>
-          </div>
-        `
-        )
-        .join('');
-
-      similarProductsContainer.innerHTML = `
-        <h5>Sản phẩm tương tự</h5>
-        ${similarProductsHtml}
-      `;
     });
   </script>
 </body>

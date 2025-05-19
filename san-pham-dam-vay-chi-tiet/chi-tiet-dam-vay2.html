@@ -125,8 +125,8 @@
           <div class="mt-3">
             <label class="fw-bold">Màu sắc:</label><br>
             <div class="btn-group" role="group">
-              <input type="radio" class="btn-check" name="color" id="white" autocomplete="off">
-              <label class="btn btn-outline-secondary" for="white">Trắng</label>
+              <input type="radio" class="btn-check" name="color" id="cream" autocomplete="off" checked>
+              <label class="btn btn-outline-secondary" for="cream">Kem</label>
               <input type="radio" class="btn-check" name="color" id="black" autocomplete="off">
               <label class="btn btn-outline-secondary" for="black">Đen</label>
               <input type="radio" class="btn-check" name="color" id="pink" autocomplete="off">
@@ -183,13 +183,13 @@
         </div>
       </div>
       <div class="col-md-4">
-        <div class="border rounded p-3 bg-white">
+        <div class="border rounded p-3 bg-white" style="display: block; min-height: 100px;">
           <!-- Sản phẩm tương tự sẽ được thêm động bởi JavaScript -->
         </div>
       </div>
     </div>
 
-    <!-- CUSTOMER REVIEWS SECTION (Shopee Style) -->
+    <!-- CUSTOMER REVIEWS SECTION -->
     <div class="row mt-5">
       <div class="col-12">
         <div class="border rounded p-3 bg-white customer-reviews">
@@ -225,6 +225,7 @@
     </div>
   </div>
 
+    <!-- FOOTER -->
   <div class="top_footer">
     <div class="more_info">
       <h3><img src="../picture/icon/plane_icon_darker.png" style="width: 25px;"> Thanh toán & giao hàng</h3>
@@ -261,7 +262,7 @@
       </ul>
       <ul class="list_info">
         <li><img src="../picture/icon/email_icon.png" style="width: 15px; margin-right: 10px;">Email:<a href="mailto:placeholder@mail.com">placeholder@mail.com</a></li>
-        <li><img src="../picture/icon/phone.png" style="width: 15px; margin-right: 10px;">Hotline:<a href="tel:5">0123.456.789</a></li>
+        <li><img src="../picture/icon/phone.png" style="width: 15px; margin-right: 10px;">Hotline:<a href="tel:0123456789">0123.456.789</a></li>
       </ul>
       <p>Đăng kí để có cơ hội nhận ưu đãi khủng lên tới 80%
         <br><input inputmode="email" placeholder="Email của bạn"><button>Đăng kí</button>
@@ -348,9 +349,10 @@
   <!-- Custom Scripts -->
   <script src="../javascript/dropdown.js"></script>
   <script src="../javascript/reviews.js"></script>
+  <script src="../javascript/similar-products.js"></script>
   <script>
     // Định nghĩa productId cho sản phẩm này
-    const productId = 'chi-tiet-dam-vay2';
+    window.productId = 'chi-tiet-dam-vay2';
 
     function changeImage(element) {
       const mainImg = document.getElementById('main-image');
@@ -382,122 +384,6 @@
     });
     closeMenu.addEventListener("click", function () {
       menuItems.style.display = "none";
-    });
-
-    // Danh sách sản phẩm và logic đề xuất sản phẩm tương tự
-    const products = [
-      {
-        id: 'chi-tiet-dam-vay1',
-        name: 'Đầm Hoa Vintage',
-        link: 'chi-tiet-dam-vay1.html',
-        image: '../picture/dam-vay-picture/dam1(1).png',
-        price_new: '399.000 VNĐ',
-        price_old: '599.000 VNĐ',
-        category: 'Đầm',
-      },
-      {
-        id: 'chi-tiet-dam-vay3',
-        name: 'Set Váy Nữ Gồm Áo Thun Nơ Cổ + Chân Váy Xếp Ly Viền Đen',
-        link: 'chi-tiet-dam-vay3.html',
-        image: '../picture/dam-vay-picture/dam3(3).png',
-        price_new: '99.000 VNĐ',
-        price_old: '199.000 VNĐ',
-        category: 'Đầm',
-      },
-      {
-        id: 'chi-tiet-dam-vay4',
-        name: 'Váy Đi Biển Trễ Vai',
-        link: 'chi-tiet-dam-vay4.html',
-        image: '../picture/dam-vay-picture/dam4(1).png',
-        price_new: '136.000 VNĐ',
-        price_old: '241.000 VNĐ',
-        category: 'Váy',
-      },
-      {
-        id: 'chi-tiet-dam-vay5',
-        name: 'Đầm Thư Sinh',
-        link: 'chi-tiet-dam-vay5.html',
-        image: '../picture/dam-vay-picture/dam5(1).png',
-        price_new: '199.000 VNĐ',
-        price_old: '299.000 VNĐ',
-        category: 'Đầm',
-      },
-      {
-        id: 'chi-tiet-dam-vay6',
-        name: 'Đầm Xòe Cổ Tim',
-        link: 'chi-tiet-dam-vay6.html',
-        image: '../picture/dam-vay-picture/dam6(1).png',
-        price_new: '299.000 VNĐ',
-        price_old: '399.000 VNĐ',
-        category: 'Đầm',
-      },
-      {
-        id: 'chi-tiet-dam-vay7',
-        name: 'Đầm Dạ Hội Đính Đá Sang Trọng',
-        link: 'chi-tiet-dam-vay7.html',
-        image: '../picture/dam-vay-picture/dam7(1).png',
-        price_new: '499.000 VNĐ',
-        price_old: '699.000 VNĐ',
-        category: 'Đầm',
-      },
-    ];
-
-    document.addEventListener('DOMContentLoaded', () => {
-      const currentProductId = window.location.pathname.split('/').pop().replace('.html', '');
-      const currentProduct = products.find((p) => p.id === currentProductId);
-      if (!currentProduct) return;
-
-      const sameCategoryProducts = products.filter(
-        (p) => p.category === currentProduct.category && p.id !== currentProductId
-      );
-      const otherProducts = products.filter((p) => p.id !== currentProductId);
-
-      const selectedProducts = [];
-      const maxSuggestions = 2;
-
-      while (
-        selectedProducts.length < maxSuggestions &&
-        sameCategoryProducts.length > 0
-      ) {
-        const randomIndex = Math.floor(Math.random() * sameCategoryProducts.length);
-        selectedProducts.push(sameCategoryProducts[randomIndex]);
-        sameCategoryProducts.splice(randomIndex, 1);
-      }
-
-      while (
-        selectedProducts.length < maxSuggestions &&
-        otherProducts.length > 0
-      ) {
-        const randomIndex = Math.floor(Math.random() * otherProducts.length);
-        const product = otherProducts[randomIndex];
-        if (!selectedProducts.includes(product)) {
-          selectedProducts.push(product);
-        }
-        otherProducts.splice(randomIndex, 1);
-      }
-
-      const similarProductsContainer = document.querySelector(
-        '.col-md-4 .border.rounded.p-3.bg-white'
-      );
-      const similarProductsHtml = selectedProducts
-        .map(
-          (product) => `
-          <div class="d-flex gap-2 mb-2">
-            <div><a href="${product.link}"><img class="logo" src="${product.image}" width="60"></a></div>
-            <div>
-              <p class="mb-0">${product.name}</p>
-              <small class="price-new">${product.price_new}</small>
-              <small class="orginal_price" style="color: gray; text-decoration: line-through; font-size: small;">${product.price_old}</small>
-            </div>
-          </div>
-        `
-        )
-        .join('');
-
-      similarProductsContainer.innerHTML = `
-        <h5>Sản phẩm tương tự</h5>
-        ${similarProductsHtml}
-      `;
     });
   </script>
 </body>
