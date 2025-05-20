@@ -69,17 +69,25 @@ td[colspan="3"] {
 }
 
 @media (max-width: 768px) {
-  th, td {
-      font-size: 14px;
-      padding: 12px;
-  }
+   section {
+        padding: 0 5px;
+    }
 
-  h2, h3 {
-      font-size: 18px;
-  }
+    section h3 {
+        font-size: 18px;
+    }
 
-  main {
-      padding: 24px;
-      margin: 30px 16px;
-  }
+    section table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    section th,
+    section td {
+        font-size: 13px;
+        padding: 8px;
+        white-space: nowrap; /* giữ nội dung không bị xuống dòng */
+    }
 }
