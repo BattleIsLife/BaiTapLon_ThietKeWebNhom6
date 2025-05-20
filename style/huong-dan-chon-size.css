@@ -82,3 +82,19 @@ table tr:hover {
     background-color: #e7f5ff;
     transition: background-color 0.3s ease;
 }
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    .size_info h3 {
+        font-size: 16px;
+    }
+
+    .size_info th,
+    .size_info td {
+        font-size: 13px;
+        padding: 6px;
+    }
+}
