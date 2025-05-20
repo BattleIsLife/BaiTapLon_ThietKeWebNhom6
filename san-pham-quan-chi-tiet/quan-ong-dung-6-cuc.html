@@ -373,7 +373,7 @@
   <script src="../javascript/dropdown.js"></script>
   <script>
 
-    const productId = 'quan-ong-dung-6-cuc';
+    window.productId = 'quan-ong-dung-6-cuc';
 
     function changeImage(img) {
       document.getElementById("main-image").src = img.src;
@@ -386,30 +386,6 @@
         qtyInput.value = current + change;
       }
     }
-
-    // Danh sách sản phẩm và logic đề xuất sản phẩm tương tự
-    const products = [
-      {
-        id: 'quan-ong-dung-6-cuc',
-        name: 'Quần ống đứng 6 cúc',
-        link: 'quan-ong-dung-6-cuc.html?id=quan-ong-dung-6-cuc',
-        image: '../picture/clothes/quan/quan-ong-dung-6-cuc-be.jpeg',
-        price_new: '367.000 VNĐ',
-        price_old: '425.000 VNĐ',
-        category: 'Quần nữ',
-      },
-
-      {
-        id: 'quan-dap-li-ao-dai',
-        name: 'Quần dập li áo dài',
-        link: 'quan-dap-li-ao-dai.html?id=quan-dap-li-ao-dai',
-        image: '../picture/clothes/quan/quan-dap-li-ao-dai-1.jpg',
-        price_new: '437.500 VNĐ',
-        price_old: '625.000 VNĐ',
-        category: 'Quần nữ',
-      },
-    ];
-
     </script>
     
 </body>

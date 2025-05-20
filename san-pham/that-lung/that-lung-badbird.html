@@ -334,10 +334,10 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Script dropdown hoặc thêm giỏ hàng -->
   <script src="../../javascript/dropdown.js"></script>
-  <script src="../../javascript/similar-products.js"></script>
+  <script src="../../javascript/similar-products-that-lung.js"></script>
   <script src="../../javascript/reviews.js"></script>
   <script>
-    const productId = 'that-lung-badbird';
+    window.productId = 'that-lung-badbird';
 
     function changeImage(img) {
       document.getElementById("main-image").src = img.src;
@@ -350,49 +350,6 @@
         qtyInput.value = current + change;
       }
     }
-
-    // Danh sách sản phẩm và logic đề xuất sản phẩm tương tự
-    const products = [
-      {
-        id: 'that-lung-nam-da-bo',
-        name: 'Thắt lưng nam da bò',
-        link: 'that-lung-nam-da-bo.html?id=that-lung-nam-da-bo',
-        image: '../../picture/space/thatlung9.webp',
-        price_new: '39.000 VNĐ',
-        price_old: '50.000 VNĐ',
-        category: 'Thắt lưng',
-      },
-
-      {
-        id: 'that-lung-khoa-tu-dong',
-        name: 'Thắt lưng khóa tự động',
-        link: 'that-lung-khoa-tu-dong.html?id=that-lung-khoa-tu-dong',
-        image: '../../picture/space/thatlung6.webp',
-        price_new: '29.000 VNĐ',
-        price_old: '23.000 VNĐ',
-        category: 'Thắt lưng',
-      },
-
-      {
-        id: 'day-belt-that-lung',
-        name: 'Dây belt thắt lưng',
-        link: 'day-belt-that-lung.html?id=day-belt-that-lung',
-        image: '../../picture/space/thatlung1.webp',
-        price_new: '30.000 VNĐ',
-        price_old: '54.000 VNĐ',
-        category: 'Thắt lưng',
-      },
-
-      {
-        id: 'that-lung-badbird',
-        name: 'Thắt Lưng BADBIRD',
-        link: 'that-lung-badbird.html?id=that-lung-badbird',
-        image: '../../picture/space/thatlung2.webp',
-        price_new: '65.000 VNĐ',
-        price_old: '69.000 VNĐ',
-        category: 'Giày dép',
-      },
-    ];
     </script>
     
 </body>

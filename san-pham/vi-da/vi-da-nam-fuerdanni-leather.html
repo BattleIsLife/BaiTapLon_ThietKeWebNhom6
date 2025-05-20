@@ -334,10 +334,10 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Script dropdown hoặc thêm giỏ hàng -->
   <script src="../../javascript/dropdown.js"></script>
-  <script src="../../javascript/similar-products.js"></script>
+  <script src="../../javascript/similar-products-vi-da.js"></script>
   <script src="../../javascript/reviews.js"></script>
   <script>
-    const productId = 'vi-da-nam-fuerdanni-leather';
+    window.productId = 'vi-da-nam-fuerdanni-leather';
 
     function changeImage(img) {
       document.getElementById("main-image").src = img.src;
@@ -350,49 +350,6 @@
         qtyInput.value = current + change;
       }
     }
-
-    // Danh sách sản phẩm và logic đề xuất sản phẩm tương tự
-    const products = [
-      {
-        id: 'vi-nam-ong-dia-da-bo',
-        name: 'Ví nam Ông Địa da bò',
-        link: 'vi-nam-ong-dia-da-bo.html?id=vi-nam-ong-dia-da-bo',
-        image: '../../picture/space/vida9.webp',
-        price_new: '139.000 VNĐ',
-        price_old: '150.000 VNĐ',
-        category: 'Ví da',
-      },
-
-      {
-        id: 'vi-da-bo-sap-in-hinh-3d',
-        name: 'Ví da bò sáp in hình 3D',
-        link: 'vi-da-bo-sap-in-hinh-3d.html?id=vi-da-bo-sap-in-hinh-3d',
-        image: '../../picture/space/vida6.webp',
-        price_new: '155.000 VNĐ',
-        price_old: '200.000 VNĐ',
-        category: 'Ví da',
-      },
-
-      {
-        id: 'vi-da-nam-longdo-leather-b03',
-        name: 'Ví da nam Longdo Leather B03',
-        link: 'vi-da-nam-longdo-leather-b03.html?id=vi-da-nam-longdo-leather-b03',
-        image: '../../picture/space/vida7.webp',
-        price_new: '65.000 VNĐ',
-        price_old: '69.000 VNĐ',
-        category: 'Ví da',
-      },
-
-      {
-        id: 'vi-da-nam-fuerdanni-leather',
-        name: 'Ví da nam Fuerdanni Leather',
-        link: 'vi-da-nam-fuerdanni-leather.html?id=vi-da-nam-fuerdanni-leather',
-        image: '../../picture/space/vida1.webp',
-        price_new: '54.000 VNĐ',
-        price_old: '99.000 VNĐ',
-        category: 'Ví da',
-      },
-    ];
     </script>
     
 </body>
