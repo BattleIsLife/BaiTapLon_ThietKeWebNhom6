@@ -194,11 +194,40 @@
   .list1
   {
     flex-direction: column;
+    align-items: center;
   }
 
   .product-grid1 .product-card
   {
     width: auto;
+  }
+
+  .container {
+    text-align: center;
+    padding: 0 16px;
+  }
+
+  .container h1 {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+
+  .container .select {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+
+  .product-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-card {
+    width: 90%;
+    max-width: 320px;
+    margin: 0 auto;
   }
 }
 
