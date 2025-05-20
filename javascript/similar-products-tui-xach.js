@@ -13,46 +13,61 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   // Danh sách sản phẩm và logic đề xuất sản phẩm tương tự
     const products = [
-      {
-        id: 'aonam1',
-        name: 'Ví nam Ông Địa da bò',
-        link: 'chi-tiet-ao-nam1.html?id=aonam1',
-        image: '../picture/clothes/ao/ao-polo-soc-co-tim.png',
-        price_new: '119.000 VNĐ',
-        price_old: '399.000 VNĐ',
-        category: 'Áo nam',
-      },
-
-      {
-        id: 'aonam2',
-        name: 'Áo sơ mi tay dài lịch lãm',
-        link: 'chi-tiet-ao-nam2.html?id=aonam2',
-        image: '../picture/clothes/ao/ao-so-mi-tay-dai.png',
-        price_new: '299.000 VNĐ',
-        price_old: '499.000 VNĐ',
-        category: 'Áo nam',
-      },
-
-      {
-        id: 'aonam3',
-        name: 'Áo sơ mi tay ngắn năng động',
-        link: 'chi-tiet-ao-nam-3.html?id=aonam3',
-        image: '../picture/clothes/ao/ao-so-mi1.jpg',
-        price_new: '199.000 VNĐ',
-        price_old: '399.000 VNĐ',
-        category: 'Áo nam',
-      },
-
-      {
-        id: 'aonam4',
-        name: 'Áo thun in chữ',
-        link: 'chi-tiet-ao-nam4.html?id=aonam4',
-        image: '../picture/clothes/ao/ao-thun-in-chu-smile.png',
-        price_new: '136.000 VNĐ',
-        price_old: '241.000 VNĐ',
-        category: 'Áo nam',
-      },
-    ];
+            {
+                id: 'chi-tiet-sanpham1',
+                name: 'COVERAL KLORS Túi',
+                link: 'chi-tiet-sanpham1?id=chi-tiet-sanpham1',
+                image: '../../picture/space/tuixach1.webp',
+                price_new: '30.000 VNĐ',
+                price_old: '54.000 VNĐ',
+                category: 'túi xách',
+            },
+            {
+                id: 'chi-tiet-sanpham2',
+                name: 'Túi xách nữ đeo chéo Diomi Store 616',
+                link: 'chi-tiet-sanpham2?id=chi-tiet-sanpham2',
+                image: '../../picture/space/tuixach2.webp',
+                price_new: '50.000 VNĐ',
+                price_old: '60.000 VNĐ',
+                category: 'túi xách',
+            },
+            {
+                id: 'chi-tiet-sanpham3',
+                name: 'Túi xách nữ',
+                link: 'chi-tiet-sanpham3?id=chi-tiet-sanpham3',
+                image: '../../picture/space/tuixach3.webp',
+                price_new: '42.000 VNĐ',
+                price_old: '45.000 VNĐ',
+                category: 'túi xách',
+            },
+            {
+                id: 'chi-tiet-sanpham4',
+                name: 'Túi xách nữ HT132',
+                link: 'chi-tiet-sanpham4?id=chi-tiet-sanpham4',
+                image: '../../picture/space/tuixach4.webp',
+                price_new: '68.000 VNĐ',
+                price_old: '80.000 VNĐ',
+                category: 'túi xách',
+            },
+            {
+                id: 'chi-tiet-sanpham5',
+                name: 'Túi đeo chéo TX73',
+                link: 'chi-tiet-sanpham5?id=chi-tiet-sanpham5',
+                image: '../../picture/space/tuixach5.webp',
+                price_new: '55.000 VNĐ',
+                price_old: '115.000 VNĐ',
+                category: 'túi xách',
+            },
+            {
+                id: 'chi-tiet-sanpham6',
+                name: 'MOSSDOOM Túi xách nữ',
+                link: 'chi-tiet-sanpham6?id=chi-tiet-sanpham6',
+                image: '../../picture/space/tuixach6.webp',
+                price_new: '225.000 VNĐ',
+                price_old: '203.000 VNĐ',
+                category: 'túi xách',
+            },
+        ];
 
   const currentProductId = window.productId;
   const currentProduct = products.find((p) => p.id === currentProductId);

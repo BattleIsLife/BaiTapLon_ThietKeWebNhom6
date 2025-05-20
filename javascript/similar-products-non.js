@@ -13,46 +13,61 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   // Danh sách sản phẩm và logic đề xuất sản phẩm tương tự
     const products = [
-      {
-        id: 'aonam1',
-        name: 'Ví nam Ông Địa da bò',
-        link: 'chi-tiet-ao-nam1.html?id=aonam1',
-        image: '../picture/clothes/ao/ao-polo-soc-co-tim.png',
-        price_new: '119.000 VNĐ',
-        price_old: '399.000 VNĐ',
-        category: 'Áo nam',
-      },
-
-      {
-        id: 'aonam2',
-        name: 'Áo sơ mi tay dài lịch lãm',
-        link: 'chi-tiet-ao-nam2.html?id=aonam2',
-        image: '../picture/clothes/ao/ao-so-mi-tay-dai.png',
-        price_new: '299.000 VNĐ',
-        price_old: '499.000 VNĐ',
-        category: 'Áo nam',
-      },
-
-      {
-        id: 'aonam3',
-        name: 'Áo sơ mi tay ngắn năng động',
-        link: 'chi-tiet-ao-nam-3.html?id=aonam3',
-        image: '../picture/clothes/ao/ao-so-mi1.jpg',
-        price_new: '199.000 VNĐ',
-        price_old: '399.000 VNĐ',
-        category: 'Áo nam',
-      },
-
-      {
-        id: 'aonam4',
-        name: 'Áo thun in chữ',
-        link: 'chi-tiet-ao-nam4.html?id=aonam4',
-        image: '../picture/clothes/ao/ao-thun-in-chu-smile.png',
-        price_new: '136.000 VNĐ',
-        price_old: '241.000 VNĐ',
-        category: 'Áo nam',
-      },
-    ];
+            {
+                id: 'chi-tiet-sanpham1',
+                name: 'Mũ cặp đôi, nón lưỡi trai',
+                link: 'chi-tiet-sanpham1?id=chi-tiet-sanpham1',
+                image: '../../picture/space/munon1.webp',
+                price_new: '99.000 VNĐ',
+                price_old: '109.000 VNĐ',
+                category: 'mũ nón',
+            },
+            {
+                id: 'chi-tiet-sanpham2',
+                name: 'Mũ Bucket Tua Rua',
+                link: 'chi-tiet-sanpham2?id=chi-tiet-sanpham2',
+                image: '../../picture/space/munon2.webp',
+                price_new: '5.000 VNĐ',
+                price_old: '18.000 VNĐ',
+                category: 'mũ nón',
+            },
+            {
+                id: 'chi-tiet-sanpham3',
+                name: 'Mũ lưỡi trai logo NY',
+                link: 'chi-tiet-sanpham3?id=chi-tiet-sanpham3',
+                image: '../../picture/space/munon3.webp',
+                price_new: '23.999 VNĐ',
+                price_old: '50.000 VNĐ',
+                category: 'mũ nón',
+            },
+            {
+                id: 'chi-tiet-sanpham4',
+                name: 'Mũ vành tai bèo lao động',
+                link: 'chi-tiet-sanpham4?id=chi-tiet-sanpham4',
+                image: '../../picture/space/munon4.webp',
+                price_new: '25.999 VNĐ',
+                price_old: '39.999 VNĐ',
+                category: 'mũ nón',
+            },
+            {
+                id: 'chi-tiet-sanpham5',
+                name: 'Mũ Chống Nắng thời trang MENG',
+                link: 'chi-tiet-sanpham5?id=chi-tiet-sanpham5',
+                image: '../../picture/space/munon5.jpg',
+                price_new: '12.200 VNĐ',
+                price_old: '15.000 VNĐ',
+                category: 'mũ nón',
+            },
+            {
+                id: 'chi-tiet-sanpham6',
+                name: 'Mũ lưỡi trai Nón Snapack',
+                link: 'chi-tiet-sanpham6?id=chi-tiet-sanpham6',
+                image: '../../picture/space/munon6.webp',
+                price_new: '35.000 VNĐ',
+                price_old: '59.000 VNĐ',
+                category: 'mũ nón',
+            },
+        ];
 
   const currentProductId = window.productId;
   const currentProduct = products.find((p) => p.id === currentProductId);
