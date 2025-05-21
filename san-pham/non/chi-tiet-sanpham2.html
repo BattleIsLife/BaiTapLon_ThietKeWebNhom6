@@ -25,7 +25,7 @@
             <div>
                 <a href="../../huong-dan-chon-size.html">Cách chọn size</a>
                 <a href="../../huong-dan-dat-hang.html">Hướng dẫn đặt hàng</a>
-                <a href="#">Giới thiệu</a>
+                <a href="../../gioithieu.html">Giới thiệu</a>
             </div>
         </div>
     </header>
@@ -250,7 +250,7 @@
         <div class="row">
             <p><img class="logo" src="../../picture/ShopLogoDark.png" style="min-width: 170px;"></p>
             <ul class="list_footer">
-                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="../../gioithieu.html">Giới thiệu</a></li>
                 <li><a href="#">Liên hệ</a></li>
                 <li><a href="../../tuyen-dung.html">Tuyển dụng</a></li>
                 <li><a href="#">Tin tức</a></li>
@@ -359,10 +359,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Script dropdown hoặc thêm giỏ hàng -->
     <script src="../../javascript/dropdown.js"></script>
-    <script src="../../javascript/similar-products.js"></script>
+    <script src="../../javascript/similar-products-non.js"></script>
     <script src="../../javascript/reviews.js"></script>
     <script>
-        const productId = 'dep-suc-nu-002';
+        window.productId = 'chi-tiet-sanpham2';
 
         function changeImage(img) {
             document.getElementById("main-image").src = img.src;
@@ -376,63 +376,7 @@
             }
         }
 
-        // Danh sách sản phẩm và logic đề xuất sản phẩm tương tự
-       const products = [
-            {
-                id: 'chi-tiet-sanpham1',
-                name: 'Mũ cặp đôi, nón lưỡi trai',
-                link: 'chi-tiet-sanpham1?id=chi-tiet-sanpham1',
-                image: '../../picture/space/munon1.webp',
-                price_new: '99.000 VNĐ',
-                price_old: '109.000 VNĐ',
-                category: 'mũ nón',
-            },
-            {
-                id: 'chi-tiet-sanpham2',
-                name: 'Mũ Bucket Tua Rua',
-                link: 'chi-tiet-sanpham2?id=chi-tiet-sanpham2',
-                image: '../../picture/space/munon2.webp',
-                price_new: '5.000 VNĐ',
-                price_old: '18.000 VNĐ',
-                category: 'mũ nón',
-            },
-            {
-                id: 'chi-tiet-sanpham3',
-                name: 'Mũ lưỡi trai logo NY',
-                link: 'chi-tiet-sanpham3?id=chi-tiet-sanpham3',
-                image: '../../picture/space/munon3.webp',
-                price_new: '23.999 VNĐ',
-                price_old: '50.000 VNĐ',
-                category: 'mũ nón',
-            },
-            {
-                id: 'chi-tiet-sanpham4',
-                name: 'Mũ vành tai bèo lao động',
-                link: 'chi-tiet-sanpham4?id=chi-tiet-sanpham4',
-                image: '../../picture/space/munon4.webp',
-                price_new: '25.999 VNĐ',
-                price_old: '39.999 VNĐ',
-                category: 'mũ nón',
-            },
-            {
-                id: 'chi-tiet-sanpham5',
-                name: 'Mũ Chống Nắng thời trang MENG',
-                link: 'chi-tiet-sanpham5?id=chi-tiet-sanpham5',
-                image: '../../picture/space/munon5.jpg',
-                price_new: '12.200 VNĐ',
-                price_old: '15.000 VNĐ',
-                category: 'mũ nón',
-            },
-            {
-                id: 'chi-tiet-sanpham6',
-                name: 'Mũ lưỡi trai Nón Snapack',
-                link: 'chi-tiet-sanpham6?id=chi-tiet-sanpham6',
-                image: '../../picture/space/munon6.webp',
-                price_new: '35.000 VNĐ',
-                price_old: '59.000 VNĐ',
-                category: 'mũ nón',
-            },
-        ];
+       
     </script>
 
 </body>

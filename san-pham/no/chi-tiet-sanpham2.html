@@ -25,7 +25,7 @@
             <div>
                 <a href="../../huong-dan-chon-size.html">Cách chọn size</a>
                 <a href="../../huong-dan-dat-hang.html">Hướng dẫn đặt hàng</a>
-                <a href="#">Giới thiệu</a>
+                <a href="../../gioithieu.html">Giới thiệu</a>
             </div>
         </div>
     </header>
@@ -267,7 +267,7 @@
         <div class="row">
             <p><img class="logo" src="../../picture/ShopLogoDark.png" style="min-width: 170px;"></p>
             <ul class="list_footer">
-                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="../../gioithieu.html">Giới thiệu</a></li>
                 <li><a href="#">Liên hệ</a></li>
                 <li><a href="../../tuyen-dung.html">Tuyển dụng</a></li>
                 <li><a href="#">Tin tức</a></li>
@@ -376,10 +376,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Script dropdown hoặc thêm giỏ hàng -->
     <script src="../../javascript/dropdown.js"></script>
-    <script src="../../javascript/similar-products.js"></script>
+    <script src="../../javascript/similar-products-no.js"></script>
     <script src="../../javascript/reviews.js"></script>
     <script>
-        const productId = 'dep-suc-nu-002';
+        window.productId = 'chi-tiet-sanpham2';
 
         function changeImage(img) {
             document.getElementById("main-image").src = img.src;
@@ -393,64 +393,7 @@
             }
         }
 
-        // Danh sách sản phẩm và logic đề xuất sản phẩm tương tự
-         const products = [
-            {
-                id: 'chi-tiet-sanpham1',
-                name: 'Nơ Cài Cổ Áo Học Sinh',
-                link: 'chi-tiet-sanpham1?id=chi-tiet-sanpham1',
-                image: '../../picture/space/no1.webp',
-                price_new: '18.000 VNĐ',
-                price_old: '24.000 VNĐ',
-                category: 'nơ',
-            },
-
-            {
-                id: 'chi-tiet-sanpham2',
-                name: 'Jk Nơ Nữ Áo Sơ Mi',
-                link: 'chi-tiet-sanpham2.html?id=chi-tiet-sanpham2',
-                image: '../../picture/space/no2.webp',
-                price_new: '10.000 VNĐ',
-                price_old: '20.000 VNĐ',
-                category: 'nơ',
-            },
-            {
-                id: 'chi-tiet-sanpham3',
-                name: 'Nơ cài áo kỉ yếu',
-                link: 'chi-tiet-sanpham3.html?id=chi-tiet-sanpham3',
-                image: '../../picture/space/no3.webp',
-                price_new: '15.000 VNĐ',
-                price_old: '45.100 VNĐ',
-                category: 'nơ',
-            },
-            {
-                id: 'chi-tiet-sanpham4',
-                name: 'Nơ Cài Áo Sơmi',
-                link: 'chi-tiet-sanpham4.html?id=chi-tiet-sanpham4',
-                image: '../../picture/space/no4.webp',
-                price_new: '25.000 VNĐ',
-                price_old: '42.100 VNĐ',
-                category: 'nơ',
-            },
-            {
-                id: 'chi-tiet-sanpham5',
-                name: 'Nơ đeo cổ Nhật Bản',
-                link: 'chi-tiet-sanpham5.html?id=chi-tiet-sanpham5',
-                image: '../../picture/space/no5.webp',
-                price_new: '35.000 VNĐ',
-                price_old: '45.100 VNĐ',
-                category: 'nơ',
-            },
-            {
-                id: 'chi-tiet-sanpham6',
-                name: 'Nơ Đeo Cổ cho event',
-                link: 'chi-tiet-sanpham6.html?id=chi-tiet-sanpham6',
-                image: '../../picture/space/no6.webp',
-                price_new: '18.000 VNĐ',
-                price_old: '19.100 VNĐ',
-                category: 'nơ',
-            },
-        ];
+       
     </script>
 
 </body>

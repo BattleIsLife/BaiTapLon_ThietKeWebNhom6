@@ -25,7 +25,7 @@
             <div>
                 <a href="../../huong-dan-chon-size.html">Cách chọn size</a>
                 <a href="../../huong-dan-dat-hang.html">Hướng dẫn đặt hàng</a>
-                <a href="#">Giới thiệu</a>
+                <a href="../../gioithieu.html">Giới thiệu</a>
             </div>
         </div>
     </header>
@@ -250,7 +250,7 @@
         <div class="row">
             <p><img class="logo" src="../../picture/ShopLogoDark.png" style="min-width: 170px;"></p>
             <ul class="list_footer">
-                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="../../gioithieu.html">Giới thiệu</a></li>
                 <li><a href="#">Liên hệ</a></li>
                 <li><a href="../../tuyen-dung.html">Tuyển dụng</a></li>
                 <li><a href="#">Tin tức</a></li>
@@ -359,10 +359,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Script dropdown hoặc thêm giỏ hàng -->
     <script src="../../javascript/dropdown.js"></script>
-    <script src="../../javascript/similar-products.js"></script>
+    <script src="../../javascript/similar-products-tui-xach.js"></script>
     <script src="../../javascript/reviews.js"></script>
     <script>
-        const productId = 'dep-suc-nu-002';
+        window.productId = 'chitietsanpham3';
 
         function changeImage(img) {
             document.getElementById("main-image").src = img.src;
@@ -375,64 +375,6 @@
                 qtyInput.value = current + change;
             }
         }
-
-        // Danh sách sản phẩm và logic đề xuất sản phẩm tương tự
-        const products = [
-            {
-                id: 'chi-tiet-sanpham1',
-                name: 'COVERAL KLORS Túi',
-                link: 'chi-tiet-sanpham1?id=chi-tiet-sanpham1',
-                image: '../../picture/space/tuixach1.webp',
-                price_new: '30.000 VNĐ',
-                price_old: '54.000 VNĐ',
-                category: 'túi xách',
-            },
-            {
-                id: 'chi-tiet-sanpham2',
-                name: 'Túi xách nữ đeo chéo Diomi Store 616',
-                link: 'chi-tiet-sanpham2?id=chi-tiet-sanpham2',
-                image: '../../picture/space/tuixach2.webp',
-                price_new: '50.000 VNĐ',
-                price_old: '60.000 VNĐ',
-                category: 'túi xách',
-            },
-            {
-                id: 'chi-tiet-sanpham3',
-                name: 'Túi xách nữ',
-                link: 'chi-tiet-sanpham3?id=chi-tiet-sanpham3',
-                image: '../../picture/space/tuixach3.webp',
-                price_new: '42.000 VNĐ',
-                price_old: '45.000 VNĐ',
-                category: 'túi xách',
-            },
-            {
-                id: 'chi-tiet-sanpham4',
-                name: 'Túi xách nữ HT132',
-                link: 'chi-tiet-sanpham4?id=chi-tiet-sanpham4',
-                image: '../../picture/space/tuixach4.webp',
-                price_new: '68.000 VNĐ',
-                price_old: '80.000 VNĐ',
-                category: 'túi xách',
-            },
-            {
-                id: 'chi-tiet-sanpham5',
-                name: 'Túi đeo chéo TX73',
-                link: 'chi-tiet-sanpham5?id=chi-tiet-sanpham5',
-                image: '../../picture/space/tuixach5.webp',
-                price_new: '55.000 VNĐ',
-                price_old: '115.000 VNĐ',
-                category: 'túi xách',
-            },
-            {
-                id: 'chi-tiet-sanpham6',
-                name: 'MOSSDOOM Túi xách nữ',
-                link: 'chi-tiet-sanpham6?id=chi-tiet-sanpham6',
-                image: '../../picture/space/tuixach6.webp',
-                price_new: '225.000 VNĐ',
-                price_old: '203.000 VNĐ',
-                category: 'túi xách',
-            },
-        ];
     </script>
 
 </body>
