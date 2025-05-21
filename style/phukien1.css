@@ -16,13 +16,14 @@
     gap: 20px;
     /* max-width: 1000px; */
     /* margin: 0 auto; */
+    justify-content: center;
     margin: 10px;
 }
 
 .product-grid .product-card
 {
   justify-items: center;
-  width: 200px;
+  width: 260px;
   height: auto;
 }
 
