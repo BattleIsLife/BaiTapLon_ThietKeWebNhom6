@@ -13,46 +13,62 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   // Danh sách sản phẩm và logic đề xuất sản phẩm tương tự
     const products = [
-      {
-        id: 'aonam1',
-        name: 'Ví nam Ông Địa da bò',
-        link: 'chi-tiet-ao-nam1.html?id=aonam1',
-        image: '../picture/clothes/ao/ao-polo-soc-co-tim.png',
-        price_new: '119.000 VNĐ',
-        price_old: '399.000 VNĐ',
-        category: 'Áo nam',
-      },
+            {
+                id: 'chi-tiet-sanpham1',
+                name: 'Nơ Cài Cổ Áo Học Sinh',
+                link: 'chi-tiet-sanpham1?id=chi-tiet-sanpham1',
+                image: '../../picture/space/no1.webp',
+                price_new: '18.000 VNĐ',
+                price_old: '24.000 VNĐ',
+                category: 'nơ',
+            },
 
-      {
-        id: 'aonam2',
-        name: 'Áo sơ mi tay dài lịch lãm',
-        link: 'chi-tiet-ao-nam2.html?id=aonam2',
-        image: '../picture/clothes/ao/ao-so-mi-tay-dai.png',
-        price_new: '299.000 VNĐ',
-        price_old: '499.000 VNĐ',
-        category: 'Áo nam',
-      },
-
-      {
-        id: 'aonam3',
-        name: 'Áo sơ mi tay ngắn năng động',
-        link: 'chi-tiet-ao-nam-3.html?id=aonam3',
-        image: '../picture/clothes/ao/ao-so-mi1.jpg',
-        price_new: '199.000 VNĐ',
-        price_old: '399.000 VNĐ',
-        category: 'Áo nam',
-      },
-
-      {
-        id: 'aonam4',
-        name: 'Áo thun in chữ',
-        link: 'chi-tiet-ao-nam4.html?id=aonam4',
-        image: '../picture/clothes/ao/ao-thun-in-chu-smile.png',
-        price_new: '136.000 VNĐ',
-        price_old: '241.000 VNĐ',
-        category: 'Áo nam',
-      },
-    ];
+            {
+                id: 'chi-tiet-sanpham2',
+                name: 'Jk Nơ Nữ Áo Sơ Mi',
+                link: 'chi-tiet-sanpham2.html?id=chi-tiet-sanpham2',
+                image: '../../picture/space/no2.webp',
+                price_new: '10.000 VNĐ',
+                price_old: '20.000 VNĐ',
+                category: 'nơ',
+            },
+            {
+                id: 'chi-tiet-sanpham3',
+                name: 'Nơ cài áo kỉ yếu',
+                link: 'chi-tiet-sanpham3.html?id=chi-tiet-sanpham3',
+                image: '../../picture/space/no3.webp',
+                price_new: '15.000 VNĐ',
+                price_old: '45.100 VNĐ',
+                category: 'nơ',
+            },
+            {
+                id: 'chi-tiet-sanpham4',
+                name: 'Nơ Cài Áo Sơmi',
+                link: 'chi-tiet-sanpham4.html?id=chi-tiet-sanpham4',
+                image: '../../picture/space/no4.webp',
+                price_new: '25.000 VNĐ',
+                price_old: '42.100 VNĐ',
+                category: 'nơ',
+            },
+            {
+                id: 'chi-tiet-sanpham5',
+                name: 'Nơ đeo cổ Nhật Bản',
+                link: 'chi-tiet-sanpham5.html?id=chi-tiet-sanpham5',
+                image: '../../picture/space/no5.webp',
+                price_new: '35.000 VNĐ',
+                price_old: '45.100 VNĐ',
+                category: 'nơ',
+            },
+            {
+                id: 'chi-tiet-sanpham6',
+                name: 'Nơ Đeo Cổ cho event',
+                link: 'chi-tiet-sanpham6.html?id=chi-tiet-sanpham6',
+                image: '../../picture/space/no6.webp',
+                price_new: '18.000 VNĐ',
+                price_old: '19.100 VNĐ',
+                category: 'nơ',
+            },
+        ];
 
   const currentProductId = window.productId;
   const currentProduct = products.find((p) => p.id === currentProductId);
