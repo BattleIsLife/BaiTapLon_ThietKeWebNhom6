@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: 'chi-tiet-dam-vay1',
       name: 'Đầm Hoa Vintage Dự Tiệc',
-      link: 'chi-tiet-dam-vay1.html',
+      link: 'chi-tiet-dam-vay1.html?id=chi-tiet-dam-vay1',
       image: '../picture/dam-vay-picture/dam1(1).png',
       price_new: '399.000 VNĐ',
       price_old: '599.000 VNĐ',
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: 'chi-tiet-dam-vay2',
       name: 'Đầm Tiểu Thư Trễ Vai Xoè Tầng',
-      link: 'chi-tiet-dam-vay2.html',
+      link: 'chi-tiet-dam-vay2.html?id=chi-tiet-dam-vay2',
       image: '../picture/dam-vay-picture/dam2(3).png',
       price_new: '299.000 VNĐ',
       price_old: '400.000 VNĐ',
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: 'chi-tiet-dam-vay3',
       name: 'Set Váy Nữ Gồm Áo Thun Nơ Cổ + Chân Váy Xếp Ly Viền Đen',
-      link: 'chi-tiet-dam-vay3.html',
+      link: 'chi-tiet-dam-vay3.html?id=chi-tiet-dam-vay3',
       image: '../picture/dam-vay-picture/dam3(3).png',
       price_new: '99.000 VNĐ',
       price_old: '199.000 VNĐ',
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: 'chi-tiet-dam-vay4',
       name: 'Váy Đi Biển Trễ Vai',
-      link: 'chi-tiet-dam-vay4.html',
+      link: 'chi-tiet-dam-vay4.html?id=chi-tiet-dam-vay4',
       image: '../picture/dam-vay-picture/dam4(1).png',
       price_new: '136.000 VNĐ',
       price_old: '241.000 VNĐ',
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: 'chi-tiet-dam-vay5',
       name: 'Đầm Thư Sinh Hàn Quốc',
-      link: 'chi-tiet-dam-vay5.html',
+      link: 'chi-tiet-dam-vay5.html?id=chi-tiet-dam-vay5',
       image: '../picture/dam-vay-picture/dam5(1).png',
       price_new: '199.000 VNĐ',
       price_old: '299.000 VNĐ',
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: 'chi-tiet-dam-vay6',
       name: 'Đầm Xòe Dự Tiệc',
-      link: 'chi-tiet-dam-vay6.html',
+      link: 'chi-tiet-dam-vay6.html?id=chi-tiet-dam-vay6',
       image: '../picture/dam-vay-picture/dam6(1).png',
       price_new: '399.000 VNĐ',
       price_old: '599.000 VNĐ',
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: 'chi-tiet-dam-vay7',
       name: 'Đầm Xòe Cổ Vuông',
-      link: 'chi-tiet-dam-vay7.html',
+      link: 'chi-tiet-dam-vay7.html?id=chi-tiet-dam-vay7',
       image: '../picture/dam-vay-picture/dam7(1).png',
       price_new: '299.000 VNĐ',
       price_old: '399.000 VNĐ',
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: 'chi-tiet-dam-vay8',
       name: 'Váy Đầm Dự Tiệc Đỏ Sang Trọng',
-      link: 'chi-tiet-dam-vay8.html',
+      link: 'chi-tiet-dam-vay8.html?id=chi-tiet-dam-vay8',
       image: '../picture/dam-vay-picture/dam8(1).png',
       price_new: '399.000 VNĐ',
       price_old: '599.000 VNĐ',
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: 'chi-tiet-dam-vay9',
       name: 'Đầm Xòe Cổ Vuông',
-      link: 'chi-tiet-dam-vay9.html',
+      link: 'chi-tiet-dam-vay9.html?id=chi-tiet-dam-vay9',
       image: '../picture/dam-vay-picture/dam9(1).png',
       price_new: '556.000 VNĐ',
       price_old: '695.000 VNĐ',

@@ -1,0 +1,55 @@
+.payment_policy {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fdfdfd;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.payment_policy h1 {
+    font-size: 28px;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.payment_policy h2 {
+    font-size: 22px;
+    color: #2980b9;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.payment_policy ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.payment_policy ul li {
+    margin-bottom: 10px;
+}
+
+.payment_policy ul li ul {
+    padding-left: 20px;
+}
+
+.payment_policy b {
+    color: #000;
+}
+
+.payment_policy p {
+    margin-bottom: 10px;
+}
+
+.payment_policy a {
+    color: #2980b9;
+    text-decoration: none;
+}
+
+.payment_policy a:hover {
+    text-decoration: underline;
+}

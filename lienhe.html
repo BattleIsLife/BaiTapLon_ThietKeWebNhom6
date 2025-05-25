@@ -8,7 +8,10 @@
     <title>123CLOTHES - Quần áo cho mọi nhà</title>
     <link rel="stylesheet" href="style/style_chung.css">
     <link rel="stylesheet" href="style/style_index.css">
-    <link rel="stylesheet" href="style/phukien1.css">
+    <link rel="stylesheet" href="style/style_lienhe.css">
+    <style>
+
+    </style>
 </head>
 
 <body>
@@ -20,7 +23,8 @@
             <div>
                 <a href="huong-dan-chon-size.html">Cách chọn size</a>
                 <a href="huong-dan-dat-hang.html">Hướng dẫn đặt hàng</a>
-                <a href="#">Giới thiệu</a>
+
+                <a href="gioithieu.html">Giới thiệu</a>
             </div>
         </div>
     </header>
@@ -65,9 +69,9 @@
         </nav>
 
         <div class="button_class">
-            <a href="thoi-trang-moi-nhat.html" id="search_button"><img src="picture/icon/search-icon.png"
-                    style="width: 25px;"></a>
-
+            <button id="search_button" onclick="window.location.href='thoi-trang-moi-nhat.html'">
+                <img src="picture/icon/search-icon.png" style="width: 25px;">
+            </button>
             <div class="myCart">
                 <button id="cart_button"><img src="picture/icon/cart-icon.png" style="width: 25px;"></button>
                 <div id="cart_dropdown">
@@ -99,168 +103,41 @@
         <a href="tuixach.html">Túi xách</a>
     </div>
 
+    <!-- Phần chính của web -->
+    <main class="contact-container">
+        <h1>Liên hệ với 123CLOTHES</h1>
 
-    <main>
-        <div class="container">
+        <div class="contact-info">
+            <div class="info">
+                <h2>Thông tin liên hệ</h2>
+                <p><strong>Địa chỉ:</strong> 123 Đường Thời Trang, Quận Style, Hà Nội</p>
+                <p><strong>Điện thoại:</strong> <a href="tel:0123456789">0123.456.789</a></p>
+                <p><strong>Email:</strong> <a href="mailto:contact@123clothes.vn">contact@123clothes.vn</a></p>
+                <p><strong>Giờ làm việc:</strong> 7:00 - 23:00 (T2 - T6), 7:00 - 18:00 (Thứ 7)</p>
+                <p><strong>Website www.123clothes.com</strong> là website chuyên bán các dòng sản phẩm thời trang: Đầm váy nữ, quần tây, quần kaki, áo sơ mi, chân váy, giày dép, phụ kiện, giày dép...</p>
+            </div>
 
-            <h1>Phụ kiện thắt lưng</h1>
-            <p class="select">Thắt lưng không chỉ là một món đồ tiện dụng mà còn là một phụ kiện thời trang giúp thể
-                hiện phong cách cá nhân. Hiện nay, các mẫu thắt lưng nam theo phong cách Hàn Quốc đang rất được ưa
-                chuộng, đặc biệt là những thiết kế trẻ trung, lịch lãm.</p>
-            <div class="list1">
-                <div class="product-grid">
-                    <div class="product-card">
-                        <div class="image-wrapper">
-                            <img src="picture/space/thatlung1.webp" alt="thatlung1">
-                        </div>
-                        <div class="info">
-                            <div class="product-name">Dây belt thắt lưng</div>
-                            <div>
-                                <span class="price-old">54.000đ</span>
-                                <span class="price-new">30.000đ</span>
-                            </div>
-                        </div>
-                        <a href="san-pham/that-lung/day-belt-that-lung.html?id=day-belt-that-lung"><button class="order-btn">Đặt hàng</button></a>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="image-wrapper">
-                            <img src="picture/space/thatlung2.webp" alt="thatlung2">
-                        </div>
-                        <div class="info">
-                            <div class="product-name">Thắt Lưng BADBIRD</div>
-                            <div>
-                                <span class="price-old">100.000đ</span>
-                                <span class="price-new">70.000đ</span>
-                            </div>
-                        </div>
-                        <a href="san-pham/that-lung/that-lung-badbird.html?id=that-lung-bad-bird"><button class="order-btn">Đặt hàng</button></a>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="image-wrapper">
-                            <img src="picture/space/thatlung6.webp" alt="thatlung6">
-                        </div>
-                        <div class="info">
-                            <div class="product-name">Thắt lưng khóa tự động</div>
-                            <div>
-                                <span class="price-old">29.000đ</span>
-                                <span class="price-new">23.000đ</span>
-                            </div>
-                        </div>
-                        <a href="san-pham/that-lung/that-lung-khoa-tu-dong.html?id=that-lung-khoa-tu-dong"><button class="order-btn">Đặt hàng</button></a>
-                    </div>
-                    
-                    <div class="product-card">
-                        <div class="image-wrapper">
-                            <img src="picture/space/thatlung9.webp" alt="thatlung9">
-                        </div>
-                        <div class="info">
-                            <div class="product-name">Thắt lưng nam da bò</div>
-                            <div>
-                                <span class="price-old">50.000đ</span>
-                                <span class="price-new">39.000đ</span>
-                            </div>
-                        </div>
-                        <a href="san-pham/that-lung/that-lung-nam-da-bo.html?id=that-lung-nam-da-bo"><button class="order-btn">Đặt hàng</button></a>
-                    </div>
-
-                     <div class="product-card">
-                        <div class="image-wrapper">
-                            <img src="picture/space/thatlung1.webp" alt="thatlung1">
-                        </div>
-                        <div class="info">
-                            <div class="product-name">Dây belt thắt lưng</div>
-                            <div>
-                                <span class="price-old">54.000đ</span>
-                                <span class="price-new">30.000đ</span>
-                            </div>
-                        </div>
-                        <a href="san-pham/that-lung/day-belt-that-lung.html?id=day-belt-that-lung"><button class="order-btn">Đặt hàng</button></a>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="image-wrapper">
-                            <img src="picture/space/thatlung2.webp" alt="thatlung2">
-                        </div>
-                        <div class="info">
-                            <div class="product-name">Thắt Lưng BADBIRD</div>
-                            <div>
-                                <span class="price-old">100.000đ</span>
-                                <span class="price-new">70.000đ</span>
-                            </div>
-                        </div>
-                        <a href="san-pham/that-lung/that-lung-badbird.html?id=that-lung-bad-bird"><button class="order-btn">Đặt hàng</button></a>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="image-wrapper">
-                            <img src="picture/space/thatlung6.webp" alt="thatlung6">
-                        </div>
-                        <div class="info">
-                            <div class="product-name">Thắt lưng khóa tự động</div>
-                            <div>
-                                <span class="price-old">29.000đ</span>
-                                <span class="price-new">23.000đ</span>
-                            </div>
-                        </div>
-                        <a href="san-pham/that-lung/that-lung-khoa-tu-dong.html?id=that-lung-khoa-tu-dong"><button class="order-btn">Đặt hàng</button></a>
-                    </div>
-                    
-                    <div class="product-card">
-                        <div class="image-wrapper">
-                            <img src="picture/space/thatlung9.webp" alt="thatlung9">
-                        </div>
-                        <div class="info">
-                            <div class="product-name">Thắt lưng nam da bò</div>
-                            <div>
-                                <span class="price-old">50.000đ</span>
-                                <span class="price-new">39.000đ</span>
-                            </div>
-                        </div>
-                        <a href="san-pham/that-lung/that-lung-nam-da-bo.html?id=that-lung-nam-da-bo"><button class="order-btn">Đặt hàng</button></a>
-                    </div>
-                </div>
-                <div class="product-grid1">
-                    <h3 class="hot_title">Sản phẩm hot</h3>
-                    <a href="san-pham/that-lung/that-lung-nam-da-bo.html?id=that-lung-nam-da-bo">
-                        <div class="product-card">
-                            <a href="#">
-                                <img src="picture/space/thatlung9.webp" alt="thatlung9">
-                                <div class="product-name1">
-                                    <p><a href="san-pham/that-lung/that-lung-nam-da-bo.html?id=that-lung-nam-da-bo">Thắt lưng nam da bò</a></p>
-                                    <span class="price-old">50.000đ</span>
-                                    <span class="price-new">39.000đ</span>
-                                </div>
-                            </a>
-                        </div>
-                    
-                        <div class="product-card">
-                            <a href="san-pham/that-lung/that-lung-khoa-tu-dong.html?id=that-lung-khoa-tu-dong">
-                                <img src="picture/space/thatlung6.webp" alt="thatlung6">
-                                <div class="product-name1">
-                                    <p><a href="san-pham/that-lung/that-lung-khoa-tu-dong.html?id=that-lung-khoa-tu-dong">Thắt lưng khóa tự động</a></p>
-                                    <span class="price-old">29.000đ</span>
-                                    <span class="price-new">23.000đ</span>
-                                </div>
-                            </a>
-                        </div>
-                            
-                        <div class="product-card">
-                            <a href="san-pham/that-lung/day-belt-that-lung.html?id=day-belt-that-lung">
-                                <img src="picture/space/thatlung1.webp" alt="thatlung1">
-                                <div class="product-name1">
-                                    <p><a href="san-pham/that-lung/day-belt-that-lung.html?id=day-belt-that-lung">Dây belt thắt lưng</a></p>
-                                    <span class="price-old">54.000đ</span>
-                                    <span class="price-new">30.000đ</span>
-                                </div>
-                            </a>
-                        </div>
-                </div>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1REXadsuW2pGVsKbCZFbAzC-lQmAXDpo&ehbc=2E312F&noprof=1"
+                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
 
+        <div class="contact-form">
+            <h2>Gửi lời nhắn</h2>
+            <form action="#" method="post">
+                <label for="name">Họ và tên:</label>
+                <input type="text" id="name" name="name" required>
 
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Nội dung:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Gửi liên hệ</button>
+            </form>
+        </div>
     </main>
 
     <div class="top_footer">
@@ -296,7 +173,7 @@
         <div class="row">
             <p><img class="logo" src="picture/ShopLogoDark.png" style="min-width: 170px;"></p>
             <ul class="list_footer">
-                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="gioithieu.html">Giới thiệu</a></li>
                 <li><a href="#">Liên hệ</a></li>
                 <li><a href="tuyen-dung.html">Tuyển dụng</a></li>
                 <li><a href="#">Tin tức</a></li>
@@ -326,7 +203,7 @@
         <div class="row">
             <h3>Hệ thống cửa hàng</h3>
             <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18309978.621253494!2d19.159568758408525!3d-73.7337626470779!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb165fce02a3d7ef5%3A0x142d0eddfdb57ff4!2zU291dGggUG9sZSwgQ2jDonUgTmFtIEPhu7Fj!5e0!3m2!1svi!2s!4v1744974810190!5m2!1svi!2s"
+                src="https://www.google.com/maps/d/u/0/embed?mid=1REXadsuW2pGVsKbCZFbAzC-lQmAXDpo&ehbc=2E312F&noprof=1"
                 width="250" height="300" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
@@ -390,7 +267,6 @@
         </div>
     </footer>
     <script src="javascript/dropdown.js"></script>
-    <script src="javascript/script.js"></script>
     <!-- Loader hiệu ứng 4 chấm quay -->
     <div id="page-loader" class="loader-wrapper">
         <div class="loader">
