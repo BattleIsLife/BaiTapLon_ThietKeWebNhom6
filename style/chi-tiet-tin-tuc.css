@@ -25,7 +25,7 @@ article a
     text-decoration: underline;
 }
 
-article li
+article ol li
 {
     font-weight: bold;
     font-size: larger;
