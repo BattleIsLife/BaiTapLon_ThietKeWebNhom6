@@ -1,0 +1,53 @@
+article{
+    padding: 10px 10px;
+    margin: 10px 5%;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    text-align: justify;
+    font-size: medium;
+    line-height: 25px;
+    font-family: 'Arial', 'Verdana', 'Geneva', 'Tahoma', sans-serif;
+}
+
+article em
+{
+    font-weight: bold;
+}
+
+article .image
+{
+    display: flex;
+    justify-content: center;
+}
+
+article a
+{
+    text-decoration: underline;
+}
+
+article li
+{
+    font-weight: bold;
+    font-size: larger;
+    text-align: start;
+}
+
+.image img
+{
+    max-width: 40%;
+    height: auto;
+}
+
+.time-written
+{
+    /* font-weight: bold; */
+    font-size: large;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 2px;
+}
+
+.time-written .image-icon
+{
+    width: auto;
+    height: 0.8em;
+}
