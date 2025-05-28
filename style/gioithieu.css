@@ -39,3 +39,16 @@
 
     padding: 30px;
 }
+
+/* Responsive */
+@media screen and (max-width: 768px)
+{
+    .section
+    {
+        flex-direction: column;
+    }
+
+    .section:nth-child(even) {
+        flex-direction: column;
+    }   
+}
