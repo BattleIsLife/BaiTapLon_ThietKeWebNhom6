@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .map(
         (product) => `
         <div class="d-flex gap-2 mb-2 align-items-center">
-          <div><a href="${product.link}"><img src="${product.image}" width="60" alt="${product.name}" style="object-fit: cover;"></a></div>
+          <div><a href="${product.link}"><img src="${product.image}" width="60" alt="${product.name}" style="object-fit: cover; margin: left 10px"></a></div>
           <div>
             <p class="mb-0" style="font-size: 14px; line-height: 1.2;">${product.name}</p>
             <small class="price-new text-danger">${product.price_new}</small>

@@ -22,6 +22,7 @@
 
 .product-grid .product-card
 {
+  display: grid;
   justify-items: center;
   width: 260px;
   height: auto;
